@@ -13,7 +13,7 @@
     <img src="https://i.imgur.com/hNJgWYx.png">
     <p style="text-align:center">Відкрийте Zip-архів, та відкрийте першу папку</p>
     <p style="text-align:center">Потім просто перемістіть ці всі файли там де встановленна ваша збірка!</p>
-    <img src="https://i.imgur.com/vm3niuH.png">
+    <img src="https://i.imgur.com/PNMc0xd.png">
     <p style="text-align:center">За замовчуванням переклад на Mine And Slash вимкнено!</p>
     <p style="text-align:center">Просто зайдіть у ресурспаки та активуйте ресурпак.</p>
 </div>
