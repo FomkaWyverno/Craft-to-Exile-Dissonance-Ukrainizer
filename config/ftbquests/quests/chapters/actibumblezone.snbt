@@ -1,0 +1,877 @@
+{
+	id: 82,
+	filename: "actibumblezone",
+	order_index: 2,
+	title: "Акт I: The Bumblezone (Оптимально)",
+	icon: "minecraft:bee_nest",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Бзззз Бдіжлки",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Ласкаво просимо до Bumblezone! Тут ви знайдете безліч біомов, наповнених медом, бджолами і не тільки! Досліджуйте Bumblezone і повертайтеся з усіма солодощами! Але будьте обережні, збирання бджолиного меду може бути пов'язане з ризиком...",
+				'Щоб отримати доступ до цього квесту, ви повинні пройти "The Bumblezone" зі Вступу.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;64],
+			dependency_requirement: "all_completed",
+			id: 86,
+			tasks: [
+				{
+					id: 87,
+					type: "item",
+					item: "minecraft:honey_bottle",
+					count: 2L
+				},
+				{
+					id: 88,
+					type: "item",
+					item: "the_bumblezone:honey_crystal_shards",
+					count: 4L
+				}
+			],
+			rewards: [
+				{
+					id: 89,
+					type: "item",
+					item: {
+						id: "mmorpg:ore1",
+						Count: 3b
+					}
+				},
+				{
+					id: 1757,
+					type: "item",
+					title: "8250 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 8250
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Зупиніть Бззз",
+			x: 1.5d,
+			y: 0.0d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Напевно, бджоли вас дуже дратують... Так давай позбудемося від них!"],
+			min_required_dependencies: 0,
+			dependencies: [I;86],
+			dependency_requirement: "all_completed",
+			id: 95,
+			tasks: [{
+				id: 96,
+				type: "kill",
+				entity: "minecraft:bee",
+				value: 6L
+			}],
+			rewards: [
+				{
+					id: 97,
+					type: "item",
+					item: {
+						id: "minecraft:honey_bottle",
+						Count: 3b
+					}
+				},
+				{
+					id: 1758,
+					type: "item",
+					title: "12000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 12000
+						}
+					}
+				},
+				{
+					id: 2499,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 15,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Відчуття Солодкого",
+			x: 3.0d,
+			y: 0.0d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Цукрова вода є специфічною для Bumblezone і може зберігатися у пляшці. Вживання цукрової води трохи втамує голод і збільшить швидкість пересування."],
+			min_required_dependencies: 0,
+			dependencies: [I;95],
+			dependency_requirement: "all_completed",
+			id: 108,
+			tasks: [{
+				id: 109,
+				type: "item",
+				item: "the_bumblezone:sugar_water_bottle",
+				count: 2L
+			}],
+			rewards: [{
+				id: 1759,
+				type: "item",
+				title: "21000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 21000
+					}
+				}
+			}]
+		},
+		{
+			title: "Незер",
+			icon: "minecraft:netherrack",
+			x: 7.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["На 20-му рівні ви зможете вирушити у Незер. Змайструйте обсидіановий портал, щоб потрапити у Незер - цим же порталом ви зможете повернутися назад у Верхній світ. Увійдіть у Незер і зупиніть вторгнення Повелителів демонів у Верхньому світ!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2339],
+			dependency_requirement: "all_completed",
+			id: 125,
+			tasks: [{
+				id: 248,
+				type: "dimension",
+				dimension: "minecraft:the_nether"
+			}],
+			rewards: [
+				{
+					id: 127,
+					type: "item",
+					item: {
+						id: "minecraft:gold_ingot",
+						Count: 5b
+					}
+				},
+				{
+					id: 1761,
+					type: "item",
+					title: "33750 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 33750
+						}
+					}
+				},
+				{
+					id: 2095,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Солодка Помста",
+			x: 3.0d,
+			y: -1.5d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У Craft to Exile ви можете створювати щити, якщо вам терміново потрібен якийсь підручний предмет. Створені щити мають вільну послідовність: щит -> щит з медового кришталю -> щит з важкого металу -> щит з гірського гриба."],
+			min_required_dependencies: 0,
+			dependencies: [I;108],
+			dependency_requirement: "all_completed",
+			id: 460,
+			tasks: [{
+				id: 461,
+				type: "item",
+				item: {
+					id: "the_bumblezone:honey_crystal_shield",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 710,
+					type: "item",
+					item: {
+						id: "mmorpg:ore1",
+						Count: 25b
+					}
+				},
+				{
+					id: 1763,
+					type: "item",
+					title: "30000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 30000
+						}
+					}
+				},
+				{
+					id: 2497,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 15,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Відцентрова Сила",
+			x: 7.5d,
+			y: 1.5d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Центрифуга - це потужний пристрій, який може перетворити ваші стільники на цінні ресурси. У ці центрифуги можна поміщати стільники, отримані від бджіл у ваших просунитих вуликах, - ви навіть можете отримати латунь або вольфрам!",
+				"Ви також можете використовувати центрифугу для розділення генетичного матеріалу з пляшечок з бджолиним матеріалом на гени."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2341],
+			dependency_requirement: "all_completed",
+			id: 462,
+			tasks: [{
+				id: 463,
+				type: "item",
+				item: "productivebees:centrifuge"
+			}],
+			rewards: [
+				{
+					id: 712,
+					type: "item",
+					item: {
+						id: "productivebees:bee_cage",
+						Count: 4b
+					}
+				},
+				{
+					id: 1764,
+					type: "item",
+					title: "30000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 30000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Запасаємось",
+			x: 7.5d,
+			y: 3.0d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["За допомогою центрифуги можна витягти перлинки ендеру із стільників ендеру. Вони вам знадобляться пізніше, тож ви можете переробити їх зараз!"],
+			min_required_dependencies: 0,
+			dependencies: [I;462],
+			dependency_requirement: "all_completed",
+			id: 464,
+			tasks: [{
+				id: 465,
+				type: "item",
+				item: "productivebees:honeycomb_ender",
+				count: 4L
+			}],
+			rewards: [
+				{
+					id: 720,
+					type: "item",
+					item: {
+						id: "minecraft:ender_pearl",
+						Count: 3b
+					}
+				},
+				{
+					id: 2363,
+					type: "item",
+					title: "15000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 15000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Бий Їх, Де Боляче",
+			x: 1.5d,
+			y: -1.5d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ці зони розплоду, схоже, є тим місцем, де народжються бджоли. Зруйнуйте блоки та зберіть мед для себе."],
+			min_required_dependencies: 0,
+			dependencies: [I;95],
+			dependency_requirement: "all_completed",
+			id: 468,
+			tasks: [{
+				id: 469,
+				type: "item",
+				item: "the_bumblezone:dead_honeycomb_larva_block",
+				count: 12L
+			}],
+			rewards: [
+				{
+					id: 1766,
+					type: "item",
+					title: "26250 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 26250
+						}
+					}
+				},
+				{
+					id: 2454,
+					type: "item",
+					item: "buzzierbees:honey_bread"
+				},
+				{
+					id: 2495,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 15,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Слизькі Засоби",
+			icon: "buzzierbees:honey_slime_spawn_egg",
+			x: 1.5d,
+			y: -3.0d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Медові слизні - чудовий 100% мед. Вбивайте їх і збирайте мед!"],
+			min_required_dependencies: 0,
+			dependencies: [I;468],
+			dependency_requirement: "all_completed",
+			id: 470,
+			tasks: [{
+				id: 471,
+				type: "kill",
+				icon: "minecraft:slime_ball",
+				entity: "buzzierbees:honey_slime",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 718,
+					type: "item",
+					item: {
+						id: "mmorpg:ore3",
+						Count: 3b
+					}
+				},
+				{
+					id: 1767,
+					type: "item",
+					title: "28125 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 28125
+						}
+					}
+				},
+				{
+					id: 2094,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2496,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 15,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Не бджола!",
+			x: 1.5d,
+			y: 1.5d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Apotheosis приносить більше, ніж один тип книжкової полиці!"],
+			min_required_dependencies: 0,
+			dependencies: [I;95],
+			dependency_requirement: "all_completed",
+			id: 1958,
+			tasks: [{
+				id: 1959,
+				type: "item",
+				item: "apotheosis:beeshelf",
+				count: 4L
+			}],
+			rewards: [{
+				id: 1960,
+				type: "item",
+				title: "25000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 25000
+					}
+				}
+			}]
+		},
+		{
+			title: "Бджільництво",
+			x: 4.5d,
+			y: 0.0d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Клітки для бджіл - це одноразові предмети, які легко виготовляти та легко використовувати. Взаємодійте з бджолою за допомогою клітки, щоб захопити бджолу. Клацніть правою кнопкою миші ще раз, щоб відпустити бджолу - це так просто!",
+				"Примітка: використання клітки призведе до її руйнування.",
+				"Примітка: наступну лінію квесту краще проходити в Верхньому світі, але деяких бджіл легше знайти в Bumblezone!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;108],
+			dependency_requirement: "all_completed",
+			id: 2337,
+			tasks: [{
+				id: 2338,
+				type: "item",
+				item: "productivebees:bee_cage"
+			}],
+			rewards: [
+				{
+					id: 2355,
+					type: "item",
+					title: "25000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 25000
+						}
+					}
+				},
+				{
+					id: 2498,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 15,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Бджолині Колонії",
+			x: 6.0d,
+			y: 0.0d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Вулики - це ванільні блоки, в яких можна розмістити бджіл. Вони особливо корисні на початковому етапі."],
+			min_required_dependencies: 0,
+			dependencies: [I;2337],
+			dependency_requirement: "all_completed",
+			id: 2339,
+			tasks: [{
+				id: 2340,
+				type: "item",
+				item: "minecraft:beehive"
+			}],
+			rewards: [{
+				id: 2356,
+				type: "item",
+				title: "27000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 27000
+					}
+				}
+			}]
+		},
+		{
+			title: "Розвинена Цивілізація",
+			x: 6.0d,
+			y: 1.5d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Хоча його створення коштує дорожче, ніж звичайного, вдосконалений вулик є надзвичайно потужним блоком від Productive Bees. Клацнувши правою кнопкою миші на вдосконаленому вулику, ви побачите графічний інтерфейс.",
+				"У графічному інтерфейсі ви можете вказати, яких бджіл ви хочете розмістити у вулику. Ви також можете зберігати пляшки для автоматичного наповнення. Згенеровані бджолами стільники будуть зберігатися в спеціальному 9-слотовому сховищі праворуч!",
+				"Порожні скляні пляшки будуть використані для виготовлення медових пляшок з меду, що утворюється.",
+				"Переконайтеся, що ви забезпечили бджолу відповідним квітковим матеріалом - більшість бджіл потребують квітів навколо вуликів, але деякі потребують спеціальних блоків. Наприклад, кістяна бджола потребує кістяних блоків поблизу."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2339],
+			dependency_requirement: "all_completed",
+			id: 2341,
+			tasks: [{
+				id: 2342,
+				type: "item",
+				item: "productivebees:advanced_oak_beehive"
+			}],
+			rewards: [
+				{
+					id: 2358,
+					type: "item",
+					title: "15000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 15000
+						}
+					}
+				},
+				{
+					id: 2365,
+					type: "item",
+					item: {
+						id: "minecraft:honey_bottle",
+						Count: 4b
+					}
+				}
+			]
+		},
+		{
+			title: "Гніздування",
+			x: 6.0d,
+			y: -1.5d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				'Ви можете побачити деякі колоди з "дірками" в них. У цих гніздах можуть жити бджоли! Залежно від колоди або навіть інших блоків (наприклад, гравію), в них можуть жити різні бджоли. Наприклад, у більшості гнізд у колодах можна знайти бджіл-теслярів.',
+				"Однак бджоли-землекопи зустрічаються лише в гніздах з гравію та каменю. Дізнайтеся, яких бджіл можна знайти в гніздах, за допомогою дуже інформативного JEI - ви можете побачити гніздові уподобання бджіл."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2339],
+			dependency_requirement: "all_completed",
+			id: 2343,
+			tasks: [{
+				id: 2344,
+				type: "item",
+				item: "productivebees:oak_wood_nest"
+			}],
+			rewards: [{
+				id: 2357,
+				type: "item",
+				title: "25000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 25000
+					}
+				}
+			}]
+		},
+		{
+			title: "Схрещування",
+			icon: "minecraft:yellow_dye",
+			x: 4.5d,
+			y: 1.5d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["За допомогою Productive Bees можна схрещувати бджіл, щоб отримати нові види бджіл! Бджола-барвник- це корисна бджола, яка може запилювати сусідні квіти і створювати барвники на основі квітів, які вона запилює!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2341],
+			dependency_requirement: "all_completed",
+			id: 2345,
+			tasks: [{
+				id: 2346,
+				type: "kill",
+				icon: "productivebees:spawn_egg_dye_bee",
+				entity: "productivebees:dye_bee",
+				value: 1L
+			}],
+			rewards: [
+				{
+					id: 2359,
+					type: "item",
+					title: "15000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 15000
+						}
+					}
+				},
+				{
+					id: 2367,
+					type: "item",
+					item: "minecraft:red_dye"
+				},
+				{
+					id: 2368,
+					type: "item",
+					item: "minecraft:yellow_dye"
+				},
+				{
+					id: 2369,
+					type: "item",
+					item: "minecraft:blue_dye"
+				}
+			]
+		},
+		{
+			title: "Бджолиний Розум",
+			x: 6.0d,
+			y: 3.0d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Просунуті вулики також можна модернізувати. Наразі доступно 5 модернізацій."],
+			min_required_dependencies: 0,
+			dependencies: [I;2341],
+			dependency_requirement: "all_completed",
+			id: 2347,
+			tasks: [{
+				id: 2348,
+				type: "item",
+				item: "productivebees:upgrade_productivity"
+			}],
+			rewards: [
+				{
+					id: 2360,
+					type: "item",
+					title: "15000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 15000
+						}
+					}
+				},
+				{
+					id: 2366,
+					type: "item",
+					item: "productivebees:upgrade_base"
+				},
+				{
+					id: 2500,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 15,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Увімкнено",
+			x: 7.5d,
+			y: 4.5d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Для роботи центрифуги з електроживленням потрібна енергія (від Create або Immersive Engineering), але вона обробить ваші стільники швидше!"],
+			min_required_dependencies: 0,
+			dependencies: [I;464],
+			dependency_requirement: "all_completed",
+			id: 2349,
+			tasks: [{
+				id: 2350,
+				type: "item",
+				item: "productivebees:powered_centrifuge"
+			}],
+			rewards: [
+				{
+					id: 2364,
+					type: "item",
+					title: "15000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 15000
+						}
+					}
+				},
+				{
+					id: 2370,
+					type: "item",
+					item: {
+						id: "create:belt_connector",
+						Count: 8b
+					}
+				},
+				{
+					id: 2502,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 15,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Генетична Рекомбінація",
+			x: 9.0d,
+			y: 1.5d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Пляшки з розчавленим бджолиним матеріалом містять суміш генетичних матеріалів бджоли. Ви можете отримати його, розчавивши бджолу в пляшці за допомогою поршня на верхній частині пляшечки. Переконайтеся, що в ботлері є порожні пляшки.",
+				"Помістіть бджолу між пляшкою і поршнем. Ви можете помістити розчавлений бджолиний матеріал у центрифугу, щоб витягти зразки генів для кожної з характеристик бджіл."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;462],
+			dependency_requirement: "all_completed",
+			id: 2351,
+			tasks: [{
+				id: 2352,
+				type: "item",
+				item: "productivebees:bottler"
+			}],
+			rewards: [{
+				id: 2361,
+				type: "item",
+				title: "15000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 15000
+					}
+				}
+			}]
+		},
+		{
+			x: 10.5d,
+			y: 1.5d,
+			shape: "hexagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ви можете об'єднати зразки генів з медовими ласощами, щоб згодувати їх бджолі. Це допоможе передавати гени!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2351],
+			dependency_requirement: "all_completed",
+			id: 2353,
+			tasks: [{
+				id: 2354,
+				type: "item",
+				item: "productivebees:honey_treat"
+			}],
+			rewards: [
+				{
+					id: 2362,
+					type: "item",
+					title: "15000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 15000
+						}
+					}
+				},
+				{
+					id: 2501,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 15,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		}
+	]
+}

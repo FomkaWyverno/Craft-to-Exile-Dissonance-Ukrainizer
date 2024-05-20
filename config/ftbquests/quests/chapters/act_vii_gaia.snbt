@@ -1,0 +1,1880 @@
+{
+	id: 2150,
+	filename: "act_vii_gaia",
+	order_index: 9,
+	title: "Акт VII: Гайя",
+	icon: {
+		id: "gaiadimension:gaia_champion_sword",
+		Count: 1b,
+		tag: {
+			Damage: 0
+		}
+	},
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Блискуча трава",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Цікаво... Трава буквально іскриться, коли на неї наступаєш. Цікаво, які ж пригоди тут чекають нас!",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Таємний світ" в Акті VIa або VIb.'
+			],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				2147,
+				2136
+			],
+			dependency_requirement: "all_completed",
+			id: 2152,
+			tasks: [{
+				id: 2153,
+				type: "item",
+				item: "gaiadimension:glitter_grass",
+				count: 16L
+			}],
+			rewards: [{
+				id: 2275,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 400000
+					}
+				}
+			}]
+		},
+		{
+			title: "Затримка росту",
+			x: 2.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Сапери росту - це види, які можна знайти майже в кожному біомі в Гайї."],
+			min_required_dependencies: 0,
+			dependencies: [I;2152],
+			dependency_requirement: "all_completed",
+			id: 2154,
+			tasks: [{
+				id: 2155,
+				type: "kill",
+				entity: "gaiadimension:growth_sapper",
+				value: 16L
+			}],
+			rewards: [
+				{
+					id: 2276,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 400000
+						}
+					}
+				},
+				{
+					id: 2595,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 60,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Аааааааааааааааа!",
+			x: 2.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ці вовки пасивні до того моменту, поки на них не нападуть. Їх можна зустріти в агатових лісах (agate forests)."],
+			min_required_dependencies: 0,
+			dependencies: [I;2154],
+			dependency_requirement: "all_completed",
+			id: 2156,
+			tasks: [{
+				id: 2157,
+				type: "kill",
+				entity: "gaiadimension:howlite_wolf",
+				value: 16L
+			}],
+			rewards: [{
+				id: 2298,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 400000
+					}
+				}
+			}]
+		},
+		{
+			title: "Кочові Лаграхи",
+			x: 3.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["В агатових лісах (Agate forests) можна зустріти Кочових Лагракхів. Ці істоти носять гострі леза - будьте обережні!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2154],
+			dependency_requirement: "all_completed",
+			id: 2158,
+			tasks: [{
+				id: 2159,
+				type: "kill",
+				entity: "gaiadimension:nomadic_lagrahk",
+				value: 8L
+			}],
+			rewards: [{
+				id: 2303,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Ще один Верстак",
+			x: -2.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Тобто, ви можете використовувати звичайний верстак."],
+			min_required_dependencies: 0,
+			dependencies: [I;2152],
+			dependency_requirement: "all_completed",
+			id: 2160,
+			tasks: [{
+				id: 2161,
+				type: "item",
+				item: "gaiadimension:agate_crafting_table"
+			}],
+			rewards: [{
+				id: 2277,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 350000
+					}
+				}
+			}]
+		},
+		{
+			title: "Прилипни до мене",
+			x: -3.5d,
+			y: -1.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Агат - основний ресурс Гайї. Використовуйте палички для створення різноманітної зброї, інструментів та блоків!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2160],
+			dependency_requirement: "all_completed",
+			id: 2162,
+			tasks: [{
+				id: 2163,
+				type: "item",
+				item: "gaiadimension:agate_stick",
+				count: 64L
+			}],
+			rewards: [{
+				id: 2280,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 350000
+					}
+				}
+			}]
+		},
+		{
+			title: "Світ Підземель",
+			x: -3.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Світ підземелля - це екземпляри підземель, схожі на мапи, але призначені для групової гри. Вони дуже складні. Створіть посібник, щоб дізнатися, з чого почати, або відвідайте вікі!",
+				"У світі підземель можна знайти найвищий рівень унікальних предметів!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;
+				2256,
+				2252
+			],
+			dependency_requirement: "all_completed",
+			id: 2164,
+			tasks: [{
+				id: 2165,
+				type: "item",
+				item: "dimdungeons:item_guidebook"
+			}],
+			rewards: [
+				{
+					id: 2319,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500000
+						}
+					}
+				},
+				{
+					id: 2596,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 75,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Створюємо портал у Підземелля",
+			x: -3.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Для створення базової структури порталів світу підземелля вам знадобляться ці блоки. Зверніться до посібника або вікі для отримання інформації про те, як їх скласти."],
+			min_required_dependencies: 0,
+			dependencies: [I;2164],
+			dependency_requirement: "all_completed",
+			id: 2166,
+			tasks: [
+				{
+					id: 2167,
+					type: "item",
+					item: "dimdungeons:block_gilded_portal",
+					count: 2L
+				},
+				{
+					id: 2170,
+					type: "item",
+					item: "dimdungeons:block_portal_keyhole"
+				},
+				{
+					id: 2171,
+					type: "item",
+					item: "minecraft:chiseled_stone_bricks",
+					count: 9L
+				}
+			],
+			rewards: [{
+				id: 2320,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 500000
+					}
+				}
+			}]
+		},
+		{
+			title: "Ключ до Перемоги",
+			x: -2.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Створення Ключів Порталу коштує дорого, але вони служать все життя. Спочатку вони порожні, а потім їх можна активувати, використовуючи їх на верхній частині рами порталу.",
+				"Ключі матимуть унікальний ідентифікатор, який можна буде вставити в кейстоун порталу.",
+				" "
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2166],
+			dependency_requirement: "all_completed",
+			id: 2168,
+			tasks: [{
+				id: 2169,
+				type: "item",
+				item: "dimdungeons:item_portal_key"
+			}],
+			rewards: [{
+				id: 2321,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1000000
+					}
+				}
+			}]
+		},
+		{
+			title: "Мінерали II",
+			x: -5.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Сугіліт - один з основних гемів, з якого можна виготовити зброю та обладунки 60-го рівня."],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				2162,
+				2183
+			],
+			dependency_requirement: "all_completed",
+			id: 2172,
+			tasks: [{
+				id: 2173,
+				type: "item",
+				item: "gaiadimension:sugilite",
+				count: 32L
+			}],
+			rewards: [
+				{
+					id: 2288,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 375000
+						}
+					}
+				},
+				{
+					id: 2587,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 60,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Чорне та Зелене",
+			x: -5.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ви захочете зібрати ці геми, з них можна створити зброю 60-65 рівня."],
+			min_required_dependencies: 0,
+			dependencies: [I;2162],
+			dependency_requirement: "all_completed",
+			id: 2174,
+			tasks: [
+				{
+					id: 2175,
+					type: "item",
+					item: "gaiadimension:ixiolite",
+					count: 16L
+				},
+				{
+					id: 2176,
+					type: "item",
+					item: "gaiadimension:euclase",
+					count: 16L
+				}
+			],
+			rewards: [
+				{
+					id: 2286,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 375000
+						}
+					}
+				},
+				{
+					id: 2586,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 60,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Помаранчевий та Синій",
+			x: -3.5d,
+			y: -2.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["З цих різнокольорових самоцвітів можна виготовити потужну зброю."],
+			min_required_dependencies: 0,
+			dependencies: [I;2162],
+			dependency_requirement: "all_completed",
+			id: 2177,
+			tasks: [
+				{
+					id: 2178,
+					type: "item",
+					item: "gaiadimension:carnelian",
+					count: 8L
+				},
+				{
+					id: 2179,
+					type: "item",
+					item: "gaiadimension:benitoite",
+					count: 8L
+				}
+			],
+			rewards: [{
+				id: 2285,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 375000
+					}
+				}
+			}]
+		},
+		{
+			title: "Крихка зброя",
+			x: 5.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Старий лук - останній з луків, які можна виготовити!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2200],
+			dependency_requirement: "all_completed",
+			id: 2180,
+			tasks: [{
+				id: 2181,
+				type: "item",
+				item: {
+					id: "gaiadimension:old_bow",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 2309,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 375000
+						}
+					}
+				},
+				{
+					id: 2589,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "dexterity_req_crate",
+							LVL: 75,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Мінерали",
+			x: -3.5d,
+			y: 1.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Гайя є місцем, де можна знайти різноманітні красиві камені та мінерали. Багато з них можна використовувати для створення потужної броні та зброї. Прустит - один з таких базових ресурсів."],
+			min_required_dependencies: 0,
+			dependencies: [I;2160],
+			dependency_requirement: "all_completed",
+			id: 2183,
+			tasks: [{
+				id: 2184,
+				type: "item",
+				item: "gaiadimension:proustite",
+				count: 16L
+			}],
+			rewards: [{
+				id: 2281,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 350000
+					}
+				}
+			}]
+		},
+		{
+			title: "Лейцит",
+			x: -5.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Лейцит легко знайти під землею, і з нього можна виготовити броню для ваших пригод."],
+			min_required_dependencies: 0,
+			dependencies: [I;2183],
+			dependency_requirement: "all_completed",
+			id: 2187,
+			tasks: [{
+				id: 2188,
+				type: "item",
+				item: "gaiadimension:leucite",
+				count: 16L
+			}],
+			rewards: [{
+				id: 2284,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 375000
+					}
+				}
+			}]
+		},
+		{
+			title: "Міцні Породи",
+			x: -3.5d,
+			y: 2.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Carnelian та diopside - це камені, які можна використати для виготовлення спорядження 65-70 рівня."],
+			min_required_dependencies: 0,
+			dependencies: [I;2183],
+			dependency_requirement: "all_completed",
+			id: 2189,
+			tasks: [
+				{
+					id: 2190,
+					type: "item",
+					item: "gaiadimension:diopside",
+					count: 8L
+				},
+				{
+					id: 2193,
+					type: "item",
+					item: "gaiadimension:carnelian",
+					count: 8L
+				}
+			],
+			rewards: [{
+				id: 2283,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 375000
+					}
+				}
+			}]
+		},
+		{
+			title: "Мінерали III",
+			x: -6.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Халцедон - найрідкісніший і найсильніший геми. Цей магічні геми можна використовувати для створення екіпіровки в кінці гри!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2246],
+			dependency_requirement: "all_completed",
+			id: 2191,
+			tasks: [{
+				id: 2192,
+				type: "item",
+				item: "gaiadimension:chalcedony",
+				count: 16L
+			}],
+			rewards: [
+				{
+					id: 2289,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 400000
+						}
+					}
+				},
+				{
+					id: 2588,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 75,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Нема Скринь",
+			x: -2.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ці необроблені контейнери - це форма зберігання Гайї. Вони не дуже гарні..."],
+			min_required_dependencies: 0,
+			dependencies: [I;2160],
+			dependency_requirement: "all_completed",
+			id: 2194,
+			tasks: [{
+				id: 2195,
+				type: "item",
+				item: "gaiadimension:crude_storage_crate"
+			}],
+			rewards: [{
+				id: 2278,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 350000
+					}
+				}
+			}]
+		},
+		{
+			title: "Доісторичний Урок",
+			disable_toast: true,
+			x: 3.5d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Стародавні Лагракхи можна знайти в печерах. Що дозволяє їм досі функціонувати?"],
+			min_required_dependencies: 0,
+			dependencies: [I;2158],
+			dependency_requirement: "all_completed",
+			id: 2198,
+			tasks: [{
+				id: 2199,
+				type: "kill",
+				entity: "gaiadimension:ancient_lagrahk",
+				value: 6L
+			}],
+			rewards: [{
+				id: 2308,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 450000
+					}
+				}
+			}]
+		},
+		{
+			title: "Tower I",
+			x: 5.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Архаїчних воїнів можна знайти у високих жовтих вежах у вимірі Гайї. Ви знайдете ці вежі в Агатових лісах (Agate forests)."],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				2158,
+				2204,
+				2208
+			],
+			dependency_requirement: "all_completed",
+			id: 2200,
+			tasks: [{
+				id: 2201,
+				type: "kill",
+				entity: "gaiadimension:archaic_warrior",
+				value: 24L
+			}],
+			rewards: [{
+				id: 2310,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Корупція",
+			x: 2.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Корумпованих створінь можна знайти в корумпованих біомах (corrupt). "],
+			min_required_dependencies: 0,
+			dependencies: [I;2154],
+			dependency_requirement: "all_completed",
+			id: 2202,
+			tasks: [{
+				id: 2203,
+				type: "kill",
+				entity: "gaiadimension:corrupt_sapper",
+				value: 16L
+			}],
+			rewards: [{
+				id: 2297,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 400000
+					}
+				}
+			}]
+		},
+		{
+			title: "Набридливі тварюки",
+			x: 3.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Печерних кліщів можна знайти в... ну, в печерах. Солянок можна знайти в соляних дюнах (salt dunes). Ці настирливі гади обов'язково вам набриднуть!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2154],
+			dependency_requirement: "all_completed",
+			id: 2204,
+			tasks: [
+				{
+					id: 2205,
+					type: "kill",
+					entity: "gaiadimension:cavern_tick",
+					value: 16L
+				},
+				{
+					id: 2224,
+					type: "kill",
+					entity: "gaiadimension:saltion",
+					value: 8L
+				}
+			],
+			rewards: [
+				{
+					id: 2299,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 400000
+						}
+					}
+				},
+				{
+					id: 2594,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 60,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "З попелу...",
+			x: 6.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Спітфайр можна зустріти в гарячих і вулканічних біомах (hot and volcanous biomes)."],
+			min_required_dependencies: 0,
+			dependencies: [I;2200],
+			dependency_requirement: "all_completed",
+			id: 2206,
+			tasks: [{
+				id: 2207,
+				type: "kill",
+				entity: "gaiadimension:lesser_spitfire",
+				value: 8L
+			}],
+			rewards: [
+				{
+					id: 2316,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 450000
+						}
+					}
+				},
+				{
+					id: 2593,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 75,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Печерні-Мешканці",
+			x: 3.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Шалуркери - моторошні створіння, яких можна зустріти в підземеллі. Будьте уважні під час перебування у шахті!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2154],
+			dependency_requirement: "all_completed",
+			id: 2208,
+			tasks: [{
+				id: 2209,
+				type: "kill",
+				entity: "gaiadimension:shalurker",
+				value: 8L
+			}],
+			rewards: [{
+				id: 2301,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Зло, стережися!",
+			x: 2.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Нага - злісні створіння, яких можна зустріти в зіпсованих біомах (corrupt)."],
+			min_required_dependencies: 0,
+			dependencies: [I;2202],
+			dependency_requirement: "all_completed",
+			id: 2210,
+			tasks: [{
+				id: 2211,
+				type: "kill",
+				entity: "gaiadimension:contorted_naga",
+				value: 8L
+			}],
+			rewards: [{
+				id: 2300,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Golemancy II",
+			x: 5.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Кришталеві големи зустрічаються на кришталевих рівнинах (crystal plains). Вони досить міцні, тож будьте обережні, коли наближаєтесь до них."],
+			min_required_dependencies: 0,
+			dependencies: [I;2208],
+			dependency_requirement: "all_completed",
+			id: 2212,
+			tasks: [{
+				id: 2213,
+				type: "kill",
+				entity: "gaiadimension:crystal_golem",
+				value: 2L
+			}],
+			rewards: [{
+				id: 2313,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Медузи",
+			x: 6.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ареніси- це створіння, схожі на медуз, тільки живуть вони у вимірі Геї! Ці мінеральні ареніси живуть у спеціальних озерах."],
+			min_required_dependencies: 0,
+			dependencies: [I;2212],
+			dependency_requirement: "all_completed",
+			id: 2214,
+			tasks: [{
+				id: 2215,
+				type: "kill",
+				entity: "gaiadimension:mineral_arenthis",
+				value: 4L
+			}],
+			rewards: [{
+				id: 2314,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Місцева рослинність",
+			x: 6.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Ці рослини рідко зустрічаються в агатових лісах (Agate forests). Кажуть, що збирання цих рослин дає корисні ресурси.",
+				"",
+				"Порада: чомусь ці рослини люблять розмножуватися на верхівках Малахітових (зелених) веж у Зелених агатових лісах."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2200],
+			dependency_requirement: "all_completed",
+			id: 2216,
+			tasks: [{
+				id: 2217,
+				type: "kill",
+				entity: "gaiadimension:markuzar_plant",
+				value: 4L
+			}],
+			rewards: [{
+				id: 2315,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Охоронці Каменя",
+			x: 8.0d,
+			y: 0.0d,
+			shape: "pentagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Малахіт можна знайти у великих, зелених, малахітових вежах в Агатових лісах (Agate forests). Прорвіться крізь вежу і дістаньтеся до охоронця на вершині!"],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				2216,
+				2214
+			],
+			dependency_requirement: "all_completed",
+			id: 2220,
+			tasks: [
+				{
+					id: 2221,
+					type: "kill",
+					entity: "gaiadimension:malachite_guard",
+					value: 1L
+				},
+				{
+					id: 2233,
+					type: "kill",
+					entity: "gaiadimension:malachite_drone",
+					value: 4L
+				}
+			],
+			rewards: [
+				{
+					id: 2322,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000000
+						}
+					}
+				},
+				{
+					id: 2597,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 75,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Каламутні води",
+			x: 5.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Гайя має унікальну воду, яка є домівкою для різноманітних створінь. На мілководді у воді можна зустріти аренію, яка мешкає над землею."],
+			min_required_dependencies: 0,
+			dependencies: [I;2212],
+			dependency_requirement: "all_completed",
+			id: 2225,
+			tasks: [{
+				id: 2226,
+				type: "kill",
+				entity: "gaiadimension:shallow_arenthis",
+				value: 8L
+			}],
+			rewards: [{
+				id: 2317,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 450000
+					}
+				}
+			}]
+		},
+		{
+			x: 6.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Продаємо лобі!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2225],
+			dependency_requirement: "all_completed",
+			id: 2227,
+			tasks: [{
+				id: 2228,
+				type: "item",
+				item: "gaiadimension:small_calamari"
+			}],
+			rewards: [{
+				id: 2306,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 350000
+					}
+				}
+			}]
+		},
+		{
+			title: "Гео, чувак!",
+			x: 5.0d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ці істоти з твердим панциром мешкають у горах. За чутками, їхнє м'ясо дуже смачне на смак, коли його приготувати!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2158],
+			dependency_requirement: "all_completed",
+			id: 2229,
+			tasks: [{
+				id: 2230,
+				type: "kill",
+				entity: "gaiadimension:rocky_luggeroth",
+				value: 4L
+			}],
+			rewards: [{
+				id: 2311,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Молодець",
+			x: 5.0d,
+			y: -4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Чутки виявилися помилковими... М'ясо Люгерота надзвичайно тверде."],
+			min_required_dependencies: 0,
+			dependencies: [I;2229],
+			dependency_requirement: "all_completed",
+			id: 2231,
+			tasks: [{
+				id: 2232,
+				type: "item",
+				item: "gaiadimension:cooked_luggeroth_chop"
+			}],
+			rewards: [{
+				id: 2305,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 350000
+					}
+				}
+			}]
+		},
+		{
+			title: "Подвійна веселка",
+			x: 3.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Знайти цього скелястого барвистого звіра надзвичайно складно. Але на них дуже приємно дивитися!",
+				"Ви знайдете їх у тліючому болоті (smoldering bog)..."
+			],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				2208,
+				2210
+			],
+			dependency_requirement: "all_completed",
+			id: 2234,
+			tasks: [{
+				id: 2235,
+				type: "kill",
+				entity: "gaiadimension:bismuth_uletrus",
+				value: 1L
+			}],
+			rewards: [
+				{
+					id: 2307,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 450000
+						}
+					}
+				},
+				{
+					id: 2591,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 75,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Середній діапазон",
+			x: -3.5d,
+			y: -4.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Benitoite та carnelian можна створити зброю та використовувати приблизно на 70 рівні!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2177],
+			dependency_requirement: "all_completed",
+			id: 2238,
+			tasks: [
+				{
+					id: 2239,
+					type: "item",
+					item: {
+						id: "gaiadimension:benitoite_sword",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 2240,
+					type: "item",
+					item: {
+						id: "gaiadimension:carnelian_axe",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			],
+			rewards: [
+				{
+					id: 2287,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 375000
+						}
+					}
+				},
+				{
+					id: 2584,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 60,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Обладнання з Прусита",
+			x: -2.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Створіть пруситове спорядження!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2183],
+			dependency_requirement: "all_completed",
+			id: 2241,
+			tasks: [
+				{
+					id: 2242,
+					type: "item",
+					item: {
+						id: "gaiadimension:proustite_chestplate",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 2243,
+					type: "item",
+					item: {
+						id: "gaiadimension:proustite_legs",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			],
+			rewards: [
+				{
+					id: 2282,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 400000
+						}
+					}
+				},
+				{
+					id: 2585,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 60,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Дірка у вашому відрі",
+			x: -2.0d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Їх важче робити, ніж залізні відра..."],
+			min_required_dependencies: 0,
+			dependencies: [I;2194],
+			dependency_requirement: "all_completed",
+			id: 2244,
+			tasks: [{
+				id: 2245,
+				type: "item",
+				item: "gaiadimension:scaynyx_bucket"
+			}],
+			rewards: [{
+				id: 2279,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 350000
+					}
+				}
+			}]
+		},
+		{
+			x: -6.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Restructurer - це важливий блок, який може розщеплювати мінерали та породи на менші, зазвичай більш корисні геми."],
+			min_required_dependencies: 0,
+			dependencies: [I;2172],
+			dependency_requirement: "all_completed",
+			id: 2246,
+			tasks: [{
+				id: 2247,
+				type: "item",
+				item: "gaiadimension:restructurer"
+			}],
+			rewards: [{
+				id: 2291,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Побічний продукт",
+			x: -6.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Тектит - побічний продукт реструктуризації. Ви можете використовувати його для створення тектитових блоків, які використовуються для створення портальних блоків Dimensional Dungeon!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2246],
+			dependency_requirement: "all_completed",
+			id: 2248,
+			tasks: [{
+				id: 2249,
+				type: "item",
+				item: "gaiadimension:tektite",
+				count: 9L
+			}],
+			rewards: [{
+				id: 2292,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			x: 2.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Очищувач може очищати пошкоджені блоки та елементи."],
+			min_required_dependencies: 0,
+			dependencies: [I;2210],
+			dependency_requirement: "all_completed",
+			id: 2250,
+			tasks: [{
+				id: 2251,
+				type: "item",
+				item: "gaiadimension:purifier"
+			}],
+			rewards: [{
+				id: 2296,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Dimensional Blocks I",
+			x: -6.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Блоки тектиту використовуються для створення блоків світу підземелля. Вам знадобиться досить багато, тож обов'язково запасіться ними."],
+			min_required_dependencies: 0,
+			dependencies: [I;2248],
+			dependency_requirement: "all_completed",
+			id: 2252,
+			tasks: [{
+				id: 2253,
+				type: "item",
+				item: "gaiadimension:tektite_block",
+				count: 3L
+			}],
+			rewards: [{
+				id: 2293,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 450000
+					}
+				}
+			}]
+		},
+		{
+			x: 0.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [],
+			min_required_dependencies: 0,
+			dependencies: [I;2250],
+			dependency_requirement: "all_completed",
+			id: 2254,
+			tasks: [{
+				id: 2255,
+				type: "item",
+				item: "gaiadimension:goldstone",
+				count: 9L
+			}],
+			rewards: [{
+				id: 2295,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 425000
+					}
+				}
+			}]
+		},
+		{
+			title: "Dimensional Blocks II",
+			x: -1.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Блоки Goldstone використовуються для створення блоків підземелля. Вам знадобиться досить багато, тож не забудьте запастися ними."],
+			min_required_dependencies: 0,
+			dependencies: [I;2254],
+			dependency_requirement: "all_completed",
+			id: 2256,
+			tasks: [{
+				id: 2257,
+				type: "item",
+				item: "gaiadimension:goldstone_block",
+				count: 3L
+			}],
+			rewards: [{
+				id: 2294,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 450000
+					}
+				}
+			}]
+		},
+		{
+			title: "Мішечок для Гемів",
+			icon: "gaiadimension:gemstone_pouch",
+			x: -8.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Треба зловити їх усіх!",
+				"Примітка: не кладіть до мішечка більше 16 гемів. Кнопка сортування видалить всі геми, кількість яких перевищує 16! Або просто не сортуйте взагалі."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2191],
+			dependency_requirement: "all_completed",
+			id: 2264,
+			tasks: [
+				{
+					id: 2265,
+					type: "item",
+					item: "gaiadimension:sugilite"
+				},
+				{
+					id: 2266,
+					type: "item",
+					item: "gaiadimension:hematite"
+				},
+				{
+					id: 2267,
+					type: "item",
+					item: "gaiadimension:cinnabar"
+				},
+				{
+					id: 2268,
+					type: "item",
+					item: "gaiadimension:labradorite"
+				},
+				{
+					id: 2269,
+					type: "item",
+					item: "gaiadimension:moonstone"
+				},
+				{
+					id: 2270,
+					type: "item",
+					item: "gaiadimension:blue_opal"
+				},
+				{
+					id: 2271,
+					type: "item",
+					item: "gaiadimension:white_opal"
+				},
+				{
+					id: 2272,
+					type: "item",
+					item: "gaiadimension:pyrite"
+				},
+				{
+					id: 2273,
+					type: "item",
+					item: "gaiadimension:scaynyx_ingot"
+				}
+			],
+			rewards: [
+				{
+					id: 2274,
+					type: "item",
+					item: "gaiadimension:gemstone_pouch"
+				},
+				{
+					id: 2290,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Покращений Світ Підземель",
+			x: -0.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				'Рідко в підземеллях можна знайти "Покращені ключі порталу". Ці ключі можна використовувати для доступу до більших і складніших підземель.',
+				"Однак, щоб витримати їхню силу, вам потрібно буде покращити структуру порталу у вашому підземеллі, щоб він міг витримати їхню потужність.",
+				"Зверніться до вікі про те, як почати знайомство з покращеним світом підземель."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2168],
+			dependency_requirement: "all_completed",
+			id: 2323,
+			tasks: [{
+				id: 2324,
+				type: "item",
+				item: "dimdungeons:block_portal_crown"
+			}],
+			rewards: [
+				{
+					id: 2325,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1500000
+						}
+					}
+				},
+				{
+					id: 2598,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 80,
+							SCORE: "AMAZING",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Первісни Прагненя",
+			x: 3.5d,
+			y: -4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ці моби, схоже, атакують на кожному кроці... знищіть їх! Ви знайдете їх у великих печерах під землею."],
+			min_required_dependencies: 0,
+			dependencies: [I;2198],
+			dependency_requirement: "all_completed",
+			id: 2470,
+			tasks: [{
+				id: 2471,
+				type: "kill",
+				entity: "gaiadimension:primal_beast",
+				value: 16L
+			}],
+			rewards: [{
+				id: 2472,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 450000
+					}
+				}
+			}]
+		},
+		{
+			title: "Геодезія врожаю",
+			icon: "gaiadimension:purple_geode",
+			x: 2.0d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ['Мутантів-саперів можна знайти навколо Гайї в біомі "Mutant Agate Wildwoods", де вони збирають цінні геодезичні знахідки! З них можна створювати різноманітні еліксири для споживання!'],
+			min_required_dependencies: 0,
+			dependencies: [I;2156],
+			dependency_requirement: "all_completed",
+			id: 2473,
+			tasks: [
+				{
+					id: 2474,
+					type: "kill",
+					entity: "gaiadimension:mutant_growth_extractor",
+					value: 4L
+				},
+				{
+					id: 2475,
+					type: "item",
+					item: "gaiadimension:pearly_geode_elixir"
+				}
+			],
+			rewards: [
+				{
+					id: 2476,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 450000
+						}
+					}
+				},
+				{
+					id: 2590,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 75,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Golemancy",
+			x: 6.5d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ['Гайя випускає на поле бою кількох нових големів. Агатового голема можна знайти в біомі Гайї "Ліс рожевого агату" (Pink Agate Forest).'],
+			min_required_dependencies: 0,
+			dependencies: [I;2229],
+			dependency_requirement: "all_completed",
+			id: 2479,
+			tasks: [{
+				id: 2480,
+				type: "kill",
+				entity: "gaiadimension:agate_golem",
+				value: 8L
+			}],
+			rewards: [
+				{
+					id: 2481,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 450000
+						}
+					}
+				},
+				{
+					id: 2592,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 75,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,1008 @@
+{
+	id: 85,
+	filename: "activtheatum",
+	order_index: 5,
+	title: "Акт IV: Атум",
+	icon: "atum:sand",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Ласкаво просимо до Атуму",
+			icon: {
+				id: "minecolonies:pharaoscepter",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 0.0d,
+			y: 0.0d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Атум - це світ пустелі, наповнений злими муміями та скарбами. Щоб дістатися до Атума, побудуйте неглибокий басейн 3х3 з дном з пісковика, та також рамку з нього. Помістіть по 2 блоки пісковика в кожен кут, щоб сформувати 4 стовпи.",
+				"Потім киньте скарабея в басейн з водою.",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити "Фараоновість" в Акті III.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;295],
+			dependency_requirement: "all_completed",
+			id: 317,
+			tasks: [{
+				id: 318,
+				type: "dimension",
+				title: "Visit Dimension: Atum",
+				dimension: "atum:atum"
+			}],
+			rewards: [
+				{
+					id: 767,
+					type: "item",
+					item: {
+						id: "minecraft:torch",
+						Count: 16b
+					}
+				},
+				{
+					id: 1802,
+					type: "item",
+					title: "75000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 75000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Вартові Каменя",
+			x: 0.0d,
+			y: 1.5d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Навіть земля просякнута негативною енергією. Будьте обережні при видобуванні каменю - ходять чутки, що камінь оживає...",
+				"Вбийте 3 stoneguards."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;317],
+			dependency_requirement: "all_completed",
+			id: 319,
+			tasks: [{
+				id: 320,
+				type: "kill",
+				entity: "atum:stoneguard",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 771,
+					type: "item",
+					item: {
+						id: "atum:khnumite",
+						Count: 4b
+					}
+				},
+				{
+					id: 1804,
+					type: "item",
+					title: "76000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 76000
+						}
+					}
+				},
+				{
+					id: 2529,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Спитаємо у місцевих",
+			x: -1.5d,
+			y: 1.5d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Через брак ресурсів Атум перебуває в постійному безладі. Не кажучи вже про те, що пустеля пронизана енергією нежиті...",
+				"Вбийте 10 mummies."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;317],
+			dependency_requirement: "all_completed",
+			id: 321,
+			tasks: [{
+				id: 322,
+				type: "kill",
+				icon: {
+					id: "atum:mummy_helmet",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				},
+				entity: "atum:mummy",
+				value: 10L
+			}],
+			rewards: [
+				{
+					id: 769,
+					type: "item",
+					item: {
+						id: "atum:cloth_scrap",
+						Count: 4b
+					}
+				},
+				{
+					id: 1803,
+					type: "item",
+					title: "75500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 75500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Чудні Піски",
+			x: 1.5d,
+			y: 1.5d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ці піски більш грубі, ніж піски з верхнього світу. Візьміть трохи, щоб роздивитися його ближче."],
+			min_required_dependencies: 0,
+			dependencies: [I;317],
+			dependency_requirement: "all_completed",
+			id: 323,
+			tasks: [{
+				id: 324,
+				type: "item",
+				item: "atum:sand",
+				count: 16L
+			}],
+			rewards: [{
+				id: 1805,
+				type: "item",
+				title: "65000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 65000
+					}
+				}
+			}]
+		},
+		{
+			title: "Землі Кочівників",
+			x: -1.5d,
+			y: 3.0d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Кочівники - уродженці пустелі, і вони нападуть на кожного, кого побачать. Вони також агресивні по відношенню до інших істот."],
+			min_required_dependencies: 0,
+			dependencies: [I;321],
+			dependency_requirement: "all_completed",
+			id: 325,
+			tasks: [{
+				id: 326,
+				type: "kill",
+				icon: {
+					id: "minecraft:stone_sword",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				},
+				entity: "atum:nomad",
+				value: 8L
+			}],
+			rewards: [
+				{
+					id: 776,
+					type: "item",
+					item: {
+						id: "atum:short_bow",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1807,
+					type: "item",
+					title: "76000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 76000
+						}
+					}
+				},
+				{
+					id: 2530,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "dexterity_req_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Хтось полює на нас.",
+			x: -1.5d,
+			y: 4.5d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Після битви з кочівниками ми дізналися, що в Атумі є піраміди, які містять великі скарби... Однак, схоже, хтось довідався, що ми намагаємося знайти ці скарби.",
+				"Вбийте 3 barbarians, 3 brigands, та 1 sergeant."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;325],
+			dependency_requirement: "all_completed",
+			id: 327,
+			tasks: [
+				{
+					id: 328,
+					type: "kill",
+					icon: {
+						id: "minecraft:iron_axe",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					},
+					entity: "atum:barbarian",
+					value: 3L
+				},
+				{
+					id: 329,
+					type: "kill",
+					icon: {
+						id: "atum:iron_dagger",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					},
+					entity: "atum:brigand",
+					value: 3L
+				},
+				{
+					id: 330,
+					type: "kill",
+					icon: {
+						id: "minecraft:iron_sword",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					},
+					entity: "atum:sergeant",
+					value: 1L
+				}
+			],
+			rewards: [
+				{
+					id: 788,
+					type: "item",
+					item: {
+						id: "atum:dagger_poison",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1813,
+					type: "item",
+					title: "76500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 76500
+						}
+					}
+				},
+				{
+					id: 2533,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Моторошні Повзуни",
+			x: -3.0d,
+			y: 3.0d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Вночі тарантулів можна зустріти по всьому Атуму (та іншим піщаним біомам). Чи сильніші вони за ванільних павуків?"],
+			min_required_dependencies: 0,
+			dependencies: [I;321],
+			dependency_requirement: "all_completed",
+			id: 331,
+			tasks: [{
+				id: 332,
+				type: "kill",
+				icon: "atum:mandibles",
+				entity: "betteranimalsplus:tarantula",
+				value: 10L
+			}],
+			rewards: [
+				{
+					id: 774,
+					type: "item",
+					item: {
+						id: "atum:flax_seeds",
+						Count: 2b
+					}
+				},
+				{
+					id: 1806,
+					type: "item",
+					title: "76000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 76000
+						}
+					}
+				},
+				{
+					id: 2531,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Привиди Пустелі",
+			x: -4.5d,
+			y: 4.5d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Спочатку мумії, а тепер ще й привиди?!",
+				"Вбийте 4 wraiths."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;331],
+			dependency_requirement: "all_completed",
+			id: 333,
+			tasks: [{
+				id: 334,
+				type: "kill",
+				entity: "atum:wraith",
+				value: 4L
+			}],
+			rewards: [
+				{
+					id: 784,
+					type: "item",
+					item: {
+						id: "atum:fish_forsaken",
+						Count: 2b
+					}
+				},
+				{
+					id: 1811,
+					type: "item",
+					title: "76500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 76500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Послідовники Атума",
+			x: -3.0d,
+			y: 4.5d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Вам сказали, що піраміди зберігають великі скарби, але ці скарби охороняє стародавній фараон. Допитайте кількох послідовників і дізнайтеся, як можна дістатися до скарбу.",
+				"Вбийте 3 sergeants."
+			],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				327,
+				333
+			],
+			dependency_requirement: "all_completed",
+			id: 335,
+			tasks: [{
+				id: 336,
+				type: "kill",
+				icon: {
+					id: "minecraft:iron_sword",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				},
+				entity: "atum:sergeant",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 786,
+					type: "item",
+					item: {
+						id: "atum:pharaoh_torch",
+						Count: 2b
+					}
+				},
+				{
+					id: 1812,
+					type: "item",
+					title: "78500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 78500
+						}
+					}
+				},
+				{
+					id: 2532,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Покинутий",
+			x: 0.0d,
+			y: 4.5d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Колись шановані, привиди минулого стали переслідувати тих, хто їх забув. Якщо, звісно, ви не зможете позбутися їх першими.",
+				"Вбийте 15 forsaken."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;327],
+			dependency_requirement: "all_completed",
+			id: 337,
+			tasks: [{
+				id: 338,
+				type: "kill",
+				icon: "atum:linen_bandage",
+				entity: "atum:forsaken",
+				value: 15L
+			}],
+			rewards: [
+				{
+					id: 790,
+					type: "item",
+					item: {
+						id: "mmorpg:ore4",
+						Count: 8b
+					}
+				},
+				{
+					id: 1814,
+					type: "item",
+					title: "77000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 77000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Фараон",
+			icon: {
+				id: "minecolonies:pharaoscepter",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 0.0d,
+			y: 6.0d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Від сержантів-бандитів ви дізнаєтеся, що вам потрібно знайти саркофаг фараона і оточити його царськими смолоскипами. Саркофаг можна знайти в глибині пірамід."],
+			min_required_dependencies: 0,
+			dependencies: [I;335],
+			dependency_requirement: "all_completed",
+			id: 339,
+			tasks: [{
+				id: 340,
+				type: "kill",
+				icon: {
+					id: "minecolonies:pharaoscepter",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				},
+				entity: "atum:pharaoh",
+				value: 1L
+			}],
+			rewards: [
+				{
+					id: 798,
+					type: "item",
+					item: "atum:radiant_beacon"
+				},
+				{
+					id: 1818,
+					type: "item",
+					title: "100000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 100000
+						}
+					}
+				},
+				{
+					id: 2535,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Нічні Шепоти",
+			x: 1.5d,
+			y: 6.0d,
+			shape: "rsquare",
+			subtitle: "",
+			size: 1.0d,
+			description: ['Після вбивства Фараона ви чуєте шепіт: "Занадто пізно, бо моя енергія просочилася з Атума в царство сновидінь... Я повернуся". Вирушайте у світ Сновидінь і знайдіть справжнє джерело негативної енергії.'],
+			min_required_dependencies: 0,
+			dependencies: [I;339],
+			dependency_requirement: "all_completed",
+			id: 341,
+			tasks: [{
+				id: 342,
+				type: "item",
+				item: "goodnightsleep:strange_bed_item"
+			}],
+			rewards: [
+				{
+					id: 1819,
+					type: "item",
+					title: "75000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 75000
+						}
+					}
+				},
+				{
+					id: 2091,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2548,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Вапняк?",
+			x: 1.5d,
+			y: 3.0d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Вапняк - найпоширеніший тип породи, доступний в Атумі, і тому він використовується в багатьох спорудах."],
+			min_required_dependencies: 0,
+			dependencies: [I;323],
+			dependency_requirement: "all_completed",
+			id: 489,
+			tasks: [{
+				id: 490,
+				type: "item",
+				item: "atum:limestone",
+				count: 16L
+			}],
+			rewards: [
+				{
+					id: 780,
+					type: "item",
+					item: {
+						id: "minecraft:iron_pickaxe",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1809,
+					type: "item",
+					title: "65500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 65500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "У пошуках Оазису",
+			x: 3.0d,
+			y: 3.0d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Оазис - це біом в Атумі, якого не торкнулася енергія нежиті. Тут можна знайти воду і вирощувати сільськогосподарські культури."],
+			min_required_dependencies: 0,
+			dependencies: [I;323],
+			dependency_requirement: "all_completed",
+			id: 491,
+			tasks: [{
+				id: 492,
+				type: "item",
+				item: "atum:palm_log",
+				count: 4L
+			}],
+			rewards: [
+				{
+					id: 782,
+					type: "item",
+					item: {
+						id: "atum:palm_sapling",
+						Count: 2b
+					}
+				},
+				{
+					id: 1810,
+					type: "item",
+					title: "65500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 65500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Заправляємо нитку в голку",
+			x: 3.0d,
+			y: 4.5d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Через сонце і нескінченну спеку місцеві жителі пристосувалися носити тонкий лляний одяг для захисту як від спеки, так і від всякого жахіття."],
+			min_required_dependencies: 0,
+			dependencies: [I;491],
+			dependency_requirement: "all_completed",
+			id: 493,
+			tasks: [{
+				id: 494,
+				type: "item",
+				item: "atum:linen_cloth",
+				count: 2L
+			}],
+			rewards: [
+				{
+					id: 794,
+					type: "item",
+					item: {
+						id: "atum:flax_seeds",
+						Count: 2b
+					}
+				},
+				{
+					id: 1816,
+					type: "item",
+					title: "66000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 66000
+						}
+					}
+				},
+				{
+					id: 2538,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Розчарування",
+			x: 1.5d,
+			y: 4.5d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: ["В Атумі ви можете створювати свитки, що знімають чари, які дозволять вам зняти чари зі свого спорядження. Поєднайте їх зі спорядженням на крафтовому столі."],
+			min_required_dependencies: 0,
+			dependencies: [I;493],
+			dependency_requirement: "all_completed",
+			id: 495,
+			tasks: [{
+				id: 496,
+				type: "item",
+				item: "atum:disenchanting_scroll"
+			}],
+			rewards: [
+				{
+					id: 792,
+					type: "item",
+					item: "atum:disenchanting_scroll"
+				},
+				{
+					id: 1815,
+					type: "item",
+					title: "66500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 66500
+						}
+					}
+				},
+				{
+					id: 2536,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Захист у Пустелі",
+			x: 4.5d,
+			y: 4.5d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Місцеві жителі зрозуміли, що лляного одягу недостатньо для захисту від ворогів, і навчилися додавати в одяг рідкісні метали для",
+				"забезпечення додаткового захисту."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;493],
+			dependency_requirement: "all_completed",
+			id: 497,
+			tasks: [{
+				id: 498,
+				type: "item",
+				item: {
+					id: "atum:desert_chest_diamond",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 796,
+					type: "item",
+					item: "minecraft:diamond"
+				},
+				{
+					id: 1817,
+					type: "item",
+					title: "66500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 66500
+						}
+					}
+				},
+				{
+					id: 2537,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Піщані пастки",
+			x: 0.0d,
+			y: 3.0d,
+			shape: "diamond",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Піч зроблена з вапняку і функціонує подібно до печі. Ви також захочете зробити прядку для обробки ниток."],
+			min_required_dependencies: 0,
+			dependencies: [I;489],
+			dependency_requirement: "all_completed",
+			id: 499,
+			tasks: [
+				{
+					id: 500,
+					type: "item",
+					item: "atum:kiln"
+				},
+				{
+					id: 501,
+					type: "item",
+					item: "atum:spinning_wheel"
+				}
+			],
+			rewards: [
+				{
+					id: 778,
+					type: "item",
+					item: {
+						id: "atum:papyrus_plant",
+						Count: 2b
+					}
+				},
+				{
+					id: 1808,
+					type: "item",
+					title: "66000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 66000
+						}
+					}
+				},
+				{
+					id: 2539,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "intelligence_req_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		}
+	]
+}

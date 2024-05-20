@@ -1,0 +1,1200 @@
+{
+	id: 343,
+	filename: "actvgoodnightssleep",
+	order_index: 6,
+	title: "Акт V: Good Night's Sleep",
+	icon: "goodnightsleep:strange_bed_item",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Блаженне пробудження (Шлях Одиночної гри)",
+			icon: {
+				id: "goodnightsleep:rainbow_sword",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 0.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Пощастило тобі! Ви потрапили у вимір Гарних Снів, де ви знайдете єдинорогів та веселку. Ви відчуваєте, що щось не так з балансом позитивної та негативної енергії.",
+				"За бажанням, використовуйте позитивні або негативні геми, щоб створити розкішне або убоге ліжко, щоб отримати прямий доступ до відповідного світу. Через 20 хвилин ви автоматично покинете світ сну.",
+				"Примітка: цей маршрут веде до Tropicraft, який наразі доступний лише для одиночної гри.",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Фараон" з IV акту.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;339],
+			dependency_requirement: "all_completed",
+			id: 344,
+			tasks: [{
+				id: 345,
+				type: "dimension",
+				title: "Visit Dimension: Good Dream",
+				dimension: "goodnightsleep:good_dream"
+			}],
+			rewards: [{
+				id: 1820,
+				type: "item",
+				title: "77500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 77500
+					}
+				}
+			}]
+		},
+		{
+			title: "Сонний Параліч",
+			icon: {
+				id: "goodnightsleep:zitrite_sword",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 0.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Як прикро. Ви потрапили у вимір Кошмару, де ви знайдете демонів і темряву. Ви відчуваєте, що щось не так з балансом позитивної та негативної енергії.",
+				"За бажанням, використовуйте позитивні або негативні геми, щоб створити розкішне або убоге ліжко, щоб отримати прямий доступ до відповідного виміру. Через 20 хвилин ви автоматично покинете світ сну.",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Фараон" з IV акту.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;339],
+			dependency_requirement: "all_completed",
+			id: 356,
+			tasks: [{
+				id: 357,
+				type: "dimension",
+				title: "Visit Dimension: Nightmare",
+				dimension: "goodnightsleep:nightmare"
+			}],
+			rewards: [{
+				id: 1832,
+				type: "item",
+				title: "77500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 77500
+					}
+				}
+			}]
+		},
+		{
+			title: "Застеляй ліжко II",
+			x: 1.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Застеливши убоге ліжко своїм негативним гемом, ви зможете вільно потрапити у світ Кошмару."],
+			min_required_dependencies: 0,
+			dependencies: [I;356],
+			dependency_requirement: "all_completed",
+			id: 358,
+			tasks: [{
+				id: 359,
+				type: "item",
+				item: "goodnightsleep:wretched_bed_item"
+			}],
+			rewards: [
+				{
+					id: 1833,
+					type: "item",
+					title: "100000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 100000
+						}
+					}
+				},
+				{
+					id: 2549,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "В Задумі",
+			x: 3.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Зорієнтуйтеся в цьому кошмарному царстві. Знаходьте та збирайте дошки з цієї місцевості, щоб дізнатися більше про те, як влаштовані світ кошмару."],
+			min_required_dependencies: 0,
+			dependencies: [I;358],
+			dependency_requirement: "all_completed",
+			id: 360,
+			tasks: [
+				{
+					id: 361,
+					type: "item",
+					item: "goodnightsleep:blood_plank",
+					count: 32L
+				},
+				{
+					id: 362,
+					type: "item",
+					item: "goodnightsleep:dead_plank",
+					count: 32L
+				}
+			],
+			rewards: [
+				{
+					id: 1834,
+					type: "item",
+					title: "137500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 137500
+						}
+					}
+				},
+				{
+					id: 2550,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Джерело Нежиті",
+			x: 3.0d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Проаналізувавши різні дерев'яні дошки, ви виявите, що вони просякнуті неживою енергією. Знайдіть джерело неживої енергії в підземеллі."],
+			min_required_dependencies: 0,
+			dependencies: [I;360],
+			dependency_requirement: "all_completed",
+			id: 363,
+			tasks: [{
+				id: 364,
+				type: "item",
+				item: "goodnightsleep:necrum",
+				count: 32L
+			}],
+			rewards: [
+				{
+					id: 1836,
+					type: "item",
+					title: "162500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 162500
+						}
+					}
+				},
+				{
+					id: 2551,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Прищі - це зло",
+			x: 4.5d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Відтоді, як ви потрапили до царства Кошмару, ви помітили, що ваші прищі погіршилися. Вважається, що цитрит підвищує рівень радіації, що викликає прищі. Позбудься його!"],
+			min_required_dependencies: 0,
+			dependencies: [I;363],
+			dependency_requirement: "all_completed",
+			id: 365,
+			tasks: [{
+				id: 366,
+				type: "item",
+				item: "goodnightsleep:zitrite_ingot",
+				count: 32L
+			}],
+			rewards: [
+				{
+					id: 1837,
+					type: "item",
+					title: "212500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 212500
+						}
+					}
+				},
+				{
+					id: 2552,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Негативна карма",
+			x: 7.5d,
+			y: 7.5d,
+			shape: "rsquare",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Ви відчуваєте велике порушення балансу позитивних і негативних енергій. Збирайте негатитові геми - можливо, ви зможете щось зробити з негатитовими гемами.",
+				"Тримаючи в руках негативні геми, ви можете навчитися отримувати доступ до нового світу..."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;
+				365,
+				390
+			],
+			dependency_requirement: "all_completed",
+			id: 367,
+			tasks: [{
+				id: 368,
+				type: "item",
+				item: "goodnightsleep:negatite_gem",
+				count: 2L
+			}],
+			rewards: [
+				{
+					id: 1838,
+					type: "item",
+					title: "275000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 275000
+						}
+					}
+				},
+				{
+					id: 2090,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2556,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Вогонь!",
+			x: 4.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Лоббери - це огидний тип створінь, яких можна зустріти в лаві. Вони з'являються у світі Кошмару."],
+			min_required_dependencies: 0,
+			dependencies: [I;360],
+			dependency_requirement: "all_completed",
+			id: 369,
+			tasks: [{
+				id: 370,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:brutespawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "lobber"
+						}
+					}
+				},
+				entity: "lycanitesmobs:lobber",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 1835,
+					type: "item",
+					title: "200000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				},
+				{
+					id: 2553,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Неприємні моменти",
+			x: 4.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Behemoth's форма з негативної енергії, що міститься у світі Кошмару. Ви знайдете їх по всьому світі в будь-якому біомі."],
+			min_required_dependencies: 0,
+			dependencies: [I;369],
+			dependency_requirement: "all_completed",
+			id: 371,
+			tasks: [{
+				id: 372,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:demonspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "behemoth"
+						}
+					}
+				},
+				entity: "lycanitesmobs:behemoth",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 1830,
+					type: "item",
+					title: "250000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2554,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Застеляй ліжко",
+			x: 1.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Застеливши розкішне ліжко своїм позитивним гемом, ви отримаєте вільний доступ до виміру хороших снів, не турбуючись про те, що вам насняться кошмари."],
+			min_required_dependencies: 0,
+			dependencies: [I;344],
+			dependency_requirement: "all_completed",
+			id: 373,
+			tasks: [{
+				id: 374,
+				type: "item",
+				item: "goodnightsleep:luxurious_bed_item"
+			}],
+			rewards: [
+				{
+					id: 1821,
+					type: "item",
+					title: "87500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 87500
+						}
+					}
+				},
+				{
+					id: 2540,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Солодкоїжка",
+			x: 1.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Оскільки ми вже тут, давайте зберемо деякі смаколики з місцевих ласощів... Почнемо з льодяників! Збирайте льодяники з льодяникових кущів."],
+			min_required_dependencies: 0,
+			dependencies: [I;373],
+			dependency_requirement: "all_completed",
+			id: 375,
+			tasks: [{
+				id: 376,
+				type: "item",
+				item: "goodnightsleep:lolipop",
+				count: 32L
+			}],
+			rewards: [
+				{
+					id: 1824,
+					type: "item",
+					title: "100000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 100000
+						}
+					}
+				},
+				{
+					id: 2541,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "В Задумі",
+			x: 3.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У цьому світі снів дуже спокійно. Це для того, щоб спочатку спробувати знайти підказки. Спробуйте збирати природні матеріали, щоб проаналізувати їхні компоненти."],
+			min_required_dependencies: 0,
+			dependencies: [I;373],
+			dependency_requirement: "all_completed",
+			id: 378,
+			tasks: [
+				{
+					id: 379,
+					type: "item",
+					item: "goodnightsleep:dream_plank",
+					count: 64L
+				},
+				{
+					id: 380,
+					type: "item",
+					item: "goodnightsleep:dream_dirt",
+					count: 32L
+				},
+				{
+					id: 381,
+					type: "item",
+					item: "goodnightsleep:white_plank",
+					count: 64L
+				}
+			],
+			rewards: [
+				{
+					id: 1822,
+					type: "item",
+					title: "125000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 125000
+						}
+					}
+				},
+				{
+					id: 2543,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Єдинороги...",
+			x: 4.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Можливо, вбивство найчистішої істоти дасть підказки..."],
+			min_required_dependencies: 0,
+			dependencies: [I;378],
+			dependency_requirement: "all_completed",
+			id: 382,
+			tasks: [{
+				id: 383,
+				type: "kill",
+				icon: "quark:rainbow_rune",
+				entity: "goodnightsleep:unicorn",
+				value: 10L
+			}],
+			rewards: [
+				{
+					id: 1823,
+					type: "item",
+					title: "150000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 150000
+						}
+					}
+				},
+				{
+					id: 2544,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Кенділенд.",
+			x: 3.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Солодка руда? Може це пов'язано з кошмарами... Точно. Я знайшов трохи руди і переплавив її на цукерки, щоб дізнатися... для дослідження."],
+			min_required_dependencies: 0,
+			dependencies: [I;378],
+			dependency_requirement: "all_completed",
+			id: 384,
+			tasks: [{
+				id: 385,
+				type: "item",
+				item: "goodnightsleep:candy",
+				count: 32L
+			}],
+			rewards: [
+				{
+					id: 1825,
+					type: "item",
+					title: "137500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 137500
+						}
+					}
+				},
+				{
+					id: 2545,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Залишатися на Позитиві",
+			x: 7.5d,
+			y: 1.5d,
+			shape: "rsquare",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Позититові геми випромінюють позитивну енергію. Можливо, зібравши кілька з них, ми зрозуміємо, як відновити баланс.",
+				"Тримаючи в руках позитивні геми, ви можете дізнатися, як отримати доступ до нового світу..."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;388],
+			dependency_requirement: "all_completed",
+			id: 386,
+			tasks: [{
+				id: 387,
+				type: "item",
+				item: "goodnightsleep:positite_gem",
+				count: 16L
+			}],
+			rewards: [
+				{
+					id: 1827,
+					type: "item",
+					title: "225000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 225000
+						}
+					}
+				},
+				{
+					id: 2089,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2547,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "...І Веселка!",
+			x: 4.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У цій різнобарвній руді є червоний колір! У ній є червоний колір! Мабуть, це зло."],
+			min_required_dependencies: 0,
+			dependencies: [I;384],
+			dependency_requirement: "all_completed",
+			id: 388,
+			tasks: [{
+				id: 389,
+				type: "item",
+				item: "goodnightsleep:rainbow_ingot",
+				count: 32L
+			}],
+			rewards: [
+				{
+					id: 1826,
+					type: "item",
+					title: "162500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 162500
+						}
+					}
+				},
+				{
+					id: 2546,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Криваві сни",
+			x: 6.0d,
+			y: 6.0d,
+			shape: "circle",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Отримайте Криваву Деревину, щоб провести розвідку в Верхньому світі. Ви також можете використовувати деревину, щоб побудувати криваве ліжко!"],
+			min_required_dependencies: 0,
+			dependencies: [I;371],
+			dependency_requirement: "all_completed",
+			id: 390,
+			tasks: [
+				{
+					id: 2828,
+					type: "item",
+					item: "goodnightsleep:blood_log",
+					count: 4L
+				},
+				{
+					id: 2829,
+					type: "item",
+					item: "minecraft:red_bed"
+				}
+			],
+			rewards: [
+				{
+					id: 1831,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2555,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Насіння до щастя",
+			x: 1.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Зберіть трохи райдужного насіння, зламавши траву. Ви можете посадити це насіння, щоб зібрати райдужні ягоди!"],
+			min_required_dependencies: 0,
+			dependencies: [I;375],
+			dependency_requirement: "all_completed",
+			id: 502,
+			tasks: [{
+				id: 503,
+				type: "item",
+				item: "goodnightsleep:rainbow_seeds",
+				count: 32L
+			}],
+			rewards: [{
+				id: 1828,
+				type: "item",
+				title: "112500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 112500
+					}
+				}
+			}]
+		},
+		{
+			title: "Повна Арка",
+			x: 1.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Райдужні ягоди смачні, ситні та гарні на вигляд. І це ще не все!"],
+			min_required_dependencies: 0,
+			dependencies: [I;502],
+			dependency_requirement: "all_completed",
+			id: 504,
+			tasks: [{
+				id: 505,
+				type: "item",
+				item: "goodnightsleep:rainbow_berries",
+				count: 64L
+			}],
+			rewards: [
+				{
+					id: 1829,
+					type: "item",
+					title: "125000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 125000
+						}
+					}
+				},
+				{
+					id: 2542,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Good Dream Lord (Рів. 45)",
+			x: 9.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Виконайте ритуал виклику Asmodeus, побудувавши вівтар Asmodeus. Схему можна знайти у Вікі!",
+				"Викликати Асмодея можна лише у світі Гарних Снів."
+			],
+			min_required_dependencies: 1,
+			dependencies: [I;386],
+			dependency_requirement: "all_completed",
+			id: 486,
+			tasks: [{
+				id: 487,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:aberrationspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "asmodeus"
+						}
+					}
+				},
+				entity: "lycanitesmobs:asmodeus",
+				value: 1L
+			}],
+			rewards: [
+				{
+					id: 1786,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2111,
+					type: "item",
+					item: "calemiutils:coin_dollar"
+				},
+				{
+					id: 2510,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Beastiary VII",
+			icon: "minecraft:writable_book",
+			x: 1.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Знайдіть і вбийте епіонів у цьому світі.",
+				"Якщо вам не вдалося знайти жодного, ви можете спробувати викликати їх за допомогою Посоху виклику ліканітів. Викличте правильних первісних елементалів, щоб об'єднати їх у цю істоту!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;378],
+			dependency_requirement: "all_completed",
+			id: 2801,
+			tasks: [{
+				id: 2802,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:beastspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "epion"
+						}
+					}
+				},
+				entity: "lycanitesmobs:epion",
+				value: 4L
+			}],
+			rewards: [{
+				id: 2811,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 150000
+					}
+				}
+			}]
+		},
+		{
+			title: "Beastiary VIII",
+			icon: "minecraft:writable_book",
+			x: 3.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Знайдіть і вбийте Сильфів у цьому світі.",
+				"Якщо вам не вдалося знайти жодного, ви можете спробувати викликати їх за допомогою Посоху виклику ліканітів. Викличте потрібних первісних елементалів, щоб об'єднати їх у цю істоту!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;378],
+			dependency_requirement: "all_completed",
+			id: 2803,
+			tasks: [{
+				id: 2804,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:elementalspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "sylph"
+						}
+					}
+				},
+				entity: "lycanitesmobs:sylph",
+				value: 4L
+			}],
+			rewards: [{
+				id: 2812,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 150000
+					}
+				}
+			}]
+		},
+		{
+			title: "Beastiary IX",
+			icon: "minecraft:writable_book",
+			x: 4.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Знайдіть і вбийте Вапулу в цьому світі.",
+				"Якщо вам не вдалося знайти жодного, ви можете спробувати викликати їх за допомогою Посоху виклику ліканітів. Викличте потрібних первісних елементалів, щоб об'єднати їх у цю істоту!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;378],
+			dependency_requirement: "all_completed",
+			id: 2805,
+			tasks: [{
+				id: 2806,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:elementalspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "vapula"
+						}
+					}
+				},
+				entity: "lycanitesmobs:vapula",
+				value: 4L
+			}],
+			rewards: [{
+				id: 2813,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 150000
+					}
+				}
+			}]
+		},
+		{
+			title: "Nightmare Lord (Lv. 45)",
+			x: 9.0d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Виконайте ритуал виклику Rahovart, побудувавши вівтар Rahovart. Зверніться до Вікі за схемою!",
+				"Викликати Rahovart можна лише у світі Кошмарів."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;367],
+			dependency_requirement: "all_completed",
+			id: 2814,
+			tasks: [{
+				id: 2815,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:demonspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "rahovart"
+						}
+					}
+				},
+				entity: "lycanitesmobs:rahovart",
+				value: 1L
+			}],
+			rewards: [
+				{
+					id: 2816,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 300000
+						}
+					}
+				},
+				{
+					id: 2817,
+					type: "item",
+					item: "calemiutils:coin_dollar"
+				},
+				{
+					id: 2818,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 45,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		}
+	]
+}

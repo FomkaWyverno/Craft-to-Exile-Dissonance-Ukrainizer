@@ -1,0 +1,689 @@
+{
+	id: 392,
+	filename: "actvimidnight",
+	order_index: 8,
+	title: "Act VIb: Midnight",
+	icon: "midnight:dark_pearl",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Вічна темрява",
+			icon: "midnight:dark_pearl",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"The Midnight - це світ ендгейму, до якого важко дістатися і в якому важко вижити. Знайдіть велику купу злоякісних червоних рослинних блоків у Верхньому світі - вночі вони створять портал, який дозволить вам потрапити в Midnight.",
+				"Зауважте, що ви не зможете повернутися через портал, якщо у верхньому світі також не настане ніч.",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Nightmare Lord" в Акті V.'
+			],
+			min_required_dependencies: 1,
+			dependencies: [I;2814],
+			dependency_requirement: "all_completed",
+			id: 393,
+			tasks: [{
+				id: 394,
+				type: "dimension",
+				title: "Visit Dimension: Midnight",
+				dimension: "midnight:midnight"
+			}],
+			rewards: [{
+				id: 1839,
+				type: "item",
+				title: "225000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 225000
+					}
+				}
+			}]
+		},
+		{
+			title: "У Пошуках Ріфтерів.",
+			x: 1.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ['Ріфтери займають важливе місце в "Midnight". Можливо, вбивши їх, ви отримаєте підказку, як повернутися назад.'],
+			min_required_dependencies: 0,
+			dependencies: [I;393],
+			dependency_requirement: "all_completed",
+			id: 395,
+			tasks: [{
+				id: 396,
+				type: "kill",
+				entity: "midnight:rifter",
+				value: 20L
+			}],
+			rewards: [
+				{
+					id: 1840,
+					type: "item",
+					title: "312500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 312500
+						}
+					}
+				},
+				{
+					id: 2573,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Пішов ти!",
+			x: 1.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Кришталеві жуки (Crystal Bugs) всюди! Як підказує їхня назва, знайдіть найяскравіший біом в Midnight. Вуаля!",
+				"Підказка: кришталеві списи дуже яскраві..."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;393],
+			dependency_requirement: "all_completed",
+			id: 397,
+			tasks: [{
+				id: 398,
+				type: "kill",
+				entity: "midnight:crystal_bug",
+				value: 24L
+			}],
+			rewards: [
+				{
+					id: 1841,
+					type: "item",
+					title: "312500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 312500
+						}
+					}
+				},
+				{
+					id: 2574,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Це не Bumblezone.",
+			x: 1.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ці крихітні істоти, схожі на скорпіонів, мають достатньо отрути в жалі, щоб вбити вас за 10 секунд... якщо нічого не зробити."],
+			min_required_dependencies: 0,
+			dependencies: [I;393],
+			dependency_requirement: "all_completed",
+			id: 399,
+			tasks: [{
+				id: 400,
+				type: "kill",
+				entity: "midnight:stinger",
+				value: 18L
+			}],
+			rewards: [
+				{
+					id: 1842,
+					type: "item",
+					title: "312500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 312500
+						}
+					}
+				},
+				{
+					id: 2575,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Від Тіні",
+			x: 1.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Нехай вас не вводить в оману чарівний погляд цих створінь. Кажуть, що скалки приносять більше нещасть тим, кому вони перетинаються, ніж чорні коти. Будьте обережні, скалки мають здатність зливатися з навколишнім середовищем."],
+			min_required_dependencies: 0,
+			dependencies: [I;393],
+			dependency_requirement: "all_completed",
+			id: 401,
+			tasks: [{
+				id: 402,
+				type: "kill",
+				entity: "midnight:skulk",
+				value: 20L
+			}],
+			rewards: [
+				{
+					id: 1846,
+					type: "item",
+					title: "312500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 312500
+						}
+					}
+				},
+				{
+					id: 2576,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Дотримуйтесь основ",
+			x: 0.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ви відчуваєте силу, що виходить від усього - навіть від дерев. Принесіть кілька паличок, і, можливо, джерело енергії вдасться дослідити."],
+			min_required_dependencies: 0,
+			dependencies: [I;393],
+			dependency_requirement: "all_completed",
+			id: 403,
+			tasks: [{
+				id: 404,
+				type: "item",
+				item: "midnight:dark_stick",
+				count: 64L
+			}],
+			rewards: [
+				{
+					id: 1847,
+					type: "item",
+					title: "250000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2578,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Обсидіан?",
+			x: 1.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Nightstone родом з Midnight. Ходять чутки, що якщо вдивлятися в нічний камінь занадто довго, то можна поринути у вічну темряву."],
+			min_required_dependencies: 0,
+			dependencies: [I;403],
+			dependency_requirement: "all_completed",
+			id: 405,
+			tasks: [{
+				id: 406,
+				type: "item",
+				item: "midnight:nightstone",
+				count: 64L
+			}],
+			rewards: [
+				{
+					id: 1848,
+					type: "item",
+					title: "250000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2579,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Поганий вид грибів",
+			x: 3.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Рок-н-рол! Ці гриби виглядають радикально... Давайте візьмемо кілька для НАУКИ."],
+			min_required_dependencies: 0,
+			dependencies: [I;405],
+			dependency_requirement: "all_completed",
+			id: 407,
+			tasks: [{
+				id: 408,
+				type: "item",
+				item: "midnight:rockshroom_clump",
+				count: 64L
+			}],
+			rewards: [
+				{
+					id: 1849,
+					type: "item",
+					title: "250000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2580,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Розломи Міднайту",
+			x: 4.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ['Ебонітова руда буквально означає "чорна руда". Вона навіть темніша за nightstone, тож, мабуть, буде гарною ідеєю взяти те, що нам потрібно, і піти геть.'],
+			min_required_dependencies: 0,
+			dependencies: [I;407],
+			dependency_requirement: "all_completed",
+			id: 409,
+			tasks: [{
+				id: 410,
+				type: "item",
+				item: "midnight:ebonite",
+				count: 48L
+			}],
+			rewards: [
+				{
+					id: 1850,
+					type: "item",
+					title: "250000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2581,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Суцільна темрява",
+			x: 6.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Нагріліт має унікальну властивість: він темний і блискучий!"],
+			min_required_dependencies: 0,
+			dependencies: [I;409],
+			dependency_requirement: "all_completed",
+			id: 411,
+			tasks: [{
+				id: 412,
+				type: "item",
+				item: "midnight:nagrilite_ingot",
+				count: 32L
+			}],
+			rewards: [
+				{
+					id: 1851,
+					type: "item",
+					title: "250000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2582,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Тенебрум",
+			x: 7.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Тенебрум: темрява. Після кування темрява в цьому металі поглинає світло, роблячи його непроникним для святих атак."],
+			min_required_dependencies: 0,
+			dependencies: [I;411],
+			dependency_requirement: "all_completed",
+			id: 413,
+			tasks: [{
+				id: 414,
+				type: "item",
+				item: "midnight:tenebrum_ingot",
+				count: 32L
+			}],
+			rewards: [
+				{
+					id: 1852,
+					type: "item",
+					title: "250000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2583,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Горіння",
+			x: 7.5d,
+			y: 2.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Поєднавши редстоун і лазурит, ви отримаєте блок з високою потенційною енергією. Ви відчуваєте, що має бути якийсь спосіб вивільнити енергію з блоків... Якби ж то був якийсь спосіб."],
+			min_required_dependencies: 0,
+			dependencies: [I;
+				413,
+				2129
+			],
+			dependency_requirement: "all_completed",
+			id: 2127,
+			tasks: [
+				{
+					id: 2128,
+					type: "item",
+					item: {
+						id: "gaiadimension:glint_and_gold",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 2132,
+					type: "item",
+					item: "gaiadimension:keystone_block",
+					count: 10L
+				}
+			],
+			rewards: [{
+				id: 2135,
+				type: "item",
+				title: "300000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 300000
+					}
+				}
+			}]
+		},
+		{
+			title: "Очищення",
+			x: 4.5d,
+			y: 2.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Кажуть, що спалювання редстоуну та лазуриту в печі очищає їх... Але з якою метою?",
+				"Для розблокування цього квесту потрібно завершити два залежних квеста."
+			],
+			min_required_dependencies: 2,
+			dependencies: [I;
+				395,
+				397,
+				399,
+				401
+			],
+			dependency_requirement: "all_completed",
+			id: 2129,
+			tasks: [
+				{
+					id: 2130,
+					type: "item",
+					item: "gaiadimension:crystallized_lapis_lazuli",
+					count: 4L
+				},
+				{
+					id: 2131,
+					type: "item",
+					item: "gaiadimension:crystallized_redstone",
+					count: 4L
+				}
+			],
+			rewards: [
+				{
+					id: 2134,
+					type: "item",
+					title: "300000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 300000
+						}
+					}
+				},
+				{
+					id: 2577,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Таємний світ",
+			icon: {
+				id: "gaiadimension:gaia_champion_sword",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 9.0d,
+			y: 2.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Розмістивши кейстоуни в орієнтації, схожій на незер портал, і активувавши їх за допомогою золота і діаманта, ви активуєте портал! Або... принаймні ви думаєте, що це портал.",
+				"Увійдіть у світ Гайї. Щось підказує вам, що це буде важка подорож..."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2127],
+			dependency_requirement: "all_completed",
+			id: 2136,
+			tasks: [{
+				id: 2137,
+				type: "dimension",
+				title: "Відвідайте світ: Гаї",
+				dimension: "gaiadimension:gaia"
+			}],
+			rewards: [
+				{
+					id: 2151,
+					type: "item",
+					title: "300000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 300000
+						}
+					}
+				},
+				{
+					id: 2572,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		}
+	]
+}

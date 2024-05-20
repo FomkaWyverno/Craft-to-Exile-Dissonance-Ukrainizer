@@ -1,0 +1,229 @@
+{
+	id: 1351,
+	filename: "summoning",
+	order_index: 12,
+	title: "Виклик",
+	icon: {
+		id: "lycanitesmobs:sturdysummoningstaff",
+		Count: 1b,
+		tag: {
+			Damage: 0
+		}
+	},
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Порядок",
+			icon: "lycanitesmobs:lightballcharge",
+			x: -0.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Щоб викликати істоту, ви повинні мати її у своєму бістіарію (за замовчуванням: G). Чим більше ви знаєте про істоту, тим сильнішою вона стає. Зливайте елементалів, щоб створювати сильніших елементалів!",
+				"Знайдіть аегіс (aegis), що захищає ваші села в верхньому світі."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;57],
+			dependency_requirement: "all_completed",
+			id: 1352,
+			tasks: [{
+				id: 1353,
+				type: "kill",
+				entity: "lycanitesmobs:aegis",
+				value: 3L
+			}],
+			rewards: [{
+				id: 1877,
+				type: "item",
+				title: "1500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1500
+					}
+				}
+			}]
+		},
+		{
+			title: "Хаос",
+			icon: "lycanitesmobs:demonicblastcharge",
+			x: 3.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Щоб викликати істоту, ви повинні мати її у своєму бістіарію (за замовчуванням: G). Чим більше ви знаєте про істоту, тим сильнішою вона стає. Зливайте елементалів, щоб створювати сильніших елементалів!",
+				"Знайдіть арґуса (argus) там, де панує хаос - вбийте багато елементалів у безпосередній близькості, і ви зможете їх породити. Або ж знайдіть арґуса в Енді."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;57],
+			dependency_requirement: "all_completed",
+			id: 1355,
+			tasks: [{
+				id: 1356,
+				type: "kill",
+				entity: "lycanitesmobs:argus",
+				value: 3L
+			}],
+			rewards: [{
+				id: 1878,
+				type: "item",
+				title: "1500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1500
+					}
+				}
+			}]
+		},
+		{
+			title: "Повітря",
+			icon: "lycanitesmobs:whirlwindcharge",
+			x: 0.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Щоб викликати істоту, ви повинні мати її у своєму бістіарії (за замовчуванням: G). Чим більше ви знаєте про істоту, тим сильнішою вона стає. Зливайте елементалів, щоб створювати сильніших елементалів!",
+				"Знаходьте джинів на великих висотах у більшості світів."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;57],
+			dependency_requirement: "all_completed",
+			id: 1358,
+			tasks: [{
+				id: 1359,
+				type: "kill",
+				entity: "lycanitesmobs:djinn",
+				value: 3L
+			}],
+			rewards: [{
+				id: 1875,
+				type: "item",
+				title: "1500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1500
+					}
+				}
+			}]
+		},
+		{
+			title: "Вогонь",
+			icon: "lycanitesmobs:embercharge",
+			x: 2.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Щоб викликати істоту, ви повинні мати її у своєму бістіарії  (за замовчуванням: G). Чим більше ви знаєте про істоту, тим сильнішою вона стає. Зливайте елементалів, щоб створювати сильніших елементалів!",
+				"Знайдіть Cinder у Незер - там ви знайдете полум'я."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;57],
+			dependency_requirement: "all_completed",
+			id: 1361,
+			tasks: [{
+				id: 1362,
+				type: "kill",
+				entity: "lycanitesmobs:cinder",
+				value: 3L
+			}],
+			rewards: [{
+				id: 1876,
+				type: "item",
+				title: "1500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1500
+					}
+				}
+			}]
+		},
+		{
+			title: "Вода",
+			icon: "lycanitesmobs:aquapulsecharge",
+			x: 0.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Щоб викликати істоту, ви повинні мати її у своєму бістіарію (за замовчуванням: G). Чим більше ви знаєте про істоту, тим сильнішою вона стає. Зливайте елементалів, щоб створювати сильніших елементалів!",
+				"Знайдіть дженгу (jengu) в глибоких підводних печерах у світі Гарних снів."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;57],
+			dependency_requirement: "all_completed",
+			id: 1364,
+			tasks: [{
+				id: 1365,
+				type: "kill",
+				entity: "lycanitesmobs:jengu",
+				value: 3L
+			}],
+			rewards: [{
+				id: 1879,
+				type: "item",
+				title: "1500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1500
+					}
+				}
+			}]
+		},
+		{
+			title: "Земля",
+			icon: "lycanitesmobs:mudshotcharge",
+			x: 2.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Щоб викликати істоту, ви повинні мати її у своєму бістіарію (за замовчуванням: G). Чим більше ви знаєте про істоту, тим сильнішою вона стає. Зливайте елементалів, щоб створювати сильніших елементалів!",
+				"Знайдіть геонах (geonach) під час видобутку руди в шахтарському світі при видобутку корисних копалин."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;57],
+			dependency_requirement: "all_completed",
+			id: 1367,
+			tasks: [{
+				id: 1368,
+				type: "kill",
+				entity: "lycanitesmobs:geonach",
+				value: 3L
+			}],
+			rewards: [{
+				id: 1880,
+				type: "item",
+				title: "1500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1500
+					}
+				}
+			}]
+		}
+	]
+}

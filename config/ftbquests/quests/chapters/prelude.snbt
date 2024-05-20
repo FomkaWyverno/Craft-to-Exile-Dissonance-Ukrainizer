@@ -1,0 +1,2615 @@
+{
+	id: 2,
+	filename: "prelude",
+	order_index: 1,
+	title: "Вступ: Верхній світ",
+	icon: "minecraft:grass_block",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Початок",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Ласкаво просимо до Craft to Exile! проходження цих квестів має на меті надати вам певні вказівки щодо того, куди рухатися далі. Для початку рекомендується провести легку розвідку Верхнього світу, як ви робите це зазвичай, і розбити табір.",
+				"Будь ласка, не забувайте забирати винагороди по мірі просування!",
+				"Не забувайте, що ви можете закріпити квести, щоб вони відображалися на вашому ігровому HUD! Основні квести позначені квадратиками із закругленими краями.",
+				"",
+				"Переклад квестів від Fomka_Wyverno",
+				"Дискорд автора перекладу - https://discord.gg/CdB79Vy"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;],
+			dependency_requirement: "all_completed",
+			id: 3,
+			tasks: [{
+				id: 4,
+				type: "item",
+				item: "minecraft:crafting_table"
+			}],
+			rewards: [
+				{
+					id: 5,
+					type: "item",
+					item: {
+						id: "minecraft:apple",
+						Count: 5b
+					}
+				},
+				{
+					id: 6,
+					type: "item",
+					item: "mmorpg:newbie_gear_bag"
+				},
+				{
+					id: 15,
+					type: "item",
+					item: {
+						id: "mmorpg:ore0",
+						Count: 3b
+					}
+				},
+				{
+					id: 1715,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 375
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Сенс",
+			icon: {
+				id: "minecraft:wooden_sword",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 1.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Ви могли помітити мішок у вашому інвентарі - клацніть правою кнопкою миші, щоб використати його. У Craft to Exile спорядження можна отримати, в основному, вбиваючи мобів. Крафтове спорядження можна використовувати, але його потужність буде обмежена.",
+				"Випавше спорядження залежить від рівня мобів, тож чим сильніші моби, тим краще спорядження! Спробуйте вбити кілька скелетів (не Nasty скелетів!) - сподіваємось, ви знайдете нове спорядження.",
+				"Примітка: наразі графічний інтерфейс квестів містить баги. Ви можете закріпити квести до графічного інтерфейсу, якщо ви не знаєте, що саме вам потрібно вбити/зібрати."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 7,
+			tasks: [{
+				id: 8,
+				type: "kill",
+				icon: "minecraft:skeleton_skull",
+				entity: "minecraft:skeleton",
+				value: 2L
+			}],
+			rewards: [
+				{
+					id: 1716,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 750
+						}
+					}
+				},
+				{
+					id: 2482,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 5,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Стаємо сильнішими",
+			icon: "minecraft:experience_bottle",
+			x: 3.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Б'ючись з мобами та виконуючи квести, ви зароблятимете досвід. Коли ви наберете достатньо досвіду, ви підвищите свій рівень і станете сильнішим. З підвищенням рівня ви зароблятимете очки статистики, очки навичок та таланту.",
+				"Натисніть 'H', щоб відкрити головне меню Mine And Slash, де ви зможете розподілити свої очки та відповідно налаштувати персонажа! Не хвилюйтеся, що ви зіпсуєте свою статистику, адже зілля для скидання будуть доступні пізніше в грі.",
+				"Вбивайте зомбі, скелетів і кріперів!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;7],
+			dependency_requirement: "all_completed",
+			id: 10,
+			tasks: [
+				{
+					id: 11,
+					type: "kill",
+					icon: "minecraft:skeleton_skull",
+					entity: "minecraft:skeleton",
+					value: 4L
+				},
+				{
+					id: 12,
+					type: "kill",
+					icon: "minecraft:zombie_head",
+					entity: "minecraft:zombie",
+					value: 2L
+				},
+				{
+					id: 13,
+					type: "kill",
+					icon: "minecraft:creeper_head",
+					entity: "minecraft:creeper",
+					value: 1L
+				}
+			],
+			rewards: [
+				{
+					id: 14,
+					type: "item",
+					item: {
+						id: "mmorpg:identify_tome",
+						Count: 8b
+					}
+				},
+				{
+					id: 1720,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Модифікатори",
+			x: 4.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Модифікатори - це потужні предмети з можливістю перекидання статів на вашому спорядженні. Для того, щоб їх використовувати, ви повинні створити станцію модифікації."],
+			min_required_dependencies: 0,
+			dependencies: [I;10],
+			dependency_requirement: "all_completed",
+			id: 16,
+			tasks: [{
+				id: 17,
+				type: "item",
+				title: "1x Orb of Transmutation",
+				item: "mmorpg:currency/orb_of_transmutation"
+			}],
+			rewards: [
+				{
+					id: 1721,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				},
+				{
+					id: 2485,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Руди",
+			x: 1.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У Craft to Exile можна добути особливі руди у верхньому світі. Ці особливі руди мають різну рідкість і можуть бути використані для ремонту обладнання або створення спеціальних предметів. За додатковою інформацією зверніться до JEI."],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 19,
+			tasks: [{
+				id: 20,
+				type: "item",
+				item: "mmorpg:ore0",
+				count: 25L
+			}],
+			rewards: [
+				{
+					id: 21,
+					type: "item",
+					item: {
+						id: "mmorpg:ore0",
+						Count: 20b
+					}
+				},
+				{
+					id: 1726,
+					type: "item",
+					title: "750 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 750
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Зламані шаблі",
+			x: 1.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"За допомогою Ремонтної Станції ви можете ремонтувати обладнення, використовуючи руду. Крім того, в Ремонтну Станцію можна покласти конденсатори, щоб підвищити ефективність ремонту рудою. Примітка: звичайна руда є ДУЖЕ неефективною, вам слід використо",
+				"Ви також можете використовувати ванільні злитки, такі як Залізо, Золото та Діамант, щоб поповнити запаси палива на Ремонтній Станції!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;19],
+			dependency_requirement: "all_completed",
+			id: 22,
+			tasks: [{
+				id: 23,
+				type: "item",
+				item: "mmorpg:repair_station"
+			}],
+			rewards: [
+				{
+					id: 24,
+					type: "item",
+					item: "mmorpg:capacitor0"
+				},
+				{
+					id: 1736,
+					type: "item",
+					title: "3000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 3000
+						}
+					}
+				},
+				{
+					id: 2633,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "strength_req_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				},
+				{
+					id: 2705,
+					type: "item",
+					item: {
+						id: "minecraft:gold_ingot",
+						Count: 8b
+					}
+				}
+			]
+		},
+		{
+			title: "Індефікуй, будь ласка.",
+			x: 4.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ви часто зустрічаєте неідентифіковане обладнання, яке потрібно ідентифікувати, щоб побачити його статистику. Ідентифікаційні томи - це розхідні предмети, які ідентифікують найбільш верхній правий неідентифікований предмет у вашому інвентарі."],
+			min_required_dependencies: 0,
+			dependencies: [I;10],
+			dependency_requirement: "all_completed",
+			id: 25,
+			tasks: [{
+				id: 26,
+				type: "item",
+				item: "mmorpg:identify_tome",
+				count: 10L
+			}],
+			rewards: [
+				{
+					id: 55,
+					type: "item",
+					item: "mmorpg:ore1"
+				},
+				{
+					id: 1727,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1750
+						}
+					}
+				},
+				{
+					id: 2634,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "wisdom_req_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Алгоритми оптимізації",
+			x: 1.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Встановлення конденсаторів у Ремонтні Станції - це чудовий спосіб підвищити ефективність використання руди. Чи знаєте ви, що кращі конденсатори ще ефективніші?"],
+			min_required_dependencies: 0,
+			dependencies: [I;22],
+			dependency_requirement: "all_completed",
+			id: 29,
+			tasks: [{
+				id: 30,
+				type: "item",
+				item: "mmorpg:capacitor2"
+			}],
+			rewards: [
+				{
+					id: 33,
+					type: "item",
+					item: {
+						id: "mmorpg:ore2",
+						Count: 3b
+					}
+				},
+				{
+					id: 1739,
+					type: "item",
+					title: "6000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 6000
+						}
+					}
+				},
+				{
+					id: 2490,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Крафтове обладнання",
+			x: 3.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"У Craft to Exile можна створювати спорядження. Не соромтеся створювати спорядження, якщо ви в складному становищі. Зроблене спорядження також підпорядковується системі прогресування.",
+				" Загалом, спорядження сильніших характеристик призначене для вищих рівнів.",
+				"Для отримання додаткової інформації, будь ласка, відвідайте вікі."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;22],
+			dependency_requirement: "all_completed",
+			id: 36,
+			tasks: [
+				{
+					id: 37,
+					type: "item",
+					item: {
+						id: "minecraft:iron_helmet",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 38,
+					type: "item",
+					item: {
+						id: "minecraft:iron_chestplate",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 39,
+					type: "item",
+					item: {
+						id: "minecraft:iron_leggings",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 40,
+					type: "item",
+					item: {
+						id: "minecraft:iron_boots",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			],
+			rewards: [
+				{
+					id: 41,
+					type: "item",
+					item: {
+						id: "minecraft:iron_sword",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 42,
+					type: "item",
+					item: {
+						id: "minecraft:crossbow",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1737,
+					type: "item",
+					title: "4500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 4500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Спеціалізація - стрільба з лука",
+			x: 6.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Сагайдаки - це особливий предмет у Craft to Exile, який зберігає стріли. Стріли, поміщені в сагайдак, використовуються в першу чергу. Якщо ви виймете сагайдак, то стріли з нього автоматично потраплять у ваш інвентар."],
+			min_required_dependencies: 0,
+			dependencies: [I;1948],
+			dependency_requirement: "all_completed",
+			id: 44,
+			tasks: [{
+				id: 45,
+				type: "item",
+				item: "quiver:quiver"
+			}],
+			rewards: [
+				{
+					id: 46,
+					type: "item",
+					item: {
+						id: "minecraft:arrow",
+						Count: 64b
+					}
+				},
+				{
+					id: 1740,
+					type: "item",
+					title: "4500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 4500
+						}
+					}
+				},
+				{
+					id: 2491,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "dexterity_req_crate",
+							LVL: 15,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Вкажіть Шлях",
+			x: 0.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Waystones - це мод, який дозволяє гравцеві телепортуватися між вейстоунами за допомогою варп каменів або свитків. Їх можна знайти в природних умовах у великих вежах по всьому світу. Ви можете перейменувати або налаштувати вейстоун на глобальни",
+				"Глобальний веустоун - може телепортувати між світами. Варп камінь дозволяє вам телепортуватися до будь-якого вейстоуну, але за певну ціну. Він має довший час перезарядки, ніж при використанні свитків."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 48,
+			tasks: [{
+				id: 49,
+				type: "item",
+				item: {
+					id: "waystones:warp_stone",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 50,
+					type: "item",
+					item: "minecraft:ender_pearl"
+				},
+				{
+					id: 1744,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Аспект виклику",
+			x: 1.5d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Виконайте цей квест, щоб відкрити вкладку квесту виклику. Виклик мобів-ліканітів повністю підтримується в Craft to Exile. Вартість виклику залежить від вашого рівня та рівня шкоди. У CtE ви можете викликати лише первісних елементалів.",
+				"Однак, можна викликати 2 елементалів одночасно і змусити їх злитися в більш потужного елементаля.",
+				"Натисніть на звіра (за замовчуванням: G), щоб змінити елементаля, який буде екіпірований у слот виклику, і утримуйте посох правою кнопкою миші, щоб відкрити портал для виклику елементаля."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2057],
+			dependency_requirement: "all_completed",
+			id: 57,
+			tasks: [{
+				id: 58,
+				type: "item",
+				item: {
+					id: "lycanitesmobs:sturdysummoningstaff",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 1722,
+					type: "item",
+					title: "1500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1500
+						}
+					}
+				},
+				{
+					id: 2493,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Модернізація обладнання",
+			x: 3.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["За допомогою Станції Модифікації ви можете покращити або переролить статистику свого спорядження, використовуючи модифікатори, які випадають з мобів. Змайструй її скоріше!"],
+			min_required_dependencies: 0,
+			dependencies: [I;19],
+			dependency_requirement: "all_completed",
+			id: 60,
+			tasks: [{
+				id: 61,
+				type: "item",
+				item: "mmorpg:modify_station"
+			}],
+			rewards: [
+				{
+					id: 62,
+					type: "item",
+					item: {
+						id: "mmorpg:identify_tome",
+						Count: 8b
+					}
+				},
+				{
+					id: 1728,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "The Bumblezone",
+			icon: "minecraft:bee_nest",
+			x: 3.0d,
+			y: -1.5d,
+			shape: "circle",
+			subtitle: "Оптимально",
+			size: 1.0d,
+			description: [
+				"Craft to Exile зосереджена навколо системи прогресії світів. У той час як у Верхньому світі ви можете перебувати до 30-го рівня, The Bumblezone є рекомендованою зоною для 14-18-го рівнів. Рекомендовані рівні для кожного світу наступні:",
+				"Верхній світ (1-30), The Bumblezone (14-18), Незер (16-26), Енд (26-30), Атум (30-40), Good Night's Sleep (40-50), Tropicraft & Midnight (50-58), Gaia (58-74), Мапи (30-99).",
+				"Щоб потрапити до The Bumblezone, киньте Ендерперлину в будь-яке бджолине гніздо або вулик. Ви можете покинути The Bumblezone, підкопавшись або піднявшись вище Y = 256.",
+				"The Bumblezone є необов'язковим світом. Якщо ви хочете пропустити його, то можете пройти Довгий маршрут, щоб потрапити до Незеру!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;10],
+			dependency_requirement: "all_completed",
+			id: 64,
+			tasks: [{
+				id: 247,
+				type: "dimension",
+				title: "Відвідайте світ: The Bumblezone",
+				dimension: "the_bumblezone:bumblezone"
+			}],
+			rewards: [
+				{
+					id: 66,
+					type: "item",
+					item: {
+						id: "mmorpg:ore0",
+						Count: 10b
+					}
+				},
+				{
+					id: 1729,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2500
+						}
+					}
+				},
+				{
+					id: 2101,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2631,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "ДУЖЕ. БАГАТО. ЛУТА.",
+			x: 4.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Маєте проблеми зі зберіганням награбованого? Шукати далі не треба! Ви можете створити Станцію Утилізації, щоб перетворити невикористане спорядження на руду! Зверніть увагу: це не спрацює з крафтовим спорядженням."],
+			min_required_dependencies: 0,
+			dependencies: [I;60],
+			dependency_requirement: "all_completed",
+			id: 68,
+			tasks: [{
+				id: 69,
+				type: "item",
+				item: "mmorpg:salvage_station"
+			}],
+			rewards: [
+				{
+					id: 70,
+					type: "item",
+					item: {
+						id: "minecraft:diamond",
+						Count: 3b
+					}
+				},
+				{
+					id: 1738,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2250
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Все ще забагато...",
+			x: 6.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ви можете створити рюкзак для модифікаторів та спорядження, які автоматично підбиратимуть для вас модифікатори та спорядження, забезпечуючи при цьому додаткове місце для зберігання під час пригод. Рецепт виготовлення шукайте в JEI!"],
+			min_required_dependencies: 0,
+			dependencies: [I;68],
+			dependency_requirement: "all_completed",
+			id: 72,
+			tasks: [
+				{
+					id: 73,
+					type: "item",
+					item: "mmorpg:loot_bag"
+				},
+				{
+					id: 74,
+					type: "item",
+					item: "mmorpg:currency_bag"
+				}
+			],
+			rewards: [
+				{
+					id: 77,
+					type: "item",
+					item: {
+						id: "mmorpg:ore2",
+						Count: 3b
+					}
+				},
+				{
+					id: 1741,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 4000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Рюкзак майстра",
+			x: 6.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Поєднання трьох типів рюкзаків створить Майстер-рюкзак!"],
+			min_required_dependencies: 0,
+			dependencies: [I;72],
+			dependency_requirement: "all_completed",
+			id: 75,
+			tasks: [{
+				id: 76,
+				type: "item",
+				item: "mmorpg:master_bag"
+			}],
+			rewards: [
+				{
+					id: 1742,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 10000
+						}
+					}
+				},
+				{
+					id: 2489,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Я більше не можу.",
+			x: -1.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Іноді вам просто потрібне старе добре рішення для зберігання речей у подорожі. Ви можете створити рюкзак та отримати доступ до нього за допомогою V!",
+				"Примітка: НЕ переходьте у творчий режим з рюкзаком в інвентарі. Це може очистити рюкзак!"
+			],
+			hide_dependency_lines: false,
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "one_completed",
+			id: 91,
+			tasks: [{
+				id: 92,
+				type: "item",
+				item: "usefulbackpacks:backpack_small"
+			}],
+			rewards: [
+				{
+					id: 93,
+					type: "item",
+					item: "minecraft:diamond"
+				},
+				{
+					id: 1723,
+					type: "item",
+					title: "1500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1500
+						}
+					}
+				},
+				{
+					id: 2487,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Щит Героя",
+			x: 4.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У Craft to Exile ви можете створювати щити, якщо вам терміново потрібна швидка допомога. Створені щити мають вільну послідовність: Щит -> Щит з медового кришталю -> Щит з важкої сталі -> Щит з кам'яного гриба."],
+			min_required_dependencies: 0,
+			dependencies: [I;36],
+			dependency_requirement: "all_completed",
+			id: 424,
+			tasks: [{
+				id: 425,
+				type: "item",
+				item: {
+					id: "minecraft:shield",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 679,
+					type: "item",
+					item: {
+						id: "mmorpg:ore1",
+						Count: 15b
+					}
+				},
+				{
+					id: 1730,
+					type: "item",
+					title: "2250 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2250
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Рішення для зберігання",
+			x: -3.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Storage Drawers - це мод, який значно спрощує сортування вашого лута! Використовуйте контейнери для маркування та автоматичного сортування предметів і не тільки! Відвідайте вікі, щоб побачити всі можливості Storage Drawers!"],
+			min_required_dependencies: 0,
+			dependencies: [I;91],
+			dependency_requirement: "all_completed",
+			id: 426,
+			tasks: [{
+				id: 427,
+				type: "item",
+				item: "storagedrawers:oak_full_drawers_1"
+			}],
+			rewards: [
+				{
+					id: 677,
+					type: "item",
+					item: "storagedrawers:oak_half_drawers_1"
+				},
+				{
+					id: 1724,
+					type: "item",
+					title: "1875 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1875
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Окарина Часу",
+			x: -3.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ['Ocarina - це потужний інструмент, схожий на ласо, який можна створювати. Підкравшись і клацнувши правою кнопкою миші по дружній істоті, ви можете "забрати" його з собою. Клацніть правою кнопкою миші ще раз, щоб притягнути істоту до себе. Цей елемент '],
+			min_required_dependencies: 0,
+			dependencies: [I;2330],
+			dependency_requirement: "all_completed",
+			id: 428,
+			tasks: [{
+				id: 429,
+				type: "item",
+				item: {
+					id: "dwmh:ocarina",
+					Count: 1b,
+					tag: {}
+				}
+			}],
+			rewards: [
+				{
+					id: 681,
+					type: "item",
+					item: "minecraft:saddle"
+				},
+				{
+					id: 1731,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 4500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Буфлонські Гори",
+			x: -3.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Bufflon - унікальна верхова тварина, створена Pandora's Creatures. Їх можна налаштувати за допомогою спеціальних сідел для Bufflon, які можна знайти в Енді. Однак після завершення цього квесту вам буде надано базове сідло Bufflon.",
+				"Bufflon мешкає в холодних і сніжних біомах, і його можна приручити за допомогою трав'яних пучків (Herb Bundles)."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;428],
+			dependency_requirement: "all_completed",
+			id: 430,
+			tasks: [{
+				id: 431,
+				type: "item",
+				item: "pandoras_creatures:herb_bundle"
+			}],
+			rewards: [
+				{
+					id: 684,
+					type: "item",
+					item: "pandoras_creatures:bufflon_saddle"
+				},
+				{
+					id: 1732,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 7500
+						}
+					}
+				},
+				{
+					id: 2100,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Покажи Мені Шлях",
+			x: 0.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Свитки - це швидкий спосіб телепортуватися до вейстоуну. Вони одноразові, але дешевші і швидші, ніж варп камені."],
+			min_required_dependencies: 0,
+			dependencies: [I;48],
+			dependency_requirement: "all_completed",
+			id: 432,
+			tasks: [{
+				id: 433,
+				type: "item",
+				item: "waystones:return_scroll",
+				count: 3L
+			}],
+			rewards: [
+				{
+					id: 686,
+					type: "item",
+					item: {
+						id: "minecraft:ender_pearl",
+						Count: 3b
+					}
+				},
+				{
+					id: 1745,
+					type: "item",
+					title: "3000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 3000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Направь Мене Кудись",
+			x: 0.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Варп Свиток - це розхідний матеріал, який дозволяє вам телепортуватися до вейпоінту. Ви також можете використовувати варп камінь, але він має довгий час перезарядки і є більш дорогим у використанні."],
+			min_required_dependencies: 0,
+			dependencies: [I;432],
+			dependency_requirement: "all_completed",
+			id: 434,
+			tasks: [{
+				id: 435,
+				type: "item",
+				item: "waystones:warp_scroll",
+				count: 3L
+			}],
+			rewards: [
+				{
+					id: 688,
+					type: "item",
+					item: "waystones:bound_scroll"
+				},
+				{
+					id: 689,
+					type: "item",
+					item: {
+						id: "waystones:return_scroll",
+						Count: 5b
+					}
+				},
+				{
+					id: 1746,
+					type: "item",
+					title: "5000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 5000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Поділіться Досвідом",
+			x: -3.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Якщо у вас виникли проблеми з телепортуванням у своє тіло, то у мене є рішення для вас! Блоки XP - це блоки, які можна створювати, і які можуть зберігати досвід. Ними навіть можна ділитися з іншими гравцями!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1686],
+			dependency_requirement: "all_completed",
+			id: 436,
+			tasks: [{
+				id: 437,
+				type: "item",
+				item: "globalxp:xp_block"
+			}],
+			rewards: [
+				{
+					id: 691,
+					type: "item",
+					item: {
+						id: "minecraft:experience_bottle",
+						Count: 10b
+					}
+				},
+				{
+					id: 1747,
+					type: "item",
+					title: "8000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 8000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "До Вершини",
+			x: -1.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Втомилися підніматися повільними сходами або підніматися до Вейстоунів на вежах? Створіть кам'яні драбину, щоб швидше дістатися до вершини! Оновіть свою кам'яну драбину, щоб підніматися ще швидше!!!"],
+			min_required_dependencies: 1,
+			dependencies: [I;432],
+			dependency_requirement: "all_completed",
+			id: 440,
+			tasks: [{
+				id: 441,
+				type: "item",
+				item: "speedyladders:stone_ladder",
+				count: 8L
+			}],
+			rewards: [
+				{
+					id: 1749,
+					type: "item",
+					title: "4000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 4000
+						}
+					}
+				},
+				{
+					id: 2097,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Beastiary I",
+			icon: "minecraft:writable_book",
+			x: -3.0d,
+			y: 7.5d,
+			shape: "octagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Знайдіть Kraken та Elder Guardian і вбийте їх! Ви знайдете їх в океані Верхнього світу.",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Дракон Ендера" з III акту.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;288],
+			dependency_requirement: "all_completed",
+			id: 442,
+			tasks: [
+				{
+					id: 2682,
+					type: "kill",
+					icon: "outvoted:kraken_tooth",
+					entity: "outvoted:kraken",
+					value: 2L
+				},
+				{
+					id: 2683,
+					type: "kill",
+					icon: "upgrade_aquatic:elder_eye",
+					entity: "minecraft:elder_guardian",
+					value: 3L
+				}
+			],
+			rewards: [
+				{
+					id: 696,
+					type: "item",
+					item: "mmorpg:lootbox/big_currency_lootbox_3"
+				},
+				{
+					id: 1750,
+					type: "item",
+					title: "200000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				},
+				{
+					id: 2105,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Beastiary II",
+			icon: "minecraft:writable_book",
+			x: -1.5d,
+			y: 7.5d,
+			shape: "octagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Pandora's Creatures приносить у верхній світ унікальних мобів. Один з них - потужний павук-міні-бос, якого можна зустріти в рівнинних або гірських біомах.",
+				"Вбийте arachnons!",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Дракон Ендера" з III акту.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;288],
+			dependency_requirement: "all_completed",
+			id: 447,
+			tasks: [{
+				id: 448,
+				type: "kill",
+				icon: "pandoras_creatures:arachnon_crystal",
+				entity: "pandoras_creatures:arachnon",
+				value: 8L
+			}],
+			rewards: [
+				{
+					id: 698,
+					type: "item",
+					item: "mmorpg:lootbox/big_currency_lootbox_3"
+				},
+				{
+					id: 1751,
+					type: "item",
+					title: "200000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				},
+				{
+					id: 2104,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Здичавілі істоти",
+			icon: "betteranimalsplus:feralwolfhead_red",
+			x: 0.0d,
+			y: -4.5d,
+			shape: "octagon",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У Better Animals Plus з'являється ціла низка істот, які гармонійно поєднуються з верхнім світом. Якщо ви не помітили, багато з цих істот можна приручити та осідлати."],
+			min_required_dependencies: 0,
+			dependencies: [I;1557],
+			dependency_requirement: "all_completed",
+			id: 449,
+			tasks: [{
+				id: 450,
+				type: "kill",
+				icon: "betteranimalsplus:feralwolfhead_brown",
+				entity: "betteranimalsplus:feralwolf",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 2734,
+					type: "item",
+					item: {
+						id: "minecraft:bone",
+						Count: 4b
+					}
+				},
+				{
+					id: 2735,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Beastiary IV",
+			icon: "minecraft:writable_book",
+			x: 1.5d,
+			y: 7.5d,
+			shape: "octagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Rotten Creatures - це мод, орієнтований на мобів, який приносить у Верхній світ потужних зомбі. Ви, напевно, вже стикалися з деякими з них, особливо якщо пройшли Beastiary I.",
+				"The Immortal та Deadbeard - два могутніх зомбі-боса. The Immortal можна знайти в верхньому світі під час грози, а Deadbeard - в пляжних біомах. Зверніть увагу: ці два спавни трапляються вкрай рідко.",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Дракон Ендера" з III акту.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;288],
+			dependency_requirement: "all_completed",
+			id: 451,
+			tasks: [
+				{
+					id: 452,
+					type: "kill",
+					icon: "lycanitesmobs:lightballcharge",
+					entity: "rotten_creatures:inmortal",
+					value: 1L
+				},
+				{
+					id: 453,
+					type: "kill",
+					icon: {
+						id: "minecolonies:pirate_top",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					},
+					entity: "rotten_creatures:dead_beard",
+					value: 1L
+				}
+			],
+			rewards: [
+				{
+					id: 702,
+					type: "item",
+					item: "mmorpg:lootbox/big_currency_lootbox_3"
+				},
+				{
+					id: 1753,
+					type: "item",
+					title: "200000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				},
+				{
+					id: 2107,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Beastiary V",
+			icon: "minecraft:writable_book",
+			x: 3.0d,
+			y: 7.5d,
+			shape: "octagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"На зовнішніх островах Енду ви знайдете охоронців, які захищають масивні споруди. Але будьте обережні, ці големоподібні створіння можуть сильно вдарити.",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Дракон Ендера" з III акту.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;288],
+			dependency_requirement: "all_completed",
+			id: 454,
+			tasks: [{
+				id: 455,
+				type: "kill",
+				icon: "endreborn:purpur_eye",
+				entity: "endreborn:endguard",
+				value: 5L
+			}],
+			rewards: [
+				{
+					id: 704,
+					type: "item",
+					item: "mmorpg:lootbox/big_currency_lootbox_3"
+				},
+				{
+					id: 1754,
+					type: "item",
+					title: "200000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				},
+				{
+					id: 2108,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Beastiary VI",
+			icon: "minecraft:writable_book",
+			x: 4.5d,
+			y: 7.5d,
+			shape: "octagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Цих жахливих створінь можна зустріти у в'язницях в \"Енду\". Будьте обережні... бо вони були замкнені не просто так.",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Дракон Ендера" з III акту.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;288],
+			dependency_requirement: "all_completed",
+			id: 456,
+			tasks: [{
+				id: 457,
+				type: "kill",
+				icon: "pandoras_creatures:end_troll_skin",
+				entity: "pandoras_creatures:end_troll",
+				value: 5L
+			}],
+			rewards: [
+				{
+					id: 706,
+					type: "item",
+					item: "mmorpg:lootbox/big_currency_lootbox_3"
+				},
+				{
+					id: 1755,
+					type: "item",
+					title: "200000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				},
+				{
+					id: 2109,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Восьминіжка",
+			icon: "minecraft:spider_eye",
+			x: 0.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У Craft to Exile є 3 основні варіанти захисту. Броня (Armore), Ухилення (Dodge) та Магічний Щит (Magic Shield). Броня зменшує завдану шкоду, ухилення дає вам шанс повністю ухилитися від атаки, а магічний щит поповнює ваш запас здоров'я."],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			hide: false,
+			dependency_requirement: "all_completed",
+			id: 1542,
+			tasks: [
+				{
+					id: 1543,
+					type: "kill",
+					icon: "minecraft:fermented_spider_eye",
+					entity: "minecraft:cave_spider",
+					value: 4L
+				},
+				{
+					id: 2720,
+					type: "kill",
+					icon: "minecraft:spider_eye",
+					entity: "minecraft:spider",
+					value: 4L
+				}
+			],
+			rewards: [
+				{
+					id: 1717,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2483,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 5,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Подвійні подвійні Клопоти та Неприємності",
+			icon: "minecraft:cauldron",
+			x: 0.0d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Під час подорожей ви знайдете щити, смолоскипи та сфери. Це підручні засоби, які можуть принести користь вашому персонажу. Затисність праву кнопку миші з щитом, щоб зменшити завдану шкоду."],
+			min_required_dependencies: 0,
+			dependencies: [I;1542],
+			dependency_requirement: "all_completed",
+			id: 1557,
+			tasks: [{
+				id: 1558,
+				type: "kill",
+				icon: "minecraft:cauldron",
+				entity: "minecraft:witch",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 1718,
+					type: "item",
+					title: "1250 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1250
+						}
+					}
+				},
+				{
+					id: 2484,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 5,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Вибираючи довгий шлях",
+			icon: "extendednether:crimson_nylium",
+			x: 7.5d,
+			y: 0.0d,
+			shape: "rsquare",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Якщо ви цього ще не зробили, вам потрібно дістатися до Нижнього Світу. Незер - це наступнча зона, яка охоплює 18-26 рівні. Босом кінця світу тут вважається Візер.",
+				"Для розблокування цього квесту потрібно виконати всі квести котрі введуть до нього."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;
+				1680,
+				72
+			],
+			dependency_requirement: "all_completed",
+			id: 1676,
+			tasks: [{
+				id: 1677,
+				type: "dimension",
+				title: "Відвідайте: Незер",
+				dimension: "minecraft:overworld"
+			}],
+			rewards: [
+				{
+					id: 1743,
+					type: "item",
+					title: "10000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 10000
+						}
+					}
+				},
+				{
+					id: 2102,
+					type: "item",
+					item: "calemiutils:coin_quarter"
+				},
+				{
+					id: 2632,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Були допущені помилки",
+			icon: "mmorpg:alchemy/instant/misc/reset_talents",
+			x: 6.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Зілля скидання можна використовувати для перерозподілу статистики або навичок!"],
+			min_required_dependencies: 0,
+			dependencies: [I;16],
+			dependency_requirement: "all_completed",
+			id: 1680,
+			tasks: [{
+				id: 1681,
+				type: "item",
+				item: "mmorpg:alchemy/instant/misc/remove_spell"
+			}],
+			rewards: [
+				{
+					id: 1682,
+					type: "item",
+					item: "mmorpg:alchemy/instant/misc/reset_stats"
+				},
+				{
+					id: 1683,
+					type: "item",
+					item: "mmorpg:alchemy/instant/misc/reset_spells"
+				},
+				{
+					id: 1685,
+					type: "item",
+					item: "mmorpg:alchemy/instant/misc/reset_talents"
+				},
+				{
+					id: 1719,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Друзі назавжди (Як влаштовувати паті)",
+			icon: "telepass:gold_telepass",
+			x: -1.5d,
+			y: 1.5d,
+			shape: "heart",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Телепаси прив'язані до гравця, який їх створив. Дайте їх іншим гравцям, і вони зможуть телепортуватися до вас!",
+				"",
+				'Якщо ви хочете влаштувати паті з іншим гравцем, ви можете скористатися командою "/slash party"! Так ви не зможете завдати один одному шкоди і зможете ділитися досвідом. Насправді, спільні паті дають вам додатковий досвід!',
+				"Наразі немає можливості ділитися проходженням квесту (принаймні, ви можете ділитися предметами)."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 1686,
+			tasks: [{
+				id: 1698,
+				type: "item",
+				item: "telepass:gold_telepass"
+			}],
+			rewards: [
+				{
+					id: 1688,
+					type: "item",
+					item: "minecraft:ender_pearl"
+				},
+				{
+					id: 1735,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Dank Storage",
+			x: -6.0d,
+			y: -1.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Використовуйте кнопку Dank, утримуючи один з них, щоб побачити більше."],
+			min_required_dependencies: 0,
+			dependencies: [I;2117],
+			dependency_requirement: "all_completed",
+			id: 1689,
+			tasks: [{
+				id: 1690,
+				type: "item",
+				item: "dankstorage:dank_1"
+			}],
+			rewards: [
+				{
+					id: 1691,
+					type: "item",
+					item: {
+						id: "minecraft:leather",
+						Count: 4b
+					}
+				},
+				{
+					id: 1725,
+					type: "item",
+					title: "2000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				},
+				{
+					id: 2098,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Пакуйте речі.",
+			icon: "endermail:stamp",
+			x: -3.0d,
+			y: 1.5d,
+			shape: "heart",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Endermail дозволяє відправляти пакунки на певні координати. Вам потрібно буде наклеїти марку на пакунок і використати контролер на пакунку."],
+			min_required_dependencies: 0,
+			dependencies: [I;1686],
+			dependency_requirement: "all_completed",
+			id: 1692,
+			tasks: [
+				{
+					id: 1693,
+					type: "item",
+					item: "endermail:package"
+				},
+				{
+					id: 1694,
+					type: "item",
+					item: "endermail:stamp"
+				},
+				{
+					id: 1695,
+					type: "item",
+					item: {
+						id: "endermail:package_controller",
+						Count: 1b,
+						tag: {}
+					}
+				}
+			],
+			rewards: [
+				{
+					id: 1696,
+					type: "item",
+					item: {
+						id: "endermail:packing_tape",
+						Count: 2b
+					}
+				},
+				{
+					id: 1697,
+					type: "item",
+					item: {
+						id: "endermail:stamp",
+						Count: 2b
+					}
+				},
+				{
+					id: 1733,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Замкніть його.",
+			x: -4.5d,
+			y: 1.5d,
+			shape: "heart",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Сховища Endermail мають унікальні ідентифікатори. Відправляючи пакунок, ви насправді можете відправити його до комірчини, яка належить гравцеві!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1692],
+			dependency_requirement: "all_completed",
+			id: 1699,
+			tasks: [{
+				id: 1700,
+				type: "item",
+				item: "endermail:locker"
+			}],
+			rewards: [
+				{
+					id: 1734,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2096,
+					type: "item",
+					item: "calemiutils:coin_penny"
+				}
+			]
+		},
+		{
+			title: "Рай Лучника",
+			x: 4.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Apotheosis приносить в [Dissonance] новий покращений стіл лучника. Він може створювати стріли ефективніше, ніж звичайний стіл лучника!"],
+			min_required_dependencies: 0,
+			dependencies: [I;36],
+			dependency_requirement: "all_completed",
+			id: 1948,
+			tasks: [{
+				id: 1949,
+				type: "item",
+				item: "minecraft:fletching_table"
+			}],
+			rewards: [
+				{
+					id: 1950,
+					type: "item",
+					title: "4000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 4000
+						}
+					}
+				},
+				{
+					id: 2492,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "dexterity_req_crate",
+							LVL: 15,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Apotheosis",
+			x: 3.0d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				'В " Apotheosis " система зачарування була повністю перероблена. Тепер це нова система зачарування, яка використовує три стати, замість початкової системи з одним. Деякі з них залишаються незмінними ( "Eterna" - це вже існуюча "Зачаровуюча сила").',
+				"Eterna - це показник, який визначає, на якому рівні знаходиться ваш чарівний стіл.",
+				"Quanta визначає, скільки потоку буде у вашому процесі зачарування. Коли ви починаєте процес зачарування, після того, як витратите свій досвід. Quanta буде працювати за кулісами, щоб змінити ваш рівень зачарування. Це не завжди корисно, оскільки",
+				"може як збільшити, так і зменшити фактичний рівень зачарування.",
+				"Arcana визначає, наскільки важко отримати рідкісні заклинання. При значенні 0% застосовуються базові правила рідкісності заклинань, але зі збільшенням рівня Arcana рідкісні заклинання стануть більш поширеними, а звичайні - досить рідкісними.",
+				"Це також приносить багато нових зачарувань - загляньте у вікі, щоб дізнатися більше!",
+				"Примітка: деякі заклинання просто не працюють з системою нанесення шкоди Mine and Slash. Будьте уважні!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2057],
+			dependency_requirement: "all_completed",
+			id: 1951,
+			tasks: [{
+				id: 1952,
+				type: "item",
+				item: "minecraft:enchanting_table"
+			}],
+			rewards: [
+				{
+					id: 1953,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2500
+						}
+					}
+				},
+				{
+					id: 1957,
+					type: "item",
+					item: {
+						id: "minecraft:enchanted_book",
+						Count: 1b,
+						tag: {
+							StoredEnchantments: [{
+								lvl: 1s,
+								id: "apotheosis:icy_thorns"
+							}]
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Під водою",
+			x: 4.5d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ['Кожен тип книжкової полиці може надавати переваги певним чарівним статистичним даним. Статистику для різних предметів можна побачити в їхніх підказках, а також знайти в JEI за допомогою пошукового терміну "Enchanting Stats".'],
+			min_required_dependencies: 0,
+			dependencies: [I;1951],
+			dependency_requirement: "all_completed",
+			id: 1954,
+			tasks: [{
+				id: 1955,
+				type: "item",
+				item: "apotheosis:seashelf",
+				count: 4L
+			}],
+			rewards: [{
+				id: 1956,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 3250
+					}
+				}
+			}]
+		},
+		{
+			title: "Волонтерство - це данина поваги",
+			x: 6.0d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"The Altar of the Sea - це блок, який дозволяє переробляти непотрібні зачаровані предмети. Для початку вам знадобляться чотири зачаровані предмети та певна кількість досвіду. Потім ви розміщуєте по одному зачарованому предмету на кожному стовпі",
+				" (наведіть курсор на стовп і клацніть правою кнопкою миші",
+				"тримаючи предмет). Як тільки всі чотири стовпи утримуватимуть предмет, Вівтар почне відбирати досвід у гравців, що знаходяться поруч.",
+				"Кількість необхідного досвіду залежить від рівня та рідкісності наданих заклинань. Коли досвід буде вичерпано, всі чотири предмети буде спожито, і буде створено новостворену зачаровану книгу."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;1954],
+			dependency_requirement: "all_completed",
+			id: 1964,
+			tasks: [{
+				id: 1965,
+				type: "item",
+				item: "apotheosis:prismatic_altar"
+			}],
+			rewards: [
+				{
+					id: 1966,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 5000
+						}
+					}
+				},
+				{
+					id: 2099,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2486,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Магія!",
+			x: 1.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"У Craft to Exile [Dissonance] ви можете створити посохи з Атума! За додатковою інформацією звертайтеся до JEI.",
+				'Чи знали ви, що брудні скіпетри можна "вимити" у воді, щоб виявити їхню справжню природу?'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;7],
+			dependency_requirement: "all_completed",
+			id: 2057,
+			tasks: [{
+				id: 2058,
+				type: "item",
+				item: "atum:loot_dirty_scepter"
+			}],
+			rewards: [
+				{
+					id: 2059,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1500
+						}
+					}
+				},
+				{
+					id: 2630,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "intelligence_req_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Це (Майже) понад 9000!",
+			x: -4.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Iron Chests - це мод для зберігання, який забезпечує чистий об'єм. Скриня з багнюки - це унікальна скриня, яка зберігає лише багнюку, але робить це дуже добре! Сундук з багнюки також можна використовувати для створення Danks - унікального сховища, де",
+				"не застосовується!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;426],
+			dependency_requirement: "all_completed",
+			id: 2117,
+			tasks: [{
+				id: 2118,
+				type: "item",
+				item: "ironchest:dirt_chest"
+			}],
+			rewards: [{
+				id: 2121,
+				type: "item",
+				title: "500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 500
+					}
+				}
+			}]
+		},
+		{
+			title: "Iron Chests",
+			x: -3.0d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Iron Chests - це мод, який представляє рішення для зберігання речей на основі прогресії. У [Dissonance] Iron Chests легко майструються і забезпечують безпечне рішення для зберігання речей на початку гри."],
+			min_required_dependencies: 0,
+			dependencies: [I;426],
+			dependency_requirement: "all_completed",
+			id: 2119,
+			tasks: [{
+				id: 2120,
+				type: "item",
+				item: "ironchest:iron_chest"
+			}],
+			rewards: [{
+				id: 2122,
+				type: "item",
+				title: "500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 500
+					}
+				}
+			}]
+		},
+		{
+			title: "Один з усім",
+			x: -1.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Nature's Compass - це дуже корисний інструмент для пошуку біомів. З додаванням такої кількості різних біомів стає важко випадково натрапити на те, що ви шукаєте!",
+				"Аналогічно, Structures Compass дозволяє знайти будь-яку структуру!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;432],
+			dependency_requirement: "all_completed",
+			id: 2330,
+			tasks: [
+				{
+					id: 2331,
+					type: "item",
+					item: {
+						id: "naturescompass:naturescompass",
+						Count: 1b,
+						tag: {}
+					}
+				},
+				{
+					id: 2748,
+					type: "item",
+					item: "structurescompass:structures_compass"
+				}
+			],
+			rewards: [{
+				id: 2332,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 3000
+					}
+				}
+			}]
+		},
+		{
+			title: "Ненаситний",
+			icon: {
+				id: "create:sand_paper",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: -1.5d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Зголоднівший велетень (The Great Hunger) - це моб, який зустрічається в пустелях і болотах, і боротьба з ним може бути дуже неприємною. Він може поглинати предмети та їхні чари, і навіть знімати чари зі спорядження, яке зараз одягнене на гравцеві!",
+				"Будьте обережні з цими мобами."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;1557],
+			dependency_requirement: "all_completed",
+			id: 2706,
+			tasks: [{
+				id: 2707,
+				type: "kill",
+				entity: "outvoted:hunger",
+				value: 4L
+			}],
+			rewards: [
+				{
+					id: 2708,
+					type: "item",
+					item: {
+						id: "minecraft:smooth_sandstone",
+						Count: 12b
+					}
+				},
+				{
+					id: 2709,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1250
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Фільтр луту",
+			x: 3.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Вам коли-небудь набридало перебирати купу непотрібного звичайного спорядження? З рюкзаком для сплавління ви можете одразу ж сплавляти спорядження на основі обраної вами рідкісності!",
+				"Щоб налаштувати рюкзак, утримуйте мішок і клацніть по ньому правою кнопкою миші",
+				"поки у вас в руці знаходиться предмет з рідкістю, яку ви хочете відфільтрувати. Якщо ви хочете автоматично зберігати рідкісні руни і кращі при піднятті предмета, тримайте рідкісну руну в лівій руці і клацніть правою кнопкою миші, тримаючи рюкзак!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;22],
+			dependency_requirement: "all_completed",
+			id: 2710,
+			tasks: [{
+				id: 2711,
+				type: "item",
+				item: "mmorpg:auto_salvage_bag0"
+			}],
+			rewards: [
+				{
+					id: 2712,
+					type: "item",
+					item: "mmorpg:alchemy/instant/misc/reset_stats"
+				},
+				{
+					id: 2713,
+					type: "item",
+					item: "mmorpg:ore2"
+				},
+				{
+					id: 2714,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 5000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Beastiary III",
+			icon: "minecraft:writable_book",
+			x: 0.0d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Frostweavers - це крижані-павуки, що мешкають у холодних біомах. Ви знатимете, коли знайдете їх, оскільки, ймовірно, застрягнете в їхньому павутинні!",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Дракон Ендера" з III акту.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;288],
+			dependency_requirement: "all_completed",
+			id: 2725,
+			tasks: [{
+				id: 2742,
+				type: "kill",
+				icon: "lycanitesmobs:frostweb",
+				entity: "lycanitesmobs:frostweaver",
+				value: 16L
+			}],
+			rewards: [
+				{
+					id: 2731,
+					type: "item",
+					item: "mmorpg:lootbox/big_currency_lootbox_3"
+				},
+				{
+					id: 2732,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2733,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Гнилі створіння",
+			icon: "betteranimalsplus:wolf_pelt_snowy",
+			x: 1.5d,
+			y: -4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Гнилі істоти приносять багато нових мобів у верхній світ - переважно зомбі. Знайдіть Гнилих Ескімосів у снігових біомах, Болотяних у болотах та багатьох інших!"],
+			min_required_dependencies: 0,
+			dependencies: [I;449],
+			dependency_requirement: "all_completed",
+			id: 2728,
+			tasks: [
+				{
+					id: 2729,
+					type: "kill",
+					icon: "betteranimalsplus:wolf_pelt_snowy",
+					entity: "rotten_creatures:eskimo",
+					value: 3L
+				},
+				{
+					id: 2730,
+					type: "kill",
+					icon: "minecraft:stick",
+					entity: "rotten_creatures:spear_eskimo",
+					value: 3L
+				}
+			],
+			rewards: [
+				{
+					id: 2736,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				},
+				{
+					id: 2739,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "BAD",
+							TIER: 1
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Віддзеркаля",
+			icon: "minecraft:white_stained_glass_pane",
+			x: -1.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Ходять чутки, що є віддзеркалення верхнього світу...",
+				"Дехто каже, що до нього можна потрапити за допомогою квадрата з маків 3х3, оточеного кам'яними цеглинами...",
+				"Кажуть, що портал можна активувати за допомогою кісткового борошна, але також кажуть, що потрібно трошки присісти...",
+				"Примітка: вимір Віддзеркалення верхнього світу має бути таким самим, як і потойбічний світ. Однак, ви НЕ зможете створювати колонії в цьому вимірі!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 2743,
+			tasks: [{
+				id: 2744,
+				type: "dimension",
+				dimension: "overworldmirror:dimension"
+			}],
+			rewards: [
+				{
+					id: 2745,
+					type: "item",
+					item: {
+						id: "minecraft:iron_ore",
+						Count: 4b
+					}
+				},
+				{
+					id: 2746,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		}
+	]
+}

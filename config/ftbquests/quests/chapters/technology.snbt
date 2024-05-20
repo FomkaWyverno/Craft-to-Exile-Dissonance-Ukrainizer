@@ -1,0 +1,1512 @@
+{
+	id: 1189,
+	filename: "technology",
+	order_index: 11,
+	title: "Технології",
+	icon: {
+		id: "immersiveengineering:hammer",
+		Count: 1b,
+		tag: {
+			Damage: 0
+		}
+	},
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Почніть творити",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Create - це модульний низькотехнологічний мод, який надає функціональність по частинах. Ваша уява не має меж! Для виготовлення базових структур Create необхідний андезитовий сплав.",
+				"Зверніть увагу: Create - руди з'являються у Верхньому світі, тоді як руди Immersive Engineering з'являються тільки в Шахтарському світі!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 1190,
+			tasks: [{
+				id: 1191,
+				type: "item",
+				item: "create:andesite_alloy"
+			}],
+			rewards: [
+				{
+					id: 1192,
+					type: "item",
+					item: {
+						id: "create:zinc_nugget",
+						Count: 5b
+					}
+				},
+				{
+					id: 1916,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Вал",
+			x: 1.5d,
+			y: 0.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Вали використовуються в багатьох пристроях. Використовуйте вали для з'єднання конвеєрних стрічок або для розміщення блоків. Вали передають обертання по прямій лінії!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1190],
+			dependency_requirement: "all_completed",
+			id: 1194,
+			tasks: [{
+				id: 1195,
+				type: "item",
+				item: "create:shaft",
+				count: 4L
+			}],
+			rewards: [
+				{
+					id: 1196,
+					type: "item",
+					item: {
+						id: "create:shaft",
+						Count: 2b
+					}
+				},
+				{
+					id: 1917,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Винахід колеса",
+			x: 3.0d,
+			y: 0.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Використовуйте зубчасті колеса для передачі обертання іншим зубчастим колесам. Помістіть їх на вал і подивіться, що станеться, коли їх з'єднати з джерелом потужності."],
+			min_required_dependencies: 0,
+			dependencies: [I;1194],
+			dependency_requirement: "all_completed",
+			id: 1198,
+			tasks: [{
+				id: 1199,
+				type: "item",
+				item: "create:cogwheel"
+			}],
+			rewards: [
+				{
+					id: 1200,
+					type: "item",
+					item: "create:large_cogwheel"
+				},
+				{
+					id: 1918,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Стискання",
+			x: 4.5d,
+			y: 0.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Механічний прес стискає предмети, що знаходяться під ним. Він може перетворювати залізні злитки на залізні листи. Для цього потрібна постійна сила обертання."],
+			min_required_dependencies: 0,
+			dependencies: [I;1198],
+			dependency_requirement: "all_completed",
+			id: 1202,
+			tasks: [{
+				id: 1203,
+				type: "item",
+				item: "create:mechanical_press"
+			}],
+			rewards: [
+				{
+					id: 1204,
+					type: "item",
+					item: {
+						id: "create:andesite_casing",
+						Count: 2b
+					}
+				},
+				{
+					id: 1919,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2624,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Не зупиняйся на досягнутом!",
+			x: 4.5d,
+			y: 1.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["За допомогою ремню можна з'єднати 2 або більше валів. Ремінь може переміщати як предмети, так і об'єкти."],
+			min_required_dependencies: 0,
+			dependencies: [I;1202],
+			dependency_requirement: "all_completed",
+			id: 1206,
+			tasks: [{
+				id: 1207,
+				type: "item",
+				item: "create:belt_connector"
+			}],
+			rewards: [
+				{
+					id: 1208,
+					type: "item",
+					item: "create:belt_connector"
+				},
+				{
+					id: 1926,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Дай мені силу!",
+			x: 6.0d,
+			y: 0.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ваше перше основне джерело енергії! Змайструйте водяне колесо і помістіть його під проточну воду. Потім прикріпіть його до механічного преса, щоб забезпечити обертальну силу!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1202],
+			dependency_requirement: "all_completed",
+			id: 1210,
+			tasks: [{
+				id: 1211,
+				type: "item",
+				item: "create:water_wheel"
+			}],
+			rewards: [
+				{
+					id: 1212,
+					type: "item",
+					item: {
+						id: "minecraft:oak_planks",
+						Count: 16b
+					}
+				},
+				{
+					id: 1921,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Доставка",
+			x: 4.5d,
+			y: 3.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Воронка - корисний пристрій, який може відфільтровувати предмети."],
+			min_required_dependencies: 0,
+			dependencies: [I;1206],
+			dependency_requirement: "all_completed",
+			id: 1214,
+			tasks: [{
+				id: 1215,
+				type: "item",
+				item: "create:brass_funnel"
+			}],
+			rewards: [
+				{
+					id: 1216,
+					type: "item",
+					item: {
+						id: "minecraft:chest",
+						Count: 2b
+					}
+				},
+				{
+					id: 1932,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Бачити більше, робити більше",
+			x: 6.0d,
+			y: 1.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Інженерні окуляри дозволять вам бачити більше деталей про Create блоки, коли ви дивитеся на них. Необхідна річ!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1210],
+			dependency_requirement: "all_completed",
+			id: 1222,
+			tasks: [{
+				id: 1223,
+				type: "item",
+				item: "create:goggles"
+			}],
+			rewards: [{
+				id: 1927,
+				type: "item",
+				title: "500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 500
+					}
+				}
+			}]
+		},
+		{
+			title: "Оцінка швидкості",
+			x: 7.5d,
+			y: 1.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Коли він прикріплений до кінетичних компонентів, він відображатиме швидкість обертання."],
+			min_required_dependencies: 0,
+			dependencies: [I;1222],
+			dependency_requirement: "all_completed",
+			id: 1225,
+			tasks: [{
+				id: 1226,
+				type: "item",
+				item: "create:speedometer"
+			}],
+			rewards: [{
+				id: 1928,
+				type: "item",
+				title: "1000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1000
+					}
+				}
+			}]
+		},
+		{
+			title: "Оцінка сили.",
+			x: 9.0d,
+			y: 1.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Приєднаний до кінетичної мережі, він покаже загальну силу."],
+			min_required_dependencies: 0,
+			dependencies: [I;1225],
+			dependency_requirement: "all_completed",
+			id: 1228,
+			tasks: [{
+				id: 1229,
+				type: "item",
+				item: "create:stressometer"
+			}],
+			rewards: [{
+				id: 1929,
+				type: "item",
+				title: "1000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1000
+					}
+				}
+			}]
+		},
+		{
+			title: "Твоя перша робота",
+			x: 7.5d,
+			y: 0.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				'Залізні листи є основними компонентами різноманітних конструкцій Create. Помістіть залізний злиток під механічний прес, який працює за рахунок сили обертання. Увімкніть його за допомогою важеля і переконайтеся, що ви "опустили"',
+				"злиток заліза під прес!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;1210],
+			dependency_requirement: "all_completed",
+			id: 1231,
+			tasks: [{
+				id: 1232,
+				type: "item",
+				item: "create:iron_sheet"
+			}],
+			rewards: [
+				{
+					id: 1233,
+					type: "item",
+					item: {
+						id: "minecraft:iron_ingot",
+						Count: 3b
+					}
+				},
+				{
+					id: 1922,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Гайковий ключ у ваших планах",
+			x: 9.0d,
+			y: 0.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Корисний інструмент, за допомогою якого можна обертати, розбирати та налаштовувати конструкції."],
+			min_required_dependencies: 0,
+			dependencies: [I;1231],
+			dependency_requirement: "all_completed",
+			id: 1235,
+			tasks: [{
+				id: 1236,
+				type: "item",
+				item: "create:wrench"
+			}],
+			rewards: [
+				{
+					id: 1237,
+					type: "item",
+					item: {
+						id: "minecraft:gold_ingot",
+						Count: 3b
+					}
+				},
+				{
+					id: 1923,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Світлове шоу",
+			x: 10.5d,
+			y: 0.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Важливий предмет, який використовується в різних рецептах створення."],
+			min_required_dependencies: 0,
+			dependencies: [I;1235],
+			dependency_requirement: "all_completed",
+			id: 1239,
+			tasks: [{
+				id: 1240,
+				type: "item",
+				item: "create:electron_tube"
+			}],
+			rewards: [{
+				id: 1924,
+				type: "item",
+				title: "500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 500
+					}
+				}
+			}]
+		},
+		{
+			title: "Виготовлення латуні",
+			x: 10.5d,
+			y: 1.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"У поєднанні з чашею під механічним змішувачем дозволить вам змішувати мідні та цинкові зливки з порошком для отримання латунних зливків. Однак вам знадобиться велика потужність обертання міксера.",
+				"Розмістіть менші зубчасті колеса по діагоналі поруч з великими, і вони будуть обертатися з більшою швидкістю, ніж велике колесо.",
+				"Ви можете розмістити велике зубчасте колесо на тій самій осі, що й мале, і повторити цю схему, щоб збільшити кількість обертів.",
+				"Однак це збільшить зусилля кінетичного моменту, і в результаті ви зможете запустити менше пристроїв одночасно на одному джерелі живлення."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;1239],
+			dependency_requirement: "all_completed",
+			id: 1242,
+			tasks: [{
+				id: 1243,
+				type: "item",
+				item: "create:mechanical_mixer"
+			}],
+			rewards: [
+				{
+					id: 1244,
+					type: "item",
+					item: "create:brass_ingot"
+				},
+				{
+					id: 1925,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2084,
+					type: "item",
+					item: "calemiutils:coin_quarter"
+				}
+			]
+		},
+		{
+			title: "Ваш диплом інженера",
+			x: 10.5d,
+			y: 3.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Immersive Engineering - це технічний мод, який входить до складу Craft to Exile. Ознайомившись з ним, не соромтеся заглиблюватися в IE. Використовуйте інструкцію, щоб допомогти вам, якщо ви не впевнені у певних функціях.",
+				"Пам'ятайте, що IE руди з'являються тільки у шахтарському світі!",
+				'Примітка: щоб отримати доступ до цього квесту, ви повинні завершити квест "Пошук Потрібних Руд" у III акту.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;
+				305,
+				1242
+			],
+			dependency_requirement: "all_completed",
+			id: 1246,
+			tasks: [{
+				id: 1247,
+				type: "item",
+				item: "immersiveengineering:manual"
+			}],
+			rewards: [
+				{
+					id: 1934,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2623,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Свята Конопля",
+			x: 10.5d,
+			y: 4.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Конопля життєво необхідна для початку роботи в галузі імерсивної інженерії. Насіння конопель можна знайти в траві."],
+			min_required_dependencies: 0,
+			dependencies: [I;1246],
+			dependency_requirement: "all_completed",
+			id: 1250,
+			tasks: [{
+				id: 1251,
+				type: "item",
+				item: "immersiveengineering:seed"
+			}],
+			rewards: [
+				{
+					id: 1252,
+					type: "item",
+					item: "mapperbase:steel_plate"
+				},
+				{
+					id: 1942,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Доменна Піч",
+			x: 9.0d,
+			y: 4.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Сталь - це основний будівельний матеріал, з якого складається все, що стосується IE. Але для виробництва сталі вам спочатку знадобиться доменна піч. Зверніться до інструкції, щоб дізнатися про розташування доменної цегли.",
+				"Вам знадобиться інженерний молоток."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;1250],
+			dependency_requirement: "all_completed",
+			id: 1254,
+			tasks: [{
+				id: 1255,
+				type: "item",
+				item: "immersiveengineering:blastbrick",
+				count: 4L
+			}],
+			rewards: [
+				{
+					id: 1256,
+					type: "item",
+					item: "minecraft:iron_block"
+				},
+				{
+					id: 1941,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Коксовальна піч",
+			x: 7.5d,
+			y: 4.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Коксове вугілля більш ефективне, ніж звичайне, і використовується в доменній печі. Вам знадобиться інженерний молоток."],
+			min_required_dependencies: 0,
+			dependencies: [I;1254],
+			dependency_requirement: "all_completed",
+			id: 1258,
+			tasks: [{
+				id: 1259,
+				type: "item",
+				item: "immersiveengineering:cokebrick",
+				count: 4L
+			}],
+			rewards: [
+				{
+					id: 1260,
+					type: "item",
+					item: {
+						id: "minecraft:coal",
+						Count: 32b
+					}
+				},
+				{
+					id: 1940,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Дріт, який ми не з'єднали?",
+			x: 6.0d,
+			y: 4.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Дроти з'єднують джерело електроенергії з конденсатором, який може розсіювати енергію на сусідні прилади. Вам знадобляться кусачки, щоб видалити всі непотрібні дроти."],
+			min_required_dependencies: 0,
+			dependencies: [I;1258],
+			dependency_requirement: "all_completed",
+			id: 1262,
+			tasks: [{
+				id: 1263,
+				type: "item",
+				item: {
+					id: "immersiveengineering:wirecutter",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 1939,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2626,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Створення Дроту",
+			x: 6.0d,
+			y: 6.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Використовуйте котушку для прокладання дротів. Добре почати з мідного дроту, але згодом ви можете замінити його на більш якісний."],
+			min_required_dependencies: 0,
+			dependencies: [I;1262],
+			dependency_requirement: "all_completed",
+			id: 1265,
+			tasks: [{
+				id: 1266,
+				type: "item",
+				item: "immersiveengineering:wirecoil_copper"
+			}],
+			rewards: [{
+				id: 1946,
+				type: "item",
+				title: "1000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1000
+					}
+				}
+			}]
+		},
+		{
+			title: "Встановлення контакту",
+			x: 4.5d,
+			y: 6.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Перш ніж ви зможете підключити дроти до чого-небудь, вам потрібно буде розмістити конектори для дротів на самих блоках."],
+			min_required_dependencies: 0,
+			dependencies: [I;1265],
+			dependency_requirement: "all_completed",
+			id: 1268,
+			tasks: [{
+				id: 1269,
+				type: "item",
+				item: "immersiveengineering:connector_lv"
+			}],
+			rewards: [{
+				id: 1945,
+				type: "item",
+				title: "1000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1000
+					}
+				}
+			}]
+		},
+		{
+			title: "Конденсатор",
+			x: 4.5d,
+			y: 4.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Конденсатори потрібні для зберігання енергії, яку можна спрямувати на різні пристрої. Приєднайте конденсатор до джерела енергії, наприклад, до водяного колеса Create."],
+			min_required_dependencies: 0,
+			dependencies: [I;1268],
+			dependency_requirement: "all_completed",
+			id: 1271,
+			tasks: [{
+				id: 1272,
+				type: "item",
+				item: "immersiveengineering:capacitor_lv"
+			}],
+			rewards: [
+				{
+					id: 1273,
+					type: "item",
+					item: {
+						id: "create:cogwheel",
+						Count: 2b
+					}
+				},
+				{
+					id: 1938,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Електродвигуни",
+			x: 3.0d,
+			y: 4.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Для того, щоб використовувати енергію від Immersive Engineering як кінетичну енергію, вам знадобиться електродвигун."],
+			min_required_dependencies: 0,
+			dependencies: [I;1271],
+			dependency_requirement: "all_completed",
+			id: 1275,
+			tasks: [{
+				id: 1276,
+				type: "item",
+				item: "createaddition:electric_motor"
+			}],
+			rewards: [
+				{
+					id: 1277,
+					type: "item",
+					item: {
+						id: "create:electron_tube",
+						Count: 2b
+					}
+				},
+				{
+					id: 1937,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2627,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Удосконалення колеса",
+			x: 1.5d,
+			y: 4.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Зараз саме час почати роботу над генератором редстоун флаксуу. RF - це джерело енергії, яке використовує IE. Змайструйте кінетичний генератор - воно буде прикріплене до водяного колеса IE."],
+			min_required_dependencies: 0,
+			dependencies: [I;1275],
+			dependency_requirement: "all_completed",
+			id: 1279,
+			tasks: [{
+				id: 1280,
+				type: "item",
+				item: "immersiveengineering:dynamo"
+			}],
+			rewards: [
+				{
+					id: 1281,
+					type: "item",
+					item: "minecraft:redstone_block"
+				},
+				{
+					id: 1936,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Застосунки",
+			x: 3.0d,
+			y: 3.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Пічний обігрівач можна розмістити поруч з піччю. При достатній потужності піч може працювати без палива."],
+			min_required_dependencies: 0,
+			dependencies: [I;1275],
+			dependency_requirement: "all_completed",
+			id: 1283,
+			tasks: [{
+				id: 1284,
+				type: "item",
+				item: "createaddition:heater"
+			}],
+			rewards: [
+				{
+					id: 1285,
+					type: "item",
+					item: "minecraft:furnace"
+				},
+				{
+					id: 1931,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2628,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Велике колесо",
+			x: 1.5d,
+			y: 3.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Помістіть водяне колесо на кінетичний генератор біля великого водоспаду. Обов'язково підключіть його до ємнісного конденсатора."],
+			min_required_dependencies: 0,
+			dependencies: [I;1279],
+			dependency_requirement: "all_completed",
+			id: 1287,
+			tasks: [{
+				id: 1288,
+				type: "item",
+				item: "immersiveengineering:watermill"
+			}],
+			rewards: [
+				{
+					id: 1289,
+					type: "item",
+					item: "minecraft:water_bucket"
+				},
+				{
+					id: 1930,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2085,
+					type: "item",
+					item: "calemiutils:coin_dollar"
+				},
+				{
+					id: 2629,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Dank Storage II",
+			x: 4.5d,
+			y: -1.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Модернізація Dank покращує пропускну здатність Dank!"],
+			min_required_dependencies: 0,
+			dependencies: [I;
+				1689,
+				1202
+			],
+			dependency_requirement: "all_completed",
+			id: 1707,
+			tasks: [{
+				id: 1708,
+				type: "item",
+				item: "dankstorage:dank_2"
+			}],
+			rewards: [
+				{
+					id: 1709,
+					type: "item",
+					item: "dankstorage:1_to_2"
+				},
+				{
+					id: 1920,
+					type: "item",
+					title: "2000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Dank Storage IV",
+			x: 12.0d,
+			y: 3.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["З оновленням Dank ви помітите, що отримувати матеріали стає дедалі важче."],
+			min_required_dependencies: 0,
+			dependencies: [I;
+				1689,
+				1246
+			],
+			dependency_requirement: "all_completed",
+			id: 1710,
+			tasks: [{
+				id: 1711,
+				type: "item",
+				item: "dankstorage:dank_4"
+			}],
+			rewards: [
+				{
+					id: 1712,
+					type: "item",
+					item: "dankstorage:3_to_4"
+				},
+				{
+					id: 1935,
+					type: "item",
+					title: "2500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Dank Storage VI",
+			x: 12.0d,
+			y: 4.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Це 2-й останній контейнер Dank. Щасти вам!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1710],
+			dependency_requirement: "all_completed",
+			id: 1713,
+			tasks: [{
+				id: 1714,
+				type: "item",
+				item: "dankstorage:dank_6"
+			}],
+			rewards: [
+				{
+					id: 1943,
+					type: "item",
+					item: "dankstorage:5_to_6"
+				},
+				{
+					id: 1944,
+					type: "item",
+					title: "3000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 3000
+						}
+					}
+				},
+				{
+					id: 2625,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Конвентор обертів",
+			x: 12.0d,
+			y: 1.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Цей блок перетворить кінетичну енергію в ІЕ-енергію з ефективністю 75%!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1242],
+			dependency_requirement: "all_completed",
+			id: 2686,
+			tasks: [{
+				id: 2687,
+				type: "item",
+				item: "createaddition:alternator"
+			}],
+			rewards: [
+				{
+					id: 2697,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				},
+				{
+					id: 2698,
+					type: "item",
+					item: "create:andesite_alloy"
+				}
+			]
+		},
+		{
+			title: "Механічний майстер",
+			x: 12.0d,
+			y: 0.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Кінетичний конструктор, який автоматизує процес створення! Вам потрібно розмістити їх у сітці з відповідними елементами."],
+			min_required_dependencies: 0,
+			dependencies: [I;1239],
+			dependency_requirement: "all_completed",
+			id: 2688,
+			tasks: [{
+				id: 2689,
+				type: "item",
+				item: "create:mechanical_crafter"
+			}],
+			rewards: [{
+				id: 2694,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1000
+					}
+				}
+			}]
+		},
+		{
+			title: "Рука об руку",
+			x: 13.5d,
+			y: 0.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Цей просунутий маніпулятор підніме і перемістить предмети замість вас!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2688],
+			dependency_requirement: "all_completed",
+			id: 2690,
+			tasks: [{
+				id: 2691,
+				type: "item",
+				item: "create:mechanical_arm"
+			}],
+			rewards: [{
+				id: 2699,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 2000
+					}
+				}
+			}]
+		},
+		{
+			title: "Платформи",
+			x: 10.5d,
+			y: -1.5d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Слугує платформою для розміщення предметів. Багато машин взаємодіють з елементами на цьому блоці."],
+			min_required_dependencies: 0,
+			dependencies: [I;1239],
+			dependency_requirement: "all_completed",
+			id: 2692,
+			tasks: [{
+				id: 2693,
+				type: "item",
+				item: "create:depot"
+			}],
+			rewards: [{
+				id: 2700,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 2000
+					}
+				}
+			}]
+		},
+		{
+			title: "Найвдячніший з усіх",
+			x: 12.0d,
+			y: 6.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ти монстр... Ти таки зробив це!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1713],
+			dependency_requirement: "all_completed",
+			id: 2701,
+			tasks: [{
+				id: 2702,
+				type: "item",
+				item: "dankstorage:dank_7"
+			}],
+			rewards: [
+				{
+					id: 2703,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 10000
+						}
+					}
+				},
+				{
+					id: 2704,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 30,
+							SCORE: "AMAZING",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Я не можу дотягнутися!",
+			x: 7.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Simple Magnets представляє магніти, які можуть піднімати предмети з більшої відстані! Ви можете активувати та деактивувати їх, клацнувши правою кнопкою миші, коли тримаєте їх у руці.",
+				"Їх не потрібно екіпірувати, вони можуть залишатися у вашому інвентарі!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;1231],
+			dependency_requirement: "all_completed",
+			id: 2752,
+			tasks: [{
+				id: 2753,
+				type: "item",
+				item: {
+					id: "simplemagnets:basicmagnet",
+					Count: 1b,
+					tag: {}
+				}
+			}],
+			rewards: [{
+				id: 2760,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 500
+					}
+				}
+			}]
+		},
+		{
+			title: "Використання Сили",
+			x: 7.5d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Просунутий магніт підбирає предмети та досвід у діапазоні, що налаштовується!",
+				"Елементи можна відфільтрувати за допомогою білого або чорного списку."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2752],
+			dependency_requirement: "all_completed",
+			id: 2754,
+			tasks: [{
+				id: 2755,
+				type: "item",
+				item: {
+					id: "simplemagnets:advancedmagnet",
+					Count: 1b,
+					tag: {}
+				}
+			}],
+			rewards: [{
+				id: 2763,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1000
+					}
+				}
+			}]
+		},
+		{
+			title: "Вимкнути живлення",
+			x: 9.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Котушка розмагнічування запобігає притягуванню предметів магнітами. Просто покладіть її, і ваш магніт не працюватиме в цій зоні!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2752],
+			dependency_requirement: "all_completed",
+			id: 2756,
+			tasks: [{
+				id: 2757,
+				type: "item",
+				item: "simplemagnets:basic_demagnetization_coil"
+			}],
+			rewards: [{
+				id: 2761,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 500
+					}
+				}
+			}]
+		},
+		{
+			title: "Покращене розмагнічування",
+			x: 9.0d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ця котушка може запобігти притягуванню предметів магнітами на ще більшій відстані. Предмети також можна фільтрувати. Клацніть правою кнопкою миші на пристрої з порожньою рукою, щоб отримати доступ до графічного інтерфейсу."],
+			min_required_dependencies: 0,
+			dependencies: [I;2756],
+			dependency_requirement: "all_completed",
+			id: 2758,
+			tasks: [{
+				id: 2759,
+				type: "item",
+				item: "simplemagnets:advanced_demagnetization_coil"
+			}],
+			rewards: [{
+				id: 2762,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 1000
+					}
+				}
+			}]
+		}
+	]
+}

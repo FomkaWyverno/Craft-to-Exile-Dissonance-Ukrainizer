@@ -1,0 +1,1074 @@
+{
+	id: 84,
+	filename: "actiiitheend",
+	order_index: 4,
+	title: "Акт III: Енд",
+	icon: "minecraft:end_stone",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Кінець Епохи",
+			icon: "minecraft:end_stone",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Ти зробив це! Ти в Енді! Вуу- *БУРКОТІНЯ БУРКОТІНЯ* що за?! Я чую дракона?",
+				'Щоб отримати доступ до цього квесту, ви повинні завершити квест "Енд" II акту.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;225],
+			dependency_requirement: "all_completed",
+			id: 244,
+			tasks: [{
+				id: 246,
+				type: "dimension",
+				title: "Відвідайте: Енд",
+				dimension: "minecraft:the_end"
+			}],
+			rewards: [{
+				id: 1787,
+				type: "item",
+				title: "62500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 62500
+					}
+				}
+			}]
+		},
+		{
+			title: "Дракон Ендера",
+			icon: "minecraft:dragon_head",
+			x: 1.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Убийте дракона Ендера! Зверніть увагу, дракон несприйнятливий до заклинань! На жаль, це пов'язано з тим, як написали код для Дракона."],
+			min_required_dependencies: 0,
+			dependencies: [I;244],
+			dependency_requirement: "all_completed",
+			id: 288,
+			tasks: [{
+				id: 289,
+				type: "kill",
+				icon: "minecraft:dragon_head",
+				entity: "minecraft:ender_dragon",
+				value: 1L
+			}],
+			rewards: [
+				{
+					id: 740,
+					type: "item",
+					item: "mmorpg:alchemy/instant/misc/reset_stats"
+				},
+				{
+					id: 741,
+					type: "item",
+					item: "mmorpg:alchemy/instant/misc/reset_spells"
+				},
+				{
+					id: 742,
+					type: "item",
+					item: "mmorpg:alchemy/instant/misc/reset_talents"
+				},
+				{
+					id: 1788,
+					type: "item",
+					title: "250000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2113,
+					type: "item",
+					item: "quark:dragon_scale"
+				},
+				{
+					id: 2519,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 30,
+							SCORE: "GOOD",
+							TIER: 4
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Залишки Енду",
+			x: 3.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Коли дракон Ендер загинув, вам варто повернутися в Енд та дослідити острови, що залишилися. Можливо, по дорозі ви знайдете особливу скриню або ще щось..."],
+			min_required_dependencies: 0,
+			dependencies: [I;288],
+			dependency_requirement: "all_completed",
+			id: 290,
+			tasks: [{
+				id: 291,
+				type: "item",
+				item: "minecraft:shulker_shell",
+				count: 2L
+			}],
+			rewards: [
+				{
+					id: 744,
+					type: "item",
+					item: {
+						id: "mmorpg:ore3",
+						Count: 10b
+					}
+				},
+				{
+					id: 1789,
+					type: "item",
+					title: "67500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 67500
+						}
+					}
+				},
+				{
+					id: 2523,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 25,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Назад до Незеру",
+			x: 4.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Повернувшись до села, ви почули чутки про те, що селянам постійно сняться кошмари. За словами власника бару оззі, селяни почали вживати гриби, які, як виявилося, у 50% випадків відлякували кошмари.",
+				"Знайдіть гриби в Незері або Верхньому світі і подивіться, що ви можете зробити з нічними кошмарами."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;290],
+			dependency_requirement: "all_completed",
+			id: 292,
+			tasks: [
+				{
+					id: 293,
+					type: "item",
+					item: "goodnightsleep:hope_mushroom"
+				},
+				{
+					id: 294,
+					type: "item",
+					item: "goodnightsleep:despair_mushroom"
+				}
+			],
+			rewards: [
+				{
+					id: 746,
+					type: "item",
+					item: "minecraft:red_bed"
+				},
+				{
+					id: 1790,
+					type: "item",
+					title: "71250 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 71250
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Фараоновість",
+			x: 6.0d,
+			y: 0.0d,
+			shape: "rsquare",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ви чуєте безсонний шепіт нежиті, що піднімається - страх пронизує кожне село в Потойбічному світі. Здається, настав час вирушити в подорож до Атума - пустелі мертвих."],
+			min_required_dependencies: 0,
+			dependencies: [I;292],
+			dependency_requirement: "all_completed",
+			id: 295,
+			tasks: [{
+				id: 296,
+				type: "item",
+				item: "atum:scarab"
+			}],
+			rewards: [
+				{
+					id: 1791,
+					type: "item",
+					title: "75000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 75000
+						}
+					}
+				},
+				{
+					id: 2092,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Пристрій Мап",
+			x: 1.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Мапи - це екземпляри підземель, які дають гравцям багато досвіду та лута! Мапи бувають різної рідкості та рівня. Рідкість визначає кількість афіксів на мапі, а вищі тіри збільшують силу мобів та лут!",
+				"Пристрій мап відкриває портали до підземелля. У цьому царстві ви не можете встановлювати або руйнувати блоки... Тому будьте обережні. Завжди беріть із собою свитки телепортації на випадок, якщо ви застрягнете!",
+				"Щоб використовувати пристрій мап, встановіть його на рівному відкритому місці. Заповніть його рудами (паливом), потім візьміть мапу в руку і використовуйте її на пристрої мап. Щасти вам!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;288],
+			dependency_requirement: "all_completed",
+			id: 297,
+			tasks: [{
+				id: 298,
+				type: "item",
+				item: "mmorpg:map_device"
+			}],
+			rewards: [
+				{
+					id: 1792,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 25000
+						}
+					}
+				},
+				{
+					id: 2520,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 30,
+							SCORE: "AMAZING",
+							TIER: 0
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "На Полюванні",
+			icon: "minecraft:ender_pearl",
+			x: 3.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ендермени заважають вам безпечно подорожувати Ендом. Знищіть решту ендерменів у Енді."],
+			min_required_dependencies: 0,
+			dependencies: [I;290],
+			dependency_requirement: "all_completed",
+			id: 299,
+			tasks: [{
+				id: 300,
+				type: "kill",
+				icon: "minecraft:ender_pearl",
+				entity: "minecraft:enderman",
+				value: 10L
+			}],
+			rewards: [
+				{
+					id: 1793,
+					type: "item",
+					title: "33750 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 33750
+						}
+					}
+				},
+				{
+					id: 2524,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 25,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Телефон Додому",
+			x: 1.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Телепортація назад з мап за допомогою порталу може трохи глючити. Використовуйте свитки телепорту, щоб гарантувати безпечне і точне повернення."],
+			min_required_dependencies: 0,
+			dependencies: [I;297],
+			dependency_requirement: "all_completed",
+			id: 301,
+			tasks: [{
+				id: 302,
+				type: "item",
+				item: "mmorpg:teleport_scroll",
+				count: 4L
+			}],
+			rewards: [
+				{
+					id: 757,
+					type: "item",
+					item: {
+						id: "mmorpg:teleport_scroll",
+						Count: 4b
+					}
+				},
+				{
+					id: 1796,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 52500
+						}
+					}
+				},
+				{
+					id: 2521,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 30,
+							SCORE: "AMAZING",
+							TIER: 0
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Шахтарський Світ",
+			x: 0.0d,
+			y: 6.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Шахтарський світ - це нескінченна печера, до якої можна потрапити, створивши телепорт (див. JEI). Рекомендується, щоб ви були щонайменше 30-го рівня перед тим, як потрапити до Шахтарського світу."],
+			min_required_dependencies: 0,
+			dependencies: [I;244],
+			dependency_requirement: "all_completed",
+			id: 303,
+			tasks: [{
+				id: 304,
+				type: "item",
+				item: "mining_dimension:teleporter"
+			}],
+			rewards: [
+				{
+					id: 763,
+					type: "item",
+					item: {
+						id: "minecraft:iron_pickaxe",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1799,
+					type: "item",
+					title: "25000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 25000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Пошук Потрібних Руд",
+			x: 1.5d,
+			y: 6.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Руди з Immersive Engineering можна знайти тільки в шахтарському світі. Відправляйтеся в печери і запасайтеся ними, поки ви там!"],
+			min_required_dependencies: 0,
+			dependencies: [I;303],
+			dependency_requirement: "all_completed",
+			id: 305,
+			tasks: [
+				{
+					id: 306,
+					type: "item",
+					item: "immersiveengineering:ore_lead"
+				},
+				{
+					id: 307,
+					type: "item",
+					item: "immersiveengineering:ore_nickel"
+				},
+				{
+					id: 308,
+					type: "item",
+					item: "immersiveengineering:ore_aluminum"
+				}
+			],
+			rewards: [
+				{
+					id: 765,
+					type: "item",
+					item: {
+						id: "mmorpg:ore3",
+						Count: 16b
+					}
+				},
+				{
+					id: 1800,
+					type: "item",
+					title: "30000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 30000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Squashing Bugs II",
+			icon: {
+				id: "lycanitesmobs:aberrationspawn",
+				Count: 1b,
+				tag: {
+					CreatureInfoSpawnEgg: {
+						creaturename: "trite"
+					}
+				}
+			},
+			x: 4.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Здається, що Енд та Незер мають якийсь зв'язок. Однак ці банальності, здається, зазнали якоїсь трансформації в порожнечі."],
+			min_required_dependencies: 0,
+			dependencies: [I;299],
+			dependency_requirement: "all_completed",
+			id: 309,
+			tasks: [{
+				id: 310,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:aberrationspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "trite"
+						}
+					}
+				},
+				entity: "lycanitesmobs:trite",
+				value: 16L
+			}],
+			rewards: [
+				{
+					id: 1794,
+					type: "item",
+					title: "37500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 37500
+						}
+					}
+				},
+				{
+					id: 2526,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 25,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Що ЦЕ взагалі таке?",
+			icon: "lycanitesmobs:geistliver",
+			x: 6.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ці хворобливі неживі істоти живляться мертвою енергією. Через нестабільну енергію, якою вони володіють, вони вибухають після смерті. Будьте обережні!"],
+			min_required_dependencies: 0,
+			dependencies: [I;309],
+			dependency_requirement: "all_completed",
+			id: 311,
+			tasks: [{
+				id: 312,
+				type: "kill",
+				icon: "lycanitesmobs:geistliver",
+				entity: "lycanitesmobs:geist",
+				value: 6L
+			}],
+			rewards: [
+				{
+					id: 1795,
+					type: "item",
+					title: "38750 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 38750
+						}
+					}
+				},
+				{
+					id: 2525,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 25,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Звільнити Того Лазера",
+			icon: "lycanitesmobs:arcanelaserstormcharge",
+			x: 4.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Вбийте цих тварюк в Енді, щоб не дати деяким з них покинути порожнечу і потрапити у верхній світ."],
+			min_required_dependencies: 0,
+			dependencies: [I;309],
+			dependency_requirement: "all_completed",
+			id: 313,
+			tasks: [{
+				id: 314,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:aberrationspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "astaroth"
+						}
+					}
+				},
+				entity: "lycanitesmobs:astaroth",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 1797,
+					type: "item",
+					title: "50000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 50000
+						}
+					}
+				},
+				{
+					id: 2527,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 25,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "And The Brain II",
+			icon: "lycanitesmobs:cooked_pinky_meat",
+			x: 6.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Вбийте цих тварюк у Енді, щоб не дати деяким з них покинути порожнечу і потрапити у верхній світ."],
+			min_required_dependencies: 0,
+			dependencies: [I;309],
+			dependency_requirement: "all_completed",
+			id: 315,
+			tasks: [{
+				id: 316,
+				type: "kill",
+				icon: "lycanitesmobs:cooked_pinky_meat",
+				entity: "lycanitesmobs:pinky",
+				value: 5L
+			}],
+			rewards: [
+				{
+					id: 1798,
+					type: "item",
+					title: "35000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 35000
+						}
+					}
+				},
+				{
+					id: 2528,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 30,
+							SCORE: "AMAZING",
+							TIER: 0
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Світло у Печері",
+			x: 3.0d,
+			y: 6.0d,
+			shape: "gear",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Створіть шахтарську каску, щоб бачити в темряві без смолоскипів!"],
+			min_required_dependencies: 0,
+			dependencies: [I;305],
+			dependency_requirement: "all_completed",
+			id: 1701,
+			tasks: [{
+				id: 1702,
+				type: "item",
+				item: {
+					id: "mining_helmet:mining_helmet",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 1801,
+					type: "item",
+					title: "20000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 20000
+						}
+					}
+				},
+				{
+					id: 2112,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2522,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 25,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Гніздо Дракона",
+			icon: "productivebees:dragon_egg_hive",
+			x: 3.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Драконічні бджоли - це унікальні бджоли з Productive Bees, для яких потрібне активне драконяче яйце. Активуйте яйце, виливши на нього дихання дракона."],
+			min_required_dependencies: 0,
+			dependencies: [I;290],
+			dependency_requirement: "all_completed",
+			id: 2455,
+			tasks: [{
+				id: 2456,
+				type: "item",
+				item: "productivebees:obsidian_nest"
+			}],
+			rewards: [{
+				id: 2457,
+				type: "item",
+				item: "productivebees:inactive_dragon_egg"
+			}]
+		},
+		{
+			title: "Проблеми у Ближньому Бою",
+			x: -1.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Arachnon Hammers - чудова стартова зброя. Вони мають фантастичні можливості для видобутку корисних копалин, а також 15% шанс отримати як потужну унікальну зброю!"],
+			min_required_dependencies: 0,
+			dependencies: [I;244],
+			dependency_requirement: "all_completed",
+			id: 2778,
+			tasks: [{
+				id: 2779,
+				type: "item",
+				item: {
+					id: "pandoras_creatures:arachnon_hammer",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 2784,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "strength_req_crate",
+							LVL: 30,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				},
+				{
+					id: 2789,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "rune_crate",
+							LVL: 30,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Проблеми у Діапазоні",
+			x: 0.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["The Neptunium Bow - вимагає певних зусиль, але має 20% шанс отримати унікальну рідкість!"],
+			min_required_dependencies: 0,
+			dependencies: [I;244],
+			dependency_requirement: "all_completed",
+			id: 2780,
+			tasks: [{
+				id: 2781,
+				type: "item",
+				item: {
+					id: "aquaculture:neptunium_bow",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 2785,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "dexterity_req_crate",
+							LVL: 30,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				},
+				{
+					id: 2788,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "rune_crate",
+							LVL: 30,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Проблема у Заклинаннях",
+			x: 1.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["The Spire of Lazarus - має 30% шанс отримати потужну унікальну рідкість для заклиначів!"],
+			min_required_dependencies: 0,
+			dependencies: [I;244],
+			dependency_requirement: "all_completed",
+			id: 2782,
+			tasks: [{
+				id: 2783,
+				type: "item",
+				item: {
+					id: "ctecu:spire_of_lazarus",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 2786,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "intelligence_req_crate",
+							LVL: 30,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				},
+				{
+					id: 2787,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "rune_crate",
+							LVL: 30,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Удосконалені Методи Ідентифікації",
+			x: 3.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Цей том здатен ідентифікувати весь ваш інвентар одразу. Створіть його, використовуючи свитки, шкіру та епічну руду!",
+				"",
+				'"Скажи "ні" зап\'ястковому суглобу!"'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;297],
+			dependency_requirement: "all_completed",
+			id: 2790,
+			tasks: [{
+				id: 2791,
+				type: "item",
+				item: "mmorpg:identify_tome_plus",
+				count: 3L
+			}],
+			rewards: [
+				{
+					id: 2793,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "unique_crate",
+							LVL: 35,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				},
+				{
+					id: 2794,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 50000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Команди Підземель",
+			x: 1.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Сфери Товаришування - це модифікатор, який можна використовувати на будь-яких мапах. Це суттєво підвищить складність мапи, але значно покращить винагороду за лут і досвід.",
+				"Обов'язково пройдіть ці підземелля в компанії друзів! Ви не захочете проходити їх наодинці.",
+				"",
+				"В ідеалі, у вас має бути хтось, хто може прийняти на себе значну частину шкоди, хтось, хто може завдати значної шкоди, і, можливо, якась підтримка."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;301],
+			dependency_requirement: "all_completed",
+			id: 2823,
+			tasks: [{
+				id: 2824,
+				type: "item",
+				item: "mmorpg:currency/team_map"
+			}],
+			rewards: [
+				{
+					id: 2825,
+					type: "item",
+					item: {
+						id: "mmorpg:currency/team_map",
+						Count: 8b
+					}
+				},
+				{
+					id: 2826,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 30,
+							SCORE: "AMAZING",
+							TIER: 0
+						}
+					}
+				},
+				{
+					id: 2827,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 55000
+						}
+					}
+				}
+			]
+		}
+	]
+}

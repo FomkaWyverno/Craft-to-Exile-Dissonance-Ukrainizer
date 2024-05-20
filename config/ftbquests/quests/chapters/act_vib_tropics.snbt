@@ -1,0 +1,1078 @@
+{
+	id: 1972,
+	filename: "act_vib_tropics",
+	order_index: 7,
+	title: "Акт VIa: Тропіки (Лише Одиночна Гра)",
+	icon: "tropicraft:pina_colada",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Ласкаво просимо до раю?",
+			icon: "tropicraft:pina_colada",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Аххх Рай... Принаймні, ви так думали. Ласкаво просимо до Тропіків - незвіданого острова, що знаходиться біля берегів іншого острова. Як ви сюди потрапили? Дуже просто! Просто сіли на пляжний шезлонг і потягувати свою Піна Коладу на заході сонця!",
+				"Можливо, вам доведеться дивитися на сонце, поки ви потягуєте свій напій!",
+				"Примітка: перед тим, як потрапити в Тропіки, переконайтеся, що ви встановили глобальний вейстоун у Верхньому світі (для цього вам потрібно бути в творчому режимі). Також не забудьте взяти з собою варп камінь або свиток, щоб телепортуватися назад.",
+				"Наразі це єдиний спосіб повернутися",
+				"з Тропіків! Саме тому, Тропіки - це тільки для Одиночної гри!",
+				'Щоб отримати доступ до цього квесту, ви повинні виконати квест "Good Dream Lord" з Акту V.'
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;486],
+			dependency_requirement: "all_completed",
+			id: 1973,
+			tasks: [{
+				id: 1974,
+				type: "dimension",
+				title: "Відвідайте: Тропіки",
+				dimension: "tropicraft:tropics"
+			}],
+			rewards: [
+				{
+					id: 1977,
+					type: "item",
+					item: {
+						id: "tropicraft:bamboo_stick",
+						Count: 4b
+					}
+				},
+				{
+					id: 1978,
+					type: "item",
+					title: "175000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 175000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Найнеобхідніше",
+			x: 1.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У Тропіках потрібно бути обережним, куди б ви не ступили. Ніколи не знаєш, що може підстерігати за поворотом... Змайструй собі кинджал для захисту."],
+			min_required_dependencies: 0,
+			dependencies: [I;1973],
+			dependency_requirement: "all_completed",
+			id: 1975,
+			tasks: [{
+				id: 1976,
+				type: "item",
+				item: {
+					id: "tropicraft:dagger",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 1979,
+					type: "item",
+					item: {
+						id: "minecraft:bucket",
+						Count: 3b
+					}
+				},
+				{
+					id: 1980,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 180000
+						}
+					}
+				},
+				{
+					id: 2565,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Розвідувальний маршрут",
+			x: 3.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Давайте подивимося, що ми можемо знайти для їжі навколо цих островів!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1975],
+			dependency_requirement: "all_completed",
+			id: 1981,
+			tasks: [
+				{
+					id: 1982,
+					type: "item",
+					item: "tropicraft:lemon"
+				},
+				{
+					id: 1983,
+					type: "item",
+					item: "tropicraft:lime"
+				},
+				{
+					id: 1985,
+					type: "item",
+					item: "tropicraft:orange"
+				}
+			],
+			rewards: [
+				{
+					id: 1987,
+					type: "item",
+					title: "185000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 185000
+						}
+					}
+				},
+				{
+					id: 2557,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Маршут для Відпочинку",
+			x: 3.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Тепер, коли ми вже тут, давайте прогуляємося берегом... Після стількох днів ми дійсно заслуговуємо на відпочинок!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1975],
+			dependency_requirement: "all_completed",
+			id: 1988,
+			tasks: [{
+				id: 1991,
+				type: "item",
+				item: "tropicraft:starfish",
+				count: 6L
+			}],
+			rewards: [
+				{
+					id: 1993,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 185000
+						}
+					}
+				},
+				{
+					id: 2566,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Міцний",
+			icon: "tropicraft:chunk",
+			x: 4.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У тропіках можна знайти різноманітні голови східних островів. Матеріал, з якого вони зроблені, дуже міцний. Вони можуть бути практичними..."],
+			min_required_dependencies: 0,
+			dependencies: [I;1981],
+			dependency_requirement: "all_completed",
+			id: 1994,
+			tasks: [
+				{
+					id: 1995,
+					type: "item",
+					item: "tropicraft:drink_mixer"
+				},
+				{
+					id: 1996,
+					type: "item",
+					item: "tropicraft:air_compressor"
+				}
+			],
+			rewards: [
+				{
+					id: 1997,
+					type: "item",
+					item: {
+						id: "tropicraft:zircon_gem",
+						Count: 4b
+					}
+				},
+				{
+					id: 1998,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Відкриття гемів",
+			x: 4.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У Тропіках ви знайдете місцеві руди та геми, заховані на скелях гір! Вони використовуються для створення різноманітних інструментів, зброї та специфічних для Тропіків предметів!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1988],
+			dependency_requirement: "all_completed",
+			id: 1999,
+			tasks: [
+				{
+					id: 2000,
+					type: "item",
+					item: "tropicraft:azurite_gem",
+					count: 4L
+				},
+				{
+					id: 2001,
+					type: "item",
+					item: "tropicraft:zircon_gem",
+					count: 6L
+				}
+			],
+			rewards: [
+				{
+					id: 2002,
+					type: "item",
+					item: {
+						id: "tropicraft:azurite_gem",
+						Count: 2b
+					}
+				},
+				{
+					id: 2003,
+					type: "item",
+					item: {
+						id: "tropicraft:zircon_gem",
+						Count: 2b
+					}
+				},
+				{
+					id: 2004,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				},
+				{
+					id: 2567,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Небезпечний маршрут",
+			x: 3.0d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У тропіках ви знайдете варіації знайомих видів... Вбийте 1 tropicreeper, 1 tropibee, 1 tropi spider, та 1 tropiskelly."],
+			min_required_dependencies: 0,
+			dependencies: [I;1975],
+			dependency_requirement: "all_completed",
+			id: 2005,
+			tasks: [
+				{
+					id: 2006,
+					type: "kill",
+					icon: "tropicraft:tropicreeper_spawn_egg",
+					entity: "tropicraft:tropicreeper",
+					value: 1L
+				},
+				{
+					id: 2007,
+					type: "kill",
+					icon: "tropicraft:tropibee_spawn_egg",
+					entity: "tropicraft:tropibee",
+					value: 1L
+				},
+				{
+					id: 2008,
+					type: "kill",
+					icon: "tropicraft:tropi_spider_spawn_egg",
+					entity: "tropicraft:tropi_spider",
+					value: 1L
+				},
+				{
+					id: 2009,
+					type: "kill",
+					icon: "minecraft:skeleton_skull",
+					entity: "tropicraft:tropiskelly",
+					value: 1L
+				}
+			],
+			rewards: [
+				{
+					id: 2011,
+					type: "item",
+					title: "200000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				},
+				{
+					id: 2559,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Місцева зустріч",
+			x: 4.5d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Ви дізнаєтеся, що в тропіках є 2 місцевих племені! The ashen - злісне плем'я, яке не зацікавлене в розмовах... вбивайте їх на місці! Інше плем'я здається трохи більш мирним...",
+				"Ви знайдете цих хлопців, розкиданих по всьому тропічному поясу."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2005],
+			dependency_requirement: "all_completed",
+			id: 2012,
+			tasks: [{
+				id: 2013,
+				type: "kill",
+				icon: "tropicraft:ashen_spawn_egg",
+				entity: "tropicraft:ashen",
+				value: 12L
+			}],
+			rewards: [
+				{
+					id: 2015,
+					type: "item",
+					title: "250000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 250000
+						}
+					}
+				},
+				{
+					id: 2564,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Епіляція шкіри",
+			x: 6.0d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ігуани є рідним видом для тропіків. Вони можуть скидати цінні матеріали для крафтингу!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2012],
+			dependency_requirement: "all_completed",
+			id: 2016,
+			tasks: [{
+				id: 2017,
+				type: "item",
+				item: "tropicraft:iguana_leather",
+				count: 12L
+			}],
+			rewards: [
+				{
+					id: 2018,
+					type: "item",
+					item: {
+						id: "tropicraft:iguana_leather",
+						Count: 4b
+					}
+				},
+				{
+					id: 2019,
+					type: "item",
+					title: "225000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 225000
+						}
+					}
+				},
+				{
+					id: 2562,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Тропічні Крафти",
+			x: 6.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ви побачите, що багато ресурсів у тропіках є різноманітними. Циркон можна перетворити на цирконій, який можна використовувати для обладнання!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1999],
+			dependency_requirement: "all_completed",
+			id: 2020,
+			tasks: [{
+				id: 2021,
+				type: "item",
+				item: {
+					id: "tropicraft:zirconium_sword",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 2022,
+					type: "item",
+					item: {
+						id: "tropicraft:zirconium_gem",
+						Count: 8b
+					}
+				},
+				{
+					id: 2023,
+					type: "item",
+					title: "275000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 275000
+						}
+					}
+				},
+				{
+					id: 2568,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Покращене спорядження",
+			x: 7.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Еудіаліт вважається одним з найміцніших матеріалів, які можна знайти в тропіках."],
+			min_required_dependencies: 0,
+			dependencies: [I;2020],
+			dependency_requirement: "all_completed",
+			id: 2024,
+			tasks: [{
+				id: 2025,
+				type: "item",
+				item: {
+					id: "tropicraft:eudialyte_axe",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 2055,
+					type: "item",
+					item: {
+						id: "tropicraft:eudialyte_gem",
+						Count: 8b
+					}
+				},
+				{
+					id: 2056,
+					type: "item",
+					title: "275000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 275000
+						}
+					}
+				},
+				{
+					id: 2569,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Вогнестійкість",
+			x: 7.5d,
+			y: -3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Повний комплект броні дає прихований бонус до вогнестійкості! Луску можна отримати від ігуан."],
+			min_required_dependencies: 0,
+			dependencies: [I;2016],
+			dependency_requirement: "all_completed",
+			id: 2026,
+			tasks: [
+				{
+					id: 2027,
+					type: "item",
+					item: {
+						id: "tropicraft:scale_helmet",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 2028,
+					type: "item",
+					item: {
+						id: "tropicraft:scale_chestplate",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 2029,
+					type: "item",
+					item: {
+						id: "tropicraft:scale_leggings",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 2030,
+					type: "item",
+					item: {
+						id: "tropicraft:scale_boots",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			],
+			rewards: [
+				{
+					id: 2031,
+					type: "item",
+					item: "mmorpg:lootbox/medium_gear_lootbox_4"
+				},
+				{
+					id: 2032,
+					type: "item",
+					title: "275000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 275000
+						}
+					}
+				},
+				{
+					id: 2563,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Підводна експедиція",
+			x: 6.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"На цьому етапі ви можете створювати акваланг! Використовуючи шкіру ігуани та циркон, ви можете виготовити 3 частини аквалангів.",
+				"Заправьте балони повітря для акваланг за допомогою повітряного компресора!"
+			],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				1999,
+				1994,
+				2016
+			],
+			dependency_requirement: "all_completed",
+			id: 2033,
+			tasks: [
+				{
+					id: 2034,
+					type: "item",
+					item: {
+						id: "tropicraft:yellow_scuba_goggles",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 2035,
+					type: "item",
+					item: {
+						id: "tropicraft:yellow_scuba_harness",
+						Count: 1b,
+						tag: {
+							Damage: 0,
+							scuba: {}
+						}
+					}
+				},
+				{
+					id: 2036,
+					type: "item",
+					item: {
+						id: "tropicraft:yellow_scuba_flippers",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			],
+			rewards: [
+				{
+					id: 2038,
+					type: "item",
+					title: "205000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 205000
+						}
+					}
+				},
+				{
+					id: 2558,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Рибалка для лиха",
+			x: 7.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Океан величезний і наповнений безліччю різних видів риби. Деякі з них можна зловити відрами. Ходімо на риболовлю!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2033],
+			dependency_requirement: "all_completed",
+			id: 2039,
+			tasks: [
+				{
+					id: 2040,
+					type: "item",
+					item: "tropicraft:tropical_fish_bucket"
+				},
+				{
+					id: 2329,
+					type: "item",
+					item: "minecraft:dead_tube_coral_block",
+					count: 4L
+				}
+			],
+			rewards: [
+				{
+					id: 2043,
+					type: "item",
+					item: {
+						id: "tropicraft:scale",
+						Count: 4b
+					}
+				},
+				{
+					id: 2044,
+					type: "item",
+					title: "200000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 200000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Очищення",
+			x: 9.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Подейкують, що спалювання редстоуну та лазуриту в печі очищає їх... Але з якою метою?"],
+			min_required_dependencies: 0,
+			dependencies: [I;2039],
+			dependency_requirement: "all_completed",
+			id: 2138,
+			tasks: [
+				{
+					id: 2139,
+					type: "item",
+					item: "gaiadimension:crystallized_lapis_lazuli",
+					count: 4L
+				},
+				{
+					id: 2140,
+					type: "item",
+					item: "gaiadimension:crystallized_redstone",
+					count: 4L
+				}
+			],
+			rewards: [
+				{
+					id: 2142,
+					type: "item",
+					title: "300000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 300000
+						}
+					}
+				},
+				{
+					id: 2570,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Горіння",
+			x: 10.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Поєднавши редстоун та лазурит, ви отримаєте блок з високою потенційною енергією. Ви відчуваєте, що має бути якийсь спосіб вивільнити енергію з блоків... Якби ж то був якийсь спосіб.",
+				""
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2138],
+			dependency_requirement: "all_completed",
+			id: 2143,
+			tasks: [
+				{
+					id: 2144,
+					type: "item",
+					item: {
+						id: "gaiadimension:glint_and_gold",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 2145,
+					type: "item",
+					item: "gaiadimension:keystone_block",
+					count: 10L
+				}
+			],
+			rewards: [{
+				id: 2146,
+				type: "item",
+				title: "300000 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 300000
+					}
+				}
+			}]
+		},
+		{
+			title: "Таємний світ",
+			icon: {
+				id: "gaiadimension:gaia_champion_sword",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 12.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Розмістивши кейстоуни в орієнтації, схожій на незер портал, і активувавши їх за допомогою золота і діаманта, ви активували портал! Або... принаймні ви думаєте, що це портал.",
+				"Увійдіть у вимір Гайї. Щось підказує вам, що це буде важка подорож..."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2143],
+			dependency_requirement: "all_completed",
+			id: 2147,
+			tasks: [{
+				id: 2148,
+				type: "dimension",
+				title: "Visit Dimension: Gaia",
+				dimension: "gaiadimension:gaia"
+			}],
+			rewards: [
+				{
+					id: 2149,
+					type: "item",
+					title: "300000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 300000
+						}
+					}
+				},
+				{
+					id: 2571,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "map_crate",
+							LVL: 55,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Хижі рослини",
+			x: 4.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Деякі рослини не дуже привітно ставляться до чужих істот... Обережно!"],
+			min_required_dependencies: 0,
+			dependencies: [I;1994],
+			dependency_requirement: "all_completed",
+			id: 2795,
+			tasks: [
+				{
+					id: 2796,
+					type: "kill",
+					icon: {
+						id: "lycanitesmobs:plantspawn",
+						Count: 1b,
+						tag: {
+							CreatureInfoSpawnEgg: {
+								creaturename: "triffid"
+							}
+						}
+					},
+					entity: "lycanitesmobs:triffid",
+					value: 4L
+				},
+				{
+					id: 2800,
+					type: "kill",
+					icon: {
+						id: "lycanitesmobs:plantspawn",
+						Count: 1b,
+						tag: {
+							CreatureInfoSpawnEgg: {
+								creaturename: "shambler"
+							}
+						}
+					},
+					entity: "lycanitesmobs:shambler",
+					value: 2L
+				}
+			],
+			rewards: [{
+				id: 2820,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 250000
+					}
+				}
+			}]
+		}
+	]
+}

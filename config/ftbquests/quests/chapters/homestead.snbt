@@ -1,0 +1,2698 @@
+{
+	id: 250,
+	filename: "homestead",
+	order_index: 10,
+	title: "Маєток",
+	icon: "minecolonies:supplycampdeployer",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Мій намет",
+			x: 0.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Табір постачання - це перше, що вам потрібно для успішного заснування. Хоча табір постачання не є функціонально корисним, він необхідний, оскільки він забезпечить вам ратушу.",
+				"Важливо з розумом підійти до вибору першого місця для ратуші. Вам знадобиться велика рівна площа для всієї колонії (ратуша також повинна бути на рівному місці).",
+				"Ви можете відмітити, клацанням правою кнопкою миші табором постачання у ручі (табір постачання НЕ вимагає використання інструменту будівництва) ви можете візуалізувати, де ви можете розмістити свій табір постачання.",
+				"Примітка: мешканці іноді проситимуть спорядження. Але для того, щоб дати його їм, спорядження не повинно мати статистики Mine And Slash. Щоб обійти цю проблему, НЕ відкривайте інвентар після створення предмета, а одразу ж",
+				"віддайте його їм. Обладнання генерує статистику при першому відкритті/закритті інвентарю."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 251,
+			tasks: [{
+				id: 252,
+				type: "item",
+				item: "minecolonies:supplycampdeployer"
+			}],
+			rewards: [
+				{
+					id: 253,
+					type: "item",
+					item: {
+						id: "mmorpg:ore0",
+						Count: 10b
+					}
+				},
+				{
+					id: 1902,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2617,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 1
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Всі ваші бази",
+			x: 1.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				'Craft to Exile включає фантастичний мод MineColonies, який дозволить вам створити домашню "базу". У MineColonies ви будете виступати в ролі лідера, контролювати виробництво нових об\'єктів і стежити за тим, щоб колоністи залишалися щасливими.',
+				"Почніть із створення будівельного інструменту. З цього моменту ви будуватимете будівлі, клацаючи правою кнопкою миші на інструменті. Паличка автоматично виявить усі будівельні блоки, які є у вашому інвентарі."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;251],
+			dependency_requirement: "all_completed",
+			id: 255,
+			tasks: [{
+				id: 256,
+				type: "item",
+				item: "structurize:sceptergold"
+			}],
+			rewards: [
+				{
+					id: 257,
+					type: "item",
+					item: {
+						id: "mmorpg:ore1",
+						Count: 5b
+					}
+				},
+				{
+					id: 1903,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2616,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 1
+						}
+					}
+				}
+			]
+		},
+		{
+			x: 3.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"У вашому таборі постачання ви знайдете блок ратуші в одному зі сховищ. За допомогою будівельного інструменту (жовтої палички) розмістіть ратушу на великому, рівному, відкритому просторі. НЕ кладіть її на землю, інакше вона не спрацює.",
+				"Після того, як ви побудуєте ратушу, до вашої колонії прийдуть нові колоністи. Ви повинні побудувати хатину будівельника, щоб доручити будівництво одному з новоприбулих колоністів."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;255],
+			dependency_requirement: "all_completed",
+			id: 259,
+			tasks: [{
+				id: 260,
+				type: "item",
+				item: "minecolonies:blockhuttownhall"
+			}],
+			rewards: [
+				{
+					id: 261,
+					type: "item",
+					item: {
+						id: "minecraft:cooked_porkchop",
+						Count: 16b
+					}
+				},
+				{
+					id: 1904,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Робота Робота",
+			x: 4.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Нарешті, кілька колоністів з ратуші! Щоб почати будувати будинки, вам потрібно встановити хатинку будівельника. Побудуйте хатинку будівельника своїм будівельним інструмент, і один з ваших колоністом стане будівельником.",
+				"Подбайте про те, щоб добре нагодувати своїх громадян! Вивчіть варіанти будівництва у JEI або відвідайте вікі MineColonies для отримання додаткової інформації."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;259],
+			dependency_requirement: "all_completed",
+			id: 263,
+			tasks: [{
+				id: 264,
+				type: "item",
+				item: "minecolonies:blockhutbuilder"
+			}],
+			rewards: [
+				{
+					id: 265,
+					type: "item",
+					item: {
+						id: "mmorpg:identify_tome",
+						Count: 16b
+					}
+				},
+				{
+					id: 1905,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2614,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Вартові міста",
+			x: 4.5d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"У вартовій вежі буде розміщено 1-го вартового, який захищатиме вашу колонію. Новому вартовому знадобиться ліжко в будинку, щоб спавнитись.",
+				"Однак, як тільки їх наймають на роботу в вартову вежу, вона стає їхнім новим місцем проживання, а ліжко в будинку звільняється для іншого нового колониста (дитини або рекрута).",
+				"Якщо ви розмістите вартові вежі біля кордону вашої колонії і вирівняєте їх за рівнем, ваш кордон розшириться.",
+				"Примітка: колоністи іноді просять обладнання. Але для того, щоб дати його їм, спорядження не повинно мати статистики Mine і Slash. Щоб обійти цю проблему, НЕ відкривайте інвентар після створення предмета, а одразу ж",
+				"віддайте це їм. Обладнання генерує статистику при першому відкритті/закритті інвентарю."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;263],
+			dependency_requirement: "all_completed",
+			id: 267,
+			tasks: [{
+				id: 268,
+				type: "item",
+				item: "minecolonies:blockhutguardtower"
+			}],
+			rewards: [
+				{
+					id: 972,
+					type: "item",
+					item: {
+						id: "minecraft:iron_sword",
+						Count: 2b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1913,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Набіги варварів",
+			icon: {
+				id: "minecraft:iron_axe",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 6.0d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Час від часу на вашу колонію здійснюватимуться набіги варварів та піратів. Ви вже повинні були встановити сторожову вежу, але якщо ваші сили переповнені, то вам доведеться захищати свою колонію самостійно!"],
+			min_required_dependencies: 0,
+			dependencies: [I;267],
+			dependency_requirement: "all_completed",
+			id: 269,
+			tasks: [
+				{
+					id: 270,
+					type: "kill",
+					entity: "minecolonies:chiefbarbarian",
+					value: 1L
+				},
+				{
+					id: 271,
+					type: "kill",
+					entity: "minecolonies:barbarian",
+					value: 10L
+				}
+			],
+			rewards: [
+				{
+					id: 1912,
+					type: "item",
+					title: "2000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				},
+				{
+					id: 2615,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Я лісоруб, і зі мною все гаразд.",
+			x: 6.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Тепер, коли у вас є кілька колоністів і хатина будівельника, вам, мабуть, буде простіше доручити завдання збору деревини одному з ваших колоністів. Хатина лісоруба - це місце, куди лісоруб буде ходити в перервах між рубанням дерев.",
+				"Лісоруб зрубає будь-яке дерево в радіусі приблизно 150 блоків (від себе), яке не входить до схеми хатини і не має під собою кругляку.",
+				"Примітка: колоністи іноді просять спорядження. Але для того, щоб дати його їм, спорядження не повинно мати статистики Mine and Slash. Щоб обійти цю проблему, НЕ відкривайте інвентар після створення предмета, а одразу ж",
+				"віддайте це  їм. Обладнання генерує статистику при першому відкритті/закритті інвентарю."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;263],
+			dependency_requirement: "all_completed",
+			id: 274,
+			tasks: [{
+				id: 275,
+				type: "item",
+				item: "minecolonies:blockhutlumberjack"
+			}],
+			rewards: [
+				{
+					id: 276,
+					type: "item",
+					item: {
+						id: "minecraft:iron_axe",
+						Count: 2b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1906,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Це вся ШАХТА!",
+			x: 7.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Шахта - це місце, де шахтар видобуватиме руду та матеріали. Після того, як його наймуть, шахтар створить шахту, яка буде йти вниз, а потім розгалужуватиметься.",
+				"Примітка: колоністи іноді просять спорядження. Але для того, щоб дати його їм, спорядження не повинно мати статистики Mine and Slash. Щоб обійти цю проблему, НЕ відкривайте інвентар після створення предмета, а одразу ж",
+				"віддайте це їм. Обладнання генерує статистику при першому відкритті/закритті інвентарю."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;274],
+			dependency_requirement: "all_completed",
+			id: 278,
+			tasks: [{
+				id: 279,
+				type: "item",
+				item: "minecolonies:blockhutminer"
+			}],
+			rewards: [
+				{
+					id: 966,
+					type: "item",
+					item: {
+						id: "minecraft:iron_pickaxe",
+						Count: 2b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1907,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2613,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Населення",
+			x: 9.0d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Хатина колоніста - це будинок для ваших колоністів. На ніч вони йтимуть до призначеної їм хатини, щоб спати. Це також один з двох способів отримати більше колоністів для вашої колонії (інший - таверна).",
+				"Для того, щоб з'явилися нові колоністи, вам спочатку потрібно мати достатньо місця в хатині (хатинах), щоб розмістити перших чотирьох громадян. Після того, як ви створили достатньо місця для перших чотирьох колоністів, у вас є два варіанти розвитку",
+				"вашої колонії.",
+				"Перший спосіб - мати принаймні одну хату колоніста принаймні 2-го рівня, в якій проживають чоловік та жінка, що дозволить народити дитину в колонії за наявності вільного місця.",
+				"Ви також можете звільнити місце для нового колоніста, піти в таверну, почекати, поки з'явиться мандрівник, а потім дати йому предмети, які він попросить, щоб завербувати його.",
+				""
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;278],
+			dependency_requirement: "all_completed",
+			id: 280,
+			tasks: [{
+				id: 281,
+				type: "item",
+				item: "minecolonies:blockhutcitizen"
+			}],
+			rewards: [
+				{
+					id: 968,
+					type: "item",
+					item: {
+						id: "minecraft:oak_log",
+						Count: 64b
+					}
+				},
+				{
+					id: 1908,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Рибні страви",
+			x: 7.5d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Рибальська хатина - це місце, де рибак буде ловити рибу. Для роботи рибаку потрібна вудка і водойма розміром мінімум 7 блоків завширшки, 7 блоків завдовжки і 1 блок заввишки. Вода також повинна бути поруч з хатиною."],
+			min_required_dependencies: 0,
+			dependencies: [I;278],
+			dependency_requirement: "all_completed",
+			id: 282,
+			tasks: [{
+				id: 283,
+				type: "item",
+				item: "minecolonies:blockhutfisherman"
+			}],
+			rewards: [
+				{
+					id: 974,
+					type: "item",
+					item: {
+						id: "aquaculture:worm",
+						Count: 16b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1911,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2078,
+					type: "item",
+					item: "calemiutils:coin_quarter"
+				}
+			]
+		},
+		{
+			title: "Освіта",
+			x: 9.0d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Університет - це місце, де дослідник буде вивчати різні поліпшення вашої колонії. Натиснувши на дерево досліджень, ви побачите варіанти для кожної гілки досліджень.",
+				"Для кожного варіанту будуть вказані вимоги та час, необхідний для його дослідження (час - це реальний час, проведений у грі).",
+				"Кожна колонка дослідницької галузі - це також рівень, на якому повинен бути університет, щоб розпочати дослідження з цієї колонки."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;278],
+			dependency_requirement: "all_completed",
+			id: 284,
+			tasks: [{
+				id: 285,
+				type: "item",
+				item: "minecolonies:blockhutuniversity"
+			}],
+			rewards: [
+				{
+					id: 976,
+					type: "item",
+					item: {
+						id: "minecraft:book",
+						Count: 16b
+					}
+				},
+				{
+					id: 1910,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2077,
+					type: "item",
+					item: "calemiutils:coin_quarter"
+				}
+			]
+		},
+		{
+			title: "Випити пива",
+			x: 10.5d,
+			y: 6.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Таверна схожа на міську хату, оскільки в ній живуть колоністи. Однак у таверні мешкає четверо, а не один, і вона не може бути розширена, щоб вмістити більше. Час від часу до таверни заходять мандрівники.",
+				"Ви можете найняти цих мандрівників (з речами), щоб вони жили і працювали у вашій колонії. Примітка: Таверну можна покращити лише до 3-го, а не до 5-го рівня. Ви також можете мати лише 1 таверну на колонію."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;280],
+			dependency_requirement: "all_completed",
+			id: 286,
+			tasks: [{
+				id: 287,
+				type: "item",
+				item: "minecolonies:blockhuttavern"
+			}],
+			rewards: [
+				{
+					id: 1909,
+					type: "item",
+					title: "1500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1500
+						}
+					}
+				},
+				{
+					id: 2079,
+					type: "item",
+					item: "calemiutils:coin_quarter"
+				},
+				{
+					id: 2612,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Рибництво",
+			icon: "aquaculture:goldfish",
+			x: 0.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Aquaculture - це фантастичний мод, який розширює можливості ванільної риболовлі. Дотримуйтесь цієї квестової лінії, щоб побачити, що може запропонувати Aquaculture!"],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 553,
+			tasks: [{
+				id: 554,
+				type: "item",
+				item: {
+					id: "minecraft:fishing_rod",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 956,
+					type: "item",
+					item: {
+						id: "aquaculture:worm",
+						Count: 3b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1897,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2609,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 1
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "До побачення...",
+			x: 1.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Якщо ви хочете бути справжнім професіоналом, зробіть собі ящик для риболовлі. Коробка для снастей дозволить вам налаштувати своє рибальське спорядження та зберігати різні рибальські предмети!"],
+			min_required_dependencies: 0,
+			dependencies: [I;553],
+			dependency_requirement: "all_completed",
+			id: 555,
+			tasks: [{
+				id: 556,
+				type: "item",
+				item: "aquaculture:tackle_box"
+			}],
+			rewards: [
+				{
+					id: 958,
+					type: "item",
+					item: "aquaculture:fishing_line"
+				},
+				{
+					id: 1898,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Гачки",
+			x: 3.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Гачки можуть покращити вашу вудку за допомогою різних ефектів. Залізні гачки збільшать довговічність вашої вудки. Спробуйте інші гачки, щоб переконатися в їхніх перевагах!"],
+			min_required_dependencies: 0,
+			dependencies: [I;555],
+			dependency_requirement: "all_completed",
+			id: 557,
+			tasks: [{
+				id: 558,
+				type: "item",
+				item: "aquaculture:iron_hook"
+			}],
+			rewards: [
+				{
+					id: 960,
+					type: "item",
+					item: {
+						id: "aquaculture:worm",
+						Count: 3b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 1899,
+					type: "item",
+					title: "2000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				},
+				{
+					id: 2610,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Стрижнева Модернізація",
+			x: 4.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Більш кращі вудки збільшують ваші шанси на упіймання кращої риби і мають підвищену міцність!"],
+			min_required_dependencies: 0,
+			dependencies: [I;557],
+			dependency_requirement: "all_completed",
+			id: 559,
+			tasks: [{
+				id: 560,
+				type: "item",
+				item: {
+					id: "aquaculture:iron_fishing_rod",
+					Count: 1b,
+					tag: {
+						Damage: 0
+					}
+				}
+			}],
+			rewards: [
+				{
+					id: 962,
+					type: "item",
+					item: "aquaculture:bobber"
+				},
+				{
+					id: 1900,
+					type: "item",
+					title: "4000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 4000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Для всіх риб",
+			x: 6.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Нептуній - це руда, характерна для Aquacultureтури. З нептунію можна виготовити справді потужні вудки та аксесуари."],
+			min_required_dependencies: 0,
+			dependencies: [I;559],
+			dependency_requirement: "all_completed",
+			id: 561,
+			tasks: [{
+				id: 562,
+				type: "item",
+				item: "aquaculture:neptunium_ingot",
+				count: 9L
+			}],
+			rewards: [
+				{
+					id: 1901,
+					type: "item",
+					title: "8000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 8000
+						}
+					}
+				},
+				{
+					id: 2080,
+					type: "item",
+					item: "calemiutils:coin_quarter"
+				},
+				{
+					id: 2611,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Час фермерства",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Craft to Exile включає деякі модифікації для покращення фермерства та кулінарії! Почніть зі збору корисного насіння і займіться сільським господарством!"],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 567,
+			tasks: [
+				{
+					id: 568,
+					type: "item",
+					item: "minecraft:wheat_seeds",
+					count: 16L
+				},
+				{
+					id: 2764,
+					type: "item",
+					item: "simplefarming:barley_seeds",
+					count: 16L
+				}
+			],
+			rewards: [
+				{
+					id: 915,
+					type: "item",
+					item: {
+						id: "simplefarming:sweet_potato_seeds",
+						Count: 4b
+					}
+				},
+				{
+					id: 916,
+					type: "item",
+					item: {
+						id: "simplefarming:pea_seeds",
+						Count: 4b
+					}
+				},
+				{
+					id: 1881,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2599,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 1
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Доїння",
+			x: 1.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Молоко - важливий інгредієнт для більшості кулінарних рецептів, у тому числі й для сиру. Доїмо корову за допомогою відра. Чи знаєте ви, що вживання унікальних продуктів інколи зміцнить ваше здоров'я? Приступаємо до приготування (використовуйте",
+				"/foodlist)"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;567],
+			dependency_requirement: "all_completed",
+			id: 569,
+			tasks: [{
+				id: 570,
+				type: "item",
+				item: "minecraft:milk_bucket"
+			}],
+			rewards: [
+				{
+					id: 919,
+					type: "item",
+					item: {
+						id: "minecraft:glass_bottle",
+						Count: 5b
+					}
+				},
+				{
+					id: 1882,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2600,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 1
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Чудова робота!",
+			x: 3.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Сир використовується у багатьох рецептах Простого Фермерства. Але ви помітили, що немає можливості створити скибочку сиру. Це тому, що для того, щоб отримати скибочку сиру, ви повинні покласти скибочку сиру і натиснути по неї (подібно до торта)."],
+			min_required_dependencies: 0,
+			dependencies: [I;569],
+			dependency_requirement: "all_completed",
+			id: 571,
+			tasks: [{
+				id: 572,
+				type: "item",
+				item: "simplefarming:cheese_block"
+			}],
+			rewards: [
+				{
+					id: 922,
+					type: "item",
+					item: "simplefarming:cheeseburger"
+				},
+				{
+					id: 1883,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2601,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 1
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Кляті Рецепти",
+			x: 4.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				'Ви, мабуть, відчуваєте себе пригніченими всіма можливими продуктами, які можна приготувати. Не хвилюйтеся! Ви можете просто займатися сільським господарством, а про приготування їжі потурбуватися пізніше з кулінарною книгою "Cooking for Blockheads I"',
+				"Використовуючи книгу, ви зможете побачити, які продукти можна приготувати з того, що є у вашому інвентарі."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;571],
+			dependency_requirement: "all_completed",
+			id: 573,
+			tasks: [{
+				id: 574,
+				type: "item",
+				item: "cookingforblockheads:recipe_book"
+			}],
+			rewards: [
+				{
+					id: 925,
+					type: "item",
+					item: "cookingforblockheads:fruit_basket"
+				},
+				{
+					id: 1884,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2602,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 1
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Можливості!",
+			x: 4.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ['Хоча "Cooking for Blockheads I" може бути дуже корисною, іноді ви просто хочете побачити всі доступні рецепти (і не ритися в JEI). Ви можете створити нефільтровану книгу рецептів, щоб переглянути доступні продукти для приготування!'],
+			min_required_dependencies: 0,
+			dependencies: [I;573],
+			dependency_requirement: "all_completed",
+			id: 575,
+			tasks: [{
+				id: 576,
+				type: "item",
+				item: "cookingforblockheads:no_filter_edition"
+			}],
+			rewards: [
+				{
+					id: 939,
+					type: "item",
+					item: {
+						id: "simplefarming:cheese_block",
+						Count: 3b
+					}
+				},
+				{
+					id: 1889,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2603,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Spice Of Life: Carrot Edition",
+			x: 3.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Вживаючи унікальні продукти, ви отримаєте невеликий бонус до здоров'я. Використовуйте книгу харчування або /foodlist (вимагає дозволу), щоб відстежувати свій прогрес."],
+			min_required_dependencies: 0,
+			dependencies: [I;571],
+			dependency_requirement: "all_completed",
+			id: 577,
+			tasks: [{
+				id: 578,
+				type: "item",
+				item: "solcarrot:food_book"
+			}],
+			rewards: [
+				{
+					id: 937,
+					type: "item",
+					item: "simplefarming:banana_bread"
+				},
+				{
+					id: 1888,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Зберігання продуктів",
+			x: 6.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [],
+			min_required_dependencies: 0,
+			dependencies: [I;573],
+			dependency_requirement: "all_completed",
+			id: 579,
+			tasks: [{
+				id: 580,
+				type: "item",
+				item: "cookingforblockheads:cabinet"
+			}],
+			rewards: [
+				{
+					id: 928,
+					type: "item",
+					item: {
+						id: "simplefarming:honeydew_seeds",
+						Count: 8b
+					}
+				},
+				{
+					id: 1885,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2604,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Оновлення вашої кухні",
+			x: 7.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ми вже згадували, що ви можете вдосконалити свою кухню, тож саме цим ми і займемося. Духовка дозволяє готувати на вашій кухні - спробуйте!"],
+			min_required_dependencies: 0,
+			dependencies: [I;579],
+			dependency_requirement: "all_completed",
+			id: 581,
+			tasks: [{
+				id: 582,
+				type: "item",
+				item: "cookingforblockheads:oven"
+			}],
+			rewards: [
+				{
+					id: 931,
+					type: "item",
+					item: "minecraft:iron_block"
+				},
+				{
+					id: 1886,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2605,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Назад до обробної дошки",
+			x: 9.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Кухонний стіл функціонує подібно до духовки, але надає вашій кухні можливості для творчості."],
+			min_required_dependencies: 0,
+			dependencies: [I;581],
+			dependency_requirement: "all_completed",
+			id: 583,
+			tasks: [{
+				id: 584,
+				type: "item",
+				item: "cookingforblockheads:cooking_table"
+			}],
+			rewards: [
+				{
+					id: 934,
+					type: "item",
+					item: "cookingforblockheads:spice_rack"
+				},
+				{
+					id: 1887,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2082,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2606,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Декор для дому",
+			x: 6.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Craft to Exile включає кілька декоративних модів, таких як Macaw's, EmbellishCraft, Mr. CrayFish's Furniture Mod та Mapper Base. Створіть предмети, щоб отримати зразок бітуму.",
+				"З бітуму можна виготовляти асфальт. Або ж ви можете покласти його в піч, щоб перетворити на звичайну руду."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;579],
+			dependency_requirement: "all_completed",
+			id: 585,
+			tasks: [
+				{
+					id: 586,
+					type: "item",
+					item: "embellishcraft:white_oak_fancy_bed"
+				},
+				{
+					id: 587,
+					type: "item",
+					item: "mcwfurnitures:oak_nightstand"
+				},
+				{
+					id: 588,
+					type: "item",
+					item: "cfm:white_sofa"
+				}
+			],
+			rewards: [
+				{
+					id: 942,
+					type: "item",
+					item: {
+						id: "mapperbase:raw_bitumen",
+						Count: 32b
+					}
+				},
+				{
+					id: 1890,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Інструменти торгівлі",
+			x: 7.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Pam's HarvestCraft 2 додає багато різноманітних і нових продуктів, щоб урізноманітнити Spice of Life. Багато з них потребують спеціальних інструментів."],
+			min_required_dependencies: 0,
+			dependencies: [I;581],
+			dependency_requirement: "all_completed",
+			id: 589,
+			tasks: [{
+				id: 590,
+				type: "item",
+				item: "pamhc2foodcore:cuttingboarditem"
+			}],
+			rewards: [
+				{
+					id: 944,
+					type: "item",
+					item: "minecraft:bowl"
+				},
+				{
+					id: 1891,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Ринок насіння",
+			x: 0.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ринок - це спеціальний блок, який дозволяє обмінювати монети на насіння. Це надзвичайно корисно, особливо якщо ваша база знаходиться в безлюдному біомі."],
+			min_required_dependencies: 0,
+			dependencies: [I;567],
+			dependency_requirement: "all_completed",
+			id: 591,
+			tasks: [{
+				id: 592,
+				type: "item",
+				item: "farmingforblockheads:market"
+			}],
+			rewards: [
+				{
+					id: 948,
+					type: "item",
+					item: {
+						id: "minecraft:bone_meal",
+						Count: 16b
+					}
+				},
+				{
+					id: 1893,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Зроби мені сендвіч",
+			x: 9.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ну? Зроби мені одну!"],
+			min_required_dependencies: 0,
+			dependencies: [I;589],
+			dependency_requirement: "all_completed",
+			id: 593,
+			tasks: [{
+				id: 594,
+				type: "item",
+				item: "pamhc2foodcore:grilledcheeseitem"
+			}],
+			rewards: [
+				{
+					id: 946,
+					type: "item",
+					item: {
+						id: "minecraft:brick",
+						Count: 5b
+					}
+				},
+				{
+					id: 1892,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2083,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Добриво",
+			x: 1.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Farming for Blockheads представляє 3 різних кольорових добрива, кожне з яких має унікальні властивості.",
+				"Зелені добрива підвищують врожайність, жовті - запобігають витоптуванню, а червоні - підвищують швидкість росту рослин.",
+				"Клацніть правою кнопкою миші на добриві (спожитому) на обробленому ґрунті, щоб застосувати його вплив!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;591],
+			dependency_requirement: "all_completed",
+			id: 595,
+			tasks: [
+				{
+					id: 596,
+					type: "item",
+					item: "farmingforblockheads:green_fertilizer"
+				},
+				{
+					id: 597,
+					type: "item",
+					item: "farmingforblockheads:yellow_fertilizer"
+				},
+				{
+					id: 598,
+					type: "item",
+					item: "farmingforblockheads:red_fertilizer"
+				}
+			],
+			rewards: [
+				{
+					id: 950,
+					type: "item",
+					item: {
+						id: "minecraft:wheat_seeds",
+						Count: 32b
+					}
+				},
+				{
+					id: 1894,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2608,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Автоматизоване годування",
+			x: 3.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Feeding trough - це блок, який може тримати їжу і автоматично годувати тварин, що знаходяться поруч. Поставьте його і покладіть їжу в нього, щоб побачити ефект! Він взаємодієї з площею 8х8 блоків і може одночасно годувати 8 тварин."],
+			min_required_dependencies: 0,
+			dependencies: [I;595],
+			dependency_requirement: "all_completed",
+			id: 599,
+			tasks: [{
+				id: 600,
+				type: "item",
+				item: "farmingforblockheads:feeding_trough"
+			}],
+			rewards: [
+				{
+					id: 952,
+					type: "item",
+					item: {
+						id: "minecraft:wheat",
+						Count: 32b
+					}
+				},
+				{
+					id: 1895,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Збирач яєць",
+			x: 4.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Збирач яєць автоматично збирає курячі яйця у діапазоні розміром 8x8."],
+			min_required_dependencies: 0,
+			dependencies: [I;599],
+			dependency_requirement: "all_completed",
+			id: 601,
+			tasks: [{
+				id: 602,
+				type: "item",
+				item: "farmingforblockheads:chicken_nest"
+			}],
+			rewards: [
+				{
+					id: 1896,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2081,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2607,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Майстер на всі руки.",
+			x: 0.0d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ремінь для інструментів - це дуже корисний елемент, який дозволяє закріпити більше одного інструмента одночасно. Щоб відкрити радіальне меню, натисніть клавішу з зображенням ременя для інструментів! Кнопку дізнайтесь у налаштуваннях."],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 1703,
+			tasks: [{
+				id: 1704,
+				type: "item",
+				item: "toolbelt:belt"
+			}],
+			rewards: [{
+				id: 1915,
+				type: "item",
+				title: "500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 500
+					}
+				}
+			}]
+		},
+		{
+			title: "Майстер на всі руки+",
+			x: 1.5d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Підсумки використовуються для збільшення місткості вашої поясної сумки для інструментів."],
+			min_required_dependencies: 0,
+			dependencies: [I;1703],
+			dependency_requirement: "all_completed",
+			id: 1705,
+			tasks: [{
+				id: 1706,
+				type: "item",
+				item: "toolbelt:pouch"
+			}],
+			rewards: [
+				{
+					id: 1914,
+					type: "item",
+					title: "1000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				},
+				{
+					id: 2076,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2618,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Небо - це межа",
+			x: 1.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["За допомогою Apotheosis певні культури можуть вирости до дуже великої висоти. Цукрова тростина, кактус і бамбук можуть вирости вдвічі вище!"],
+			min_required_dependencies: 0,
+			dependencies: [I;595],
+			dependency_requirement: "all_completed",
+			id: 1967,
+			tasks: [{
+				id: 1968,
+				type: "item",
+				item: "minecraft:sugar_cane",
+				count: 32L
+			}],
+			rewards: [{
+				id: 1969,
+				type: "item",
+				title: "500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 500
+					}
+				}
+			}]
+		},
+		{
+			title: "Ініціалізація торгів",
+			x: 1.5d,
+			y: 9.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				'Торговий пункт - це місце, де гравці торгують. Кожен торговий пункт має свій власний "інвентар", але товари також можуть бути завантажені в контейнер. Крім того, ви можете з\'єднати торгові пункти кабельною мережею і банком, щоб централізувати валюту ',
+				"в одному банківському блоці."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2065],
+			dependency_requirement: "all_completed",
+			id: 2060,
+			tasks: [{
+				id: 2061,
+				type: "item",
+				item: "calemiutils:trading_post"
+			}],
+			rewards: [{
+				id: 2068,
+				type: "item",
+				title: "500 Experience",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 500
+					}
+				}
+			}]
+		},
+		{
+			title: "Об'єднуємо зусилля",
+			x: 3.0d,
+			y: 9.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Банківський блок - це пристрій для зберігання валюти, який можна використовувати вдома або як сховище валюти, підключивши його до обмінних пунктів за допомогою мережевих кабелів. Не хвилюйтеся, створені вами банківські та торгові блоки захищені!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2060],
+			dependency_requirement: "all_completed",
+			id: 2062,
+			tasks: [
+				{
+					id: 2063,
+					type: "item",
+					item: "calemiutils:bank"
+				},
+				{
+					id: 2064,
+					type: "item",
+					item: "calemiutils:network_cable"
+				}
+			],
+			rewards: [
+				{
+					id: 2069,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2074,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				},
+				{
+					id: 2619,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Створення магазину",
+			x: 0.0d,
+			y: 9.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Calemi's Utilities додають повнофункціональну економіку, яка включає монети, гаманці, банки, поштові відділення та багато іншого!",
+				"Гаманці можуть зберігати величезні суми грошей. Ключ безпеки - безцінний актив при роботі з торговими блоками. Він знадобиться вам для встановлення угод!",
+				"Примітка: ви можете розмістити стопки з 8 монет як прикрасу, але ці блоки НЕ будуть скидати ваші гроші під час перерви!"
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 2065,
+			tasks: [{
+				id: 2066,
+				type: "item",
+				item: "calemiutils:security_wrench"
+			}],
+			rewards: [
+				{
+					id: 2067,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2620,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 1
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "На екрані",
+			x: 4.5d,
+			y: 9.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Підставка для речей дозволяє демонструвати ваші важко зароблені речі! Використовуйте захисний ключ на підставці, щоб налаштувати зовнішній вигляд."],
+			min_required_dependencies: 0,
+			dependencies: [I;2062],
+			dependency_requirement: "all_completed",
+			id: 2071,
+			tasks: [{
+				id: 2072,
+				type: "item",
+				item: "calemiutils:item_stand"
+			}],
+			rewards: [
+				{
+					id: 2073,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2075,
+					type: "item",
+					item: "calemiutils:coin_quarter"
+				},
+				{
+					id: 2621,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 3
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Справжній ринок",
+			x: 3.0d,
+			y: 10.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Marketplace - це блок який можна створити, доступ до якого може отримати будь-хто! За замовчуванням ви можете купувати лутбокси за допомогою CED. Це можна налаштувати, і це дуже корисно для серверів."],
+			min_required_dependencies: 0,
+			dependencies: [I;2062],
+			dependency_requirement: "all_completed",
+			id: 2114,
+			tasks: [{
+				id: 2115,
+				type: "item",
+				item: "calemiutils:market"
+			}],
+			rewards: [
+				{
+					id: 2116,
+					type: "item",
+					title: "500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				},
+				{
+					id: 2622,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 10,
+							SCORE: "GOOD",
+							TIER: 5
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Навчання в школі",
+			x: 10.5d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Школа - це місце, де Вчитель буде розвивати навички Учнів (дітей). Папір збільшить швидкість розвиток Учнів.",
+				"Рівень Школи визначає, скільки Учнів може навчатися одночасно."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;284],
+			dependency_requirement: "all_completed",
+			id: 2635,
+			tasks: [{
+				id: 2636,
+				type: "item",
+				item: "minecolonies:blockhutschool"
+			}],
+			rewards: [
+				{
+					id: 2657,
+					type: "item",
+					item: "minecraft:book"
+				},
+				{
+					id: 2675,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Веселитися не важко...",
+			x: 12.0d,
+			y: 7.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Бібліотека - це спосіб підвищити рівень Інтелекту ваших дорослих колоністів, який впливає на всі інші навички (на інших роботах). Колоністи будуть випадковим чином підвищувати свій інтелект, поки він призначений до Бібліотеки.",
+				"Студент бібліотеки - це робота на повний робочий день, тому не можна, щоб один колоніст одночасно працював у бібліотеці та в робочій хаті."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2635],
+			dependency_requirement: "all_completed",
+			id: 2637,
+			tasks: [{
+				id: 2638,
+				type: "item",
+				item: "minecolonies:blockhutlibrary"
+			}],
+			rewards: [
+				{
+					id: 2658,
+					type: "item",
+					item: "minecraft:writable_book"
+				},
+				{
+					id: 2674,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Харчування",
+			x: 10.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Ресторан - це місце, де Кухар готуватиме їжу, за умови, що у нього є необхідні інгредієнти та паливо. Коли колоністи будуть голодні, вони прийдуть до ресторану, і кухар нагодує їх їжею. Помічник кухаря також працює в ресторані.",
+				"Примітка: Ви можете найняти помічника кухаря лише тоді, коли ресторан має рівень 3 або вище."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;286],
+			dependency_requirement: "all_completed",
+			id: 2639,
+			tasks: [{
+				id: 2640,
+				type: "item",
+				item: "minecolonies:blockhutcook"
+			}],
+			rewards: [
+				{
+					id: 2667,
+					type: "item",
+					item: "minecraft:cake"
+				},
+				{
+					id: 2676,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			x: 7.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Склад - це центральне сховище, де кур'єр буде зберігати та забирати все, що ваші колоністи збирають, виготовляють або потребують. Предмети зберігатимуться на стелажах.",
+				"Рівень складу визначає, скільки Кур'єрів зможуть використовувати його одночасно. Підвищуйте рівень складу, щоб збільшити кількість Кур'єрів, які можуть працювати в ньому. Підвищення рівня Сховища також збільшить його місткість."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;278],
+			dependency_requirement: "all_completed",
+			id: 2641,
+			tasks: [{
+				id: 2642,
+				type: "item",
+				item: "minecolonies:blockhutwarehouse"
+			}],
+			rewards: [{
+				id: 2678,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 2000
+					}
+				}
+			}]
+		},
+		{
+			title: "Друге місце!",
+			x: 9.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Кур'єр ходить туди-сюди від Складу до всіх робітничих хатин у вашій колонії, доставляючи матеріали робітникам і складуючи готову продукцію на Складі.",
+				"Рівень хатини кур'єра залежить від того, скільки предметів він може доставити, тому, якщо ви хочете, щоб кур'єр міг переносити більше матеріалів/інструментів, покращуйте його хатину. Покращення хатини також збільшить кількість запитів,",
+				"які кур'єр зможе одночасно обслуговувати."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2641],
+			dependency_requirement: "all_completed",
+			id: 2643,
+			tasks: [{
+				id: 2644,
+				type: "item",
+				item: "minecolonies:blockhutdeliveryman"
+			}],
+			rewards: [{
+				id: 2677,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 2000
+					}
+				}
+			}]
+		},
+		{
+			title: "Готові до роботи",
+			x: 6.0d,
+			y: 9.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Ферма - це місце, де фермер буде вирощувати культури для вашої колонії. Наразі фермер вирощує пшеницю, моркву, картоплю, буряк, кавуни, гарбузи та більшість культур з інших модів (за умови, що вони мають нормальну поведінку росту).",
+				"Перш ніж фермер зможе розпочати роботу, ви повинні дати йому мотику, сокиру (для збору врожаю) та культуру, яку ви хочете вирощувати.",
+				"Фермер також створюватиме насіння, вирізані гарбузи, тюки сіна, компостовану землю та грубу землю. Вони робитимуть предмети лише тоді, коли їх навчать рецептам, отримають запит на предмет і матимуть необхідні матеріали."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;282],
+			dependency_requirement: "all_completed",
+			id: 2645,
+			tasks: [{
+				id: 2646,
+				type: "item",
+				item: "minecolonies:blockhutfarmer"
+			}],
+			rewards: [
+				{
+					id: 2666,
+					type: "item",
+					item: {
+						id: "minecraft:diamond_hoe",
+						Count: 1b,
+						tag: {
+							Damage: 0
+						}
+					}
+				},
+				{
+					id: 2668,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Нерівні зуби",
+			x: 9.0d,
+			y: 9.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Лісопилка - це місце, де Тесля виготовляє будь-які предмети, що складаються щонайменше на 75% з дерева, які не включають злитки, камінь, редстоуну (або подають сигнал редстоуну) або нитки.",
+				"Тесля також виготовить кілька інших предметів, зокрема дошки для кактусів, черепицю, дерев'яні рами, бочки для компосту та стелажі.",
+				"Для цього ви повинні навчити Лісоруба рецептам, а Тесляр повинен отримати замовлення на виріб від іншого робітника."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;284],
+			dependency_requirement: "all_completed",
+			id: 2647,
+			tasks: [{
+				id: 2648,
+				type: "item",
+				item: "minecolonies:blockhutsawmill"
+			}],
+			rewards: [
+				{
+					id: 2664,
+					type: "item",
+					item: {
+						id: "minecraft:oak_planks",
+						Count: 64b
+					}
+				},
+				{
+					id: 2669,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Мідь + олово = Мідний Прут",
+			x: 10.5d,
+			y: 9.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Плавильний цех - це місце, де плавильник переплавлятиме руду на злитки.",
+				"Підказка: чим вищий рівень металургійного заводу, тим більше печей він зможе використовувати. ",
+				"Вищий рівень також дає більше шансів подвоїти і навіть потроїти вихід злитків з одного блоку руди. Рівень потужності металургійного заводу іноді визначає можливість подвоїти або потроїти вихід злитків з руди відповідно до рівня металургійного заводу."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;284],
+			dependency_requirement: "all_completed",
+			id: 2649,
+			tasks: [{
+				id: 2650,
+				type: "item",
+				item: "minecolonies:blockhutsmeltery"
+			}],
+			rewards: [
+				{
+					id: 2659,
+					type: "item",
+					item: "minecraft:iron_ingot"
+				},
+				{
+					id: 2660,
+					type: "item",
+					item: "create:copper_ingot"
+				},
+				{
+					id: 2671,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "99 Глав Ковальского посібника",
+			x: 10.5d,
+			y: 10.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Коваль - може  3х3 виготовляти будь-які ванільні інструменти, обладунки, мечі та щити (без луків та предметів з редстоуну). Коваль почне працювати, коли отримає замовлення на будь-який з цих предметів від іншого робітника."],
+			min_required_dependencies: 0,
+			dependencies: [I;2649],
+			dependency_requirement: "all_completed",
+			id: 2651,
+			tasks: [{
+				id: 2652,
+				type: "item",
+				item: "minecolonies:blockhutblacksmith"
+			}],
+			rewards: [
+				{
+					id: 2663,
+					type: "item",
+					item: "minecraft:diamond"
+				},
+				{
+					id: 2672,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Завжди з каменю",
+			x: 12.0d,
+			y: 9.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Хатина Каменяра - це місце, де Каменяр буде створювати рецепти 3х3 з бруківки, каменю, андезиту, діориту, граніту, кварцу, пурпуру, цегли, призмарину, пісковиків, чорного каменю, базальту та/або руд.",
+				'Вони також можуть виготовити ендерняк з бруківки та перлини, але тільки якщо ви пройшли дослідження "Know the End" в університеті.',
+				"Каменяр працюватиме лише тоді, коли отримає замовлення від іншого робітника і матиме необхідні матеріали. Вам також потрібно буде навчити Каменяра рецептам, які ви хочете, щоб він створював."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;2649],
+			dependency_requirement: "all_completed",
+			id: 2653,
+			tasks: [{
+				id: 2654,
+				type: "item",
+				item: "minecolonies:blockhutstonemason"
+			}],
+			rewards: [
+				{
+					id: 2662,
+					type: "item",
+					item: {
+						id: "minecraft:cobblestone",
+						Count: 64b
+					}
+				},
+				{
+					id: 2673,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Зменшуй, Перевикористовуй, Переробляй",
+			x: 7.5d,
+			y: 9.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Хатинка Компостера - це місце, де Компостер перетворює органічні матеріали на компост, який може бути використаний Фермером або Квітникарем для добрива посівів або квітів. Вони також можуть створювати ґрунт, якщо ви ввімкнули цю функцію в",
+				"налаштуваннях можна використовувати в будівлях. Компостер використовує компостні бочки для приготування компосту або бруду.",
+				"Для розблокування цього квесту потрібні обидва квеста."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;
+				2645,
+				284
+			],
+			dependency_requirement: "all_completed",
+			id: 2655,
+			tasks: [{
+				id: 2656,
+				type: "item",
+				item: "minecolonies:blockhutcomposter"
+			}],
+			rewards: [
+				{
+					id: 2665,
+					type: "item",
+					item: "minecraft:composter"
+				},
+				{
+					id: 2670,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 2000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Хатина просіювача",
+			x: 6.0d,
+			y: 10.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Хатина Просіювача - це місце, де Просіювач буде просіювати бруд, гравій, пісок або пісок душі, щоб знайти здобич. Коли він це зробить, блок, який він просіює, зникне."],
+			min_required_dependencies: 0,
+			dependencies: [I;2645],
+			dependency_requirement: "all_completed",
+			id: 2679,
+			tasks: [{
+				id: 2680,
+				type: "item",
+				item: "minecolonies:blockhutsifter"
+			}],
+			rewards: [{
+				id: 2681,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 2000
+					}
+				}
+			}]
+		},
+		{
+			title: "Ягоди добре",
+			x: 0.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ягідні кущі - фантастичне джерело їжі. Вони швидко ростуть і їх легко збирати. Посадіть кущі та клацніть правою кнопкою миші, щоб зібрати врожай!"],
+			min_required_dependencies: 0,
+			dependencies: [I;567],
+			dependency_requirement: "all_completed",
+			id: 2765,
+			tasks: [
+				{
+					id: 2766,
+					type: "item",
+					item: "simplefarming:strawberry_bush",
+					count: 4L
+				},
+				{
+					id: 2767,
+					type: "item",
+					item: "simplefarming:blueberry_bush",
+					count: 4L
+				}
+			],
+			rewards: [
+				{
+					id: 2768,
+					type: "item",
+					item: "simplefarming:raspberry_bush"
+				},
+				{
+					id: 2769,
+					type: "item",
+					item: "simplefarming:blackberry_bush"
+				},
+				{
+					id: 2770,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Плоди ростуть на деревах",
+			x: 1.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Фруктові дерева розкидані по всьому світу. Подібно до ягідних кущів, ці дерева є фантастичним джерело їжі. Вони можуть зайняти більше часу, щоб почати рости, але результат вартий того, щоб почекати!"],
+			min_required_dependencies: 0,
+			dependencies: [I;2765],
+			dependency_requirement: "all_completed",
+			id: 2771,
+			tasks: [
+				{
+					id: 2773,
+					type: "item",
+					item: "simplefarming:apple_sapling"
+				},
+				{
+					id: 2774,
+					type: "item",
+					item: "simplefarming:pear_sapling"
+				},
+				{
+					id: 2777,
+					type: "item",
+					item: "simplefarming:orange_sapling"
+				}
+			],
+			rewards: [
+				{
+					id: 2775,
+					type: "item",
+					item: "simplefarming:mango_sapling"
+				},
+				{
+					id: 2776,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 1000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Щедрий врожай",
+			x: 0.0d,
+			y: 10.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Bountiful Boards - це блоки, які можна виготовити, і які можна знайти в селах. Ці блоки періодично генерують винагороди, які гравець може взяти і спробувати виконати. Після виконання завдання, можна повернутись до дошки за",
+				"винагородою."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;3],
+			dependency_requirement: "all_completed",
+			id: 2830,
+			tasks: [{
+				id: 2831,
+				type: "item",
+				item: "bountiful:bountyboard"
+			}],
+			rewards: [{
+				id: 2834,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 750
+					}
+				}
+			}]
+		},
+		{
+			title: "Моїм Указом",
+			x: 1.5d,
+			y: 10.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Укази - це предмети, які модифікують пул Bountiful Board's. Зокрема, вони збільшують вагу певних завдань і нагород, а в деяких випадках додають нові."],
+			min_required_dependencies: 0,
+			dependencies: [I;2830],
+			dependency_requirement: "all_completed",
+			id: 2832,
+			tasks: [{
+				id: 2833,
+				type: "item",
+				item: "bountiful:decree"
+			}],
+			rewards: [{
+				id: 2835,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 750
+					}
+				}
+			}]
+		}
+	]
+}

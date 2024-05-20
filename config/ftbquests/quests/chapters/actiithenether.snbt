@@ -1,0 +1,1070 @@
+{
+	id: 83,
+	filename: "actiithenether",
+	order_index: 3,
+	title: "Акт II: Незер",
+	icon: "minecraft:netherrack",
+	always_invisible: false,
+	group: 0,
+	default_quest_shape: "default",
+	images: [],
+	quests: [
+		{
+			title: "Будьте в Безпеці",
+			icon: "minecraft:netherrack",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Незер - це заповнена лавою територія, що кишить зомбі-свинями. Будьте обережні, коли будете копати прямо вниз.",
+				'Щоб отримати доступ до цього квесту, ви повинні виконати квести "Незер" з Акту I або "Вибираючи довгий шлях" зі Вступу.'
+			],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				125,
+				1676
+			],
+			dependency_requirement: "all_completed",
+			id: 121,
+			tasks: [{
+				id: 206,
+				type: "kill",
+				entity: "minecraft:zombie_pigman",
+				value: 4L
+			}],
+			rewards: [
+				{
+					id: 123,
+					type: "item",
+					item: {
+						id: "mmorpg:teleport_scroll",
+						Count: 4b
+					}
+				},
+				{
+					id: 1769,
+					type: "item",
+					title: "26000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 26000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: 'Що таке "Блейз"?',
+			icon: "minecraft:blaze_powder",
+			x: 1.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["У Незері є безліч ворогів, з якими можна зіткнутися, і багато унікальних біомів. Сподіваємось, що коли ви натрапите на блейзів, ви не будете так сильно обпалені."],
+			min_required_dependencies: 0,
+			dependencies: [I;121],
+			dependency_requirement: "all_completed",
+			id: 207,
+			tasks: [{
+				id: 208,
+				type: "kill",
+				icon: "minecraft:blaze_powder",
+				entity: "minecraft:blaze",
+				value: 8L
+			}],
+			rewards: [
+				{
+					id: 209,
+					type: "item",
+					item: {
+						id: "mmorpg:identify_tome",
+						Count: 8b
+					}
+				},
+				{
+					id: 1770,
+					type: "item",
+					title: "32500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 32500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Хто ріже сир?",
+			x: 4.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Незер - невблаганне царство. Ви, швидше за все, проллєте сльози від розчарування. Але чи знаєте ви, що монстри в Незері теж вміють плакати?"],
+			min_required_dependencies: 0,
+			dependencies: [I;215],
+			dependency_requirement: "all_completed",
+			id: 211,
+			tasks: [{
+				id: 212,
+				type: "item",
+				item: "minecraft:ghast_tear",
+				count: 2L
+			}],
+			rewards: [
+				{
+					id: 213,
+					type: "item",
+					item: {
+						id: "mmorpg:ore3",
+						Count: 2b
+					}
+				},
+				{
+					id: 1771,
+					type: "item",
+					title: "37500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 37500
+						}
+					}
+				},
+				{
+					id: 2509,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "В'янучий відхід",
+			x: 4.5d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Коли ви подорожуєте по Незеру, темрява починає гризти вашу психіку. Швидше, треба забиратися звідси! Вбийте їх і заберіть їхні черепи. Тільки тоді ми зможемо піти..."],
+			min_required_dependencies: 0,
+			dependencies: [I;207],
+			dependency_requirement: "all_completed",
+			id: 215,
+			tasks: [{
+				id: 216,
+				type: "item",
+				item: "minecraft:wither_skeleton_skull",
+				count: 3L
+			}],
+			rewards: [
+				{
+					id: 217,
+					type: "item",
+					item: {
+						id: "mmorpg:ore4",
+						Count: 3b
+					}
+				},
+				{
+					id: 1772,
+					type: "item",
+					title: "43750 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 43750
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Чорна смерть (Рів. 26)",
+			icon: "minecraft:wither_rose",
+			x: 6.0d,
+			y: 0.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Нарешті, зберіть 4 блоки Душевного піску/ґрунту в Т-подібну форму, а потім покладіть зверху 3 голови незер скелетів, що в'януть, і вбийте Візера! Але будьте обережні, це буде нелегко!"],
+			min_required_dependencies: 0,
+			dependencies: [I;215],
+			dependency_requirement: "all_completed",
+			id: 219,
+			tasks: [{
+				id: 220,
+				type: "kill",
+				icon: "minecraft:wither_rose",
+				entity: "minecraft:wither",
+				value: 1L
+			}],
+			rewards: [
+				{
+					id: 1773,
+					type: "item",
+					title: "75000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 75000
+						}
+					}
+				},
+				{
+					id: 2504,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Енд",
+			x: 7.5d,
+			y: 0.0d,
+			shape: "rsquare",
+			subtitle: "",
+			size: 1.0d,
+			description: ["За допомогою Ока Ендера ви можете знайти фортецю в верхньому світі, яка відкриє вам доступ до Енду. Не забудьте взяти з собою 12 Очей Ендера, щоб активувати портал. Приготуйтеся... Кінець наближається."],
+			min_required_dependencies: 0,
+			dependencies: [I;219],
+			dependency_requirement: "all_completed",
+			id: 225,
+			tasks: [{
+				id: 226,
+				type: "item",
+				item: "minecraft:ender_eye"
+			}],
+			rewards: [
+				{
+					id: 1774,
+					type: "item",
+					title: "50000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 50000
+						}
+					}
+				},
+				{
+					id: 2093,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		},
+		{
+			title: "Оооо Блискучий",
+			x: 0.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Селянин у місті дуже захоплений унікальними рудами та матеріалами. Допоможіть йому, знайшовши 50 кварцу!",
+				'Щоб отримати доступ до цього квесту, ви повинні виконати "Незер" з Акту I або "Вибираючи довгий шлях" зі Вступу.'
+			],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				125,
+				1676
+			],
+			dependency_requirement: "all_completed",
+			id: 228,
+			tasks: [{
+				id: 229,
+				type: "item",
+				item: "minecraft:quartz",
+				count: 50L
+			}],
+			rewards: [
+				{
+					id: 230,
+					type: "item",
+					item: {
+						id: "mmorpg:ore1",
+						Count: 10b
+					}
+				},
+				{
+					id: 1775,
+					type: "item",
+					title: "25000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 25000
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Сяюча шкіра",
+			x: 1.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Тепер, коли ви дали їм кварц, вони знають, що ви здатні подорожувати через Незер! Вони попросили тебе повернутися і принести їм 30 блоків світлого каменю!"],
+			min_required_dependencies: 0,
+			dependencies: [I;228],
+			dependency_requirement: "all_completed",
+			id: 232,
+			tasks: [{
+				id: 233,
+				type: "item",
+				item: "minecraft:glowstone",
+				count: 30L
+			}],
+			rewards: [
+				{
+					id: 234,
+					type: "item",
+					item: {
+						id: "mmorpg:ore1",
+						Count: 20b
+					}
+				},
+				{
+					id: 1776,
+					type: "item",
+					title: "31250 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 31250
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Бородавки",
+			x: 3.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Після сну з світо-каменем, і вилизування кварцу, бідний селянин прокинувся з жахливим набором бородавок. Вони чули, що бородавки можна швидко вилікувати, і попросили вас принести їм трохи бородавок!"],
+			min_required_dependencies: 0,
+			dependencies: [I;232],
+			dependency_requirement: "all_completed",
+			id: 236,
+			tasks: [{
+				id: 237,
+				type: "item",
+				item: "minecraft:nether_wart",
+				count: 50L
+			}],
+			rewards: [
+				{
+					id: 238,
+					type: "item",
+					item: {
+						id: "mmorpg:ore2",
+						Count: 10b
+					}
+				},
+				{
+					id: 1777,
+					type: "item",
+					title: "37500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 37500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Світло в тіні",
+			x: 6.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Пам'ятаєш того селянина? Так, вони повернулися... Схоже, що бородавок від блискучих предметів їм було замало. Цього разу вони просять Зірку Незеру..."],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				236,
+				219
+			],
+			dependency_requirement: "all_completed",
+			id: 240,
+			tasks: [{
+				id: 241,
+				type: "item",
+				item: "minecraft:nether_star"
+			}],
+			rewards: [
+				{
+					id: 1778,
+					type: "item",
+					title: "46250 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 46250
+						}
+					}
+				},
+				{
+					id: 2505,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Досліджуючи вогняні глибини",
+			icon: {
+				id: "lycanitesmobs:equipmentpart_astarothclaw",
+				Count: 1b,
+				tag: {
+					equipmentLevel: 1
+				}
+			},
+			x: 7.5d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Допитуйте пекельних посіпак силою, щоб дізнатися, де живуть Повелителі демонів!",
+				"Вбийте astaroths."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;240],
+			dependency_requirement: "all_completed",
+			id: 472,
+			tasks: [{
+				id: 473,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:equipmentpart_astarothclaw",
+					Count: 1b,
+					tag: {
+						equipmentLevel: 1
+					}
+				},
+				entity: "lycanitesmobs:astaroth",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 1779,
+					type: "item",
+					title: "52500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 52500
+						}
+					}
+				},
+				{
+					id: 2511,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Придушення помилок",
+			icon: {
+				id: "lycanitesmobs:aberrationspawn",
+				Count: 1b,
+				tag: {
+					CreatureInfoSpawnEgg: {
+						creaturename: "trite"
+					}
+				}
+			},
+			x: 7.5d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Допитуйте пекельних посіпак силою, щоб дізнатися, де живуть Повелителі демонів!",
+				"Вбийте trites."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;240],
+			dependency_requirement: "all_completed",
+			id: 474,
+			tasks: [{
+				id: 475,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:aberrationspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "trite"
+						}
+					}
+				},
+				entity: "lycanitesmobs:trite",
+				value: 10L
+			}],
+			rewards: [
+				{
+					id: 1780,
+					type: "item",
+					title: "37500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 37500
+						}
+					}
+				},
+				{
+					id: 2512,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Палаючі шкури",
+			icon: "lycanitesmobs:boulderblastcharge",
+			x: 7.5d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Допитуйте пекельних посіпак силою, щоб дізнатися, де живуть Повелителі демонів!",
+				"Вбийте salamanders."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;240],
+			dependency_requirement: "all_completed",
+			id: 476,
+			tasks: [{
+				id: 477,
+				type: "kill",
+				icon: "lycanitesmobs:boulderblastcharge",
+				entity: "lycanitesmobs:salamander",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 1781,
+					type: "item",
+					title: "45000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 45000
+						}
+					}
+				},
+				{
+					id: 2513,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Хібі Джибіс",
+			icon: {
+				id: "lycanitesmobs:beastspawn",
+				Count: 1b,
+				tag: {
+					CreatureInfoSpawnEgg: {
+						creaturename: "arisaur"
+					}
+				}
+			},
+			x: 9.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Допитуйте пекельних посіпак силою, щоб дізнатися, де живуть Повелителі демонів!",
+				"Вбийте belphs."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;472],
+			dependency_requirement: "all_completed",
+			id: 478,
+			tasks: [{
+				id: 479,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:beastspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "arisaur"
+						}
+					}
+				},
+				entity: "lycanitesmobs:belph",
+				value: 3L
+			}],
+			rewards: [
+				{
+					id: 1782,
+					type: "item",
+					title: "48750 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 48750
+						}
+					}
+				},
+				{
+					id: 2514,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "jewerlycrafter_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Фаєрбол!",
+			icon: "lycanitesmobs:scorchfireballcharge",
+			x: 9.0d,
+			y: 3.0d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Допитуйте пекельних посіпак силою, щоб дізнатися, де живуть Повелителі демонів!",
+				"Вбийте afrits."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;474],
+			dependency_requirement: "all_completed",
+			id: 480,
+			tasks: [{
+				id: 481,
+				type: "kill",
+				icon: "lycanitesmobs:scorchfireballcharge",
+				entity: "lycanitesmobs:afrit",
+				value: 5L
+			}],
+			rewards: [
+				{
+					id: 1783,
+					type: "item",
+					title: "52500 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 52500
+						}
+					}
+				},
+				{
+					id: 2515,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "І Мозок",
+			icon: "lycanitesmobs:raw_pinky_meat",
+			x: 9.0d,
+			y: 4.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Допитуйте пекельних посіпак силою, щоб дізнатися, де живуть Повелителі демонів!",
+				"Вбийте pinkys."
+			],
+			min_required_dependencies: 0,
+			dependencies: [I;476],
+			dependency_requirement: "all_completed",
+			id: 482,
+			tasks: [{
+				id: 483,
+				type: "kill",
+				icon: "lycanitesmobs:raw_pinky_meat",
+				entity: "lycanitesmobs:pinky",
+				value: 5L
+			}],
+			rewards: [
+				{
+					id: 1784,
+					type: "item",
+					title: "45000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 45000
+						}
+					}
+				},
+				{
+					id: 2516,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "weaponcrafter_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Пекельні полиці!",
+			x: 3.0d,
+			y: 1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Ви можете шукати в JEI всі різні чари та полички, які пропонує Apotheosis. Експериментуйте з різними конфігураціями!"],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				207,
+				232
+			],
+			dependency_requirement: "all_completed",
+			id: 1961,
+			tasks: [{
+				id: 1962,
+				type: "item",
+				item: "apotheosis:hellshelf",
+				count: 4L
+			}],
+			rewards: [
+				{
+					id: 1963,
+					type: "item",
+					title: "30000 Experience",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 30000
+						}
+					}
+				},
+				{
+					id: 2506,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "currency_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Робимо перші кроки",
+			icon: {
+				id: "extendednether:netherite_boots",
+				Count: 1b,
+				tag: {
+					Damage: 0
+				}
+			},
+			x: 1.5d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["The Extended Nether портовано деякі речі, що були в 1.16, у версію 1.15.2! Знайдіть Страйдера, Хогліна та багатьох інших!"],
+			min_required_dependencies: 0,
+			dependencies: [I;207],
+			dependency_requirement: "all_completed",
+			id: 2458,
+			tasks: [{
+				id: 2459,
+				type: "kill",
+				icon: "extendednether:strider_spawn_egg",
+				entity: "extendednether:strider",
+				value: 4L
+			}],
+			rewards: [
+				{
+					id: 2460,
+					type: "item",
+					item: {
+						id: "mmorpg:identify_tome",
+						Count: 4b
+					}
+				},
+				{
+					id: 2461,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 32500
+						}
+					}
+				},
+				{
+					id: 2508,
+					type: "item",
+					item: {
+						id: "mmorpg:loot_crate",
+						Count: 1b,
+						tag: {
+							REGISTRY_ID: "armorcrafter_crate",
+							LVL: 20,
+							SCORE: "GOOD",
+							TIER: 2
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Нашестя зомбі-свиней",
+			icon: "minecraft:cooked_porkchop",
+			x: 3.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["Цих огидних зомбі-свиней можна зустріти у Незері!"],
+			min_required_dependencies: 0,
+			dependencies: [I;207],
+			dependency_requirement: "all_completed",
+			id: 2462,
+			tasks: [{
+				id: 2463,
+				type: "kill",
+				icon: "extendednether:zombified_piglin_spawn_egg",
+				entity: "extendednether:zombified_piglin",
+				value: 10L
+			}],
+			rewards: [
+				{
+					id: 2465,
+					type: "item",
+					item: {
+						id: "mmorpg:ore3",
+						Count: 4b
+					}
+				},
+				{
+					id: 2466,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 32500
+						}
+					}
+				}
+			]
+		},
+		{
+			title: "Телепортацію увімкнено?",
+			x: 6.0d,
+			y: -1.5d,
+			shape: "default",
+			subtitle: "",
+			size: 1.0d,
+			description: ["За допомогою зірки можна створити вейстоун! Якщо ви граєте в одиночну гру, ви навіть можете зробити його глобальним, що дозволить вам телепортуватися до нього з будь-якого світу."],
+			min_required_dependencies: 0,
+			dependencies: [I;219],
+			dependency_requirement: "all_completed",
+			id: 2715,
+			tasks: [{
+				id: 2716,
+				type: "item",
+				item: "waystones:sandy_waystone"
+			}],
+			rewards: [{
+				id: 2717,
+				type: "item",
+				item: {
+					id: "mmorpg:give_exp",
+					Count: 1b,
+					tag: {
+						exp: 80000
+					}
+				}
+			}]
+		},
+		{
+			title: "The Amalgalich (Рів. 30)",
+			icon: {
+				id: "lycanitesmobs:undeadspawn",
+				Count: 1b,
+				tag: {
+					CreatureInfoSpawnEgg: {
+						creaturename: "amalgalich"
+					}
+				}
+			},
+			x: 10.5d,
+			y: 3.0d,
+			shape: "octagon",
+			subtitle: "",
+			size: 1.0d,
+			description: [
+				"Викличте і знищіть Amalgalich , створивши портал нежиті (див. вікі). Не рекомендується зустрічатися з Amalgalich наодинці... Також майте на увазі, що виклик цієї істоти призведе до її появи великої споруди.",
+				"Ви повинні викликати Amalgalich в Незері."
+			],
+			min_required_dependencies: 1,
+			dependencies: [I;
+				478,
+				480,
+				482
+			],
+			dependency_requirement: "all_completed",
+			id: 458,
+			tasks: [{
+				id: 459,
+				type: "kill",
+				icon: {
+					id: "lycanitesmobs:undeadspawn",
+					Count: 1b,
+					tag: {
+						CreatureInfoSpawnEgg: {
+							creaturename: "amalgalich"
+						}
+					}
+				},
+				entity: "lycanitesmobs:amalgalich",
+				value: 1L
+			}],
+			rewards: [
+				{
+					id: 708,
+					type: "item",
+					item: "mmorpg:lootbox/big_currency_lootbox_3"
+				},
+				{
+					id: 1756,
+					type: "item",
+					item: {
+						id: "mmorpg:give_exp",
+						Count: 1b,
+						tag: {
+							exp: 60000
+						}
+					}
+				},
+				{
+					id: 2110,
+					type: "item",
+					item: "calemiutils:coin_nickel"
+				}
+			]
+		}
+	]
+}
